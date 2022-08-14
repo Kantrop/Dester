@@ -1,0 +1,415 @@
+@use './customBootstrap' as *
+
+body
+  position: relative
+
+.underline
+  display: inline-block
+  text-decoration: none
+  position: relative
+  &::after
+    content:''
+    position: absolute
+    left: 0
+    right:0
+    bottom: 2px
+    border-bottom: 1px solid
+.test-bg
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background: url(../bg.png) top center
+  z-index: 10
+  pointer-events: none
+  opacity: 0.3
+
+.container
+    // max-width: 1240px
+    margin-left: auto
+    margin-right: auto
+
+.logo
+  display: block
+  width: 104px
+  height: 40px
+  background: url(../assets/logo.svg) no-repeat left top
+
+.header
+  position: sticky
+  top: 0 
+  background: #{white}
+  z-index: 1
+  &-content
+    display: flex
+    align-items: center
+
+  .navbar-collapse
+    justify-content: flex-end
+  .navbar-nav
+    margin-right: 12px
+
+.lang
+  width: 20px
+  height: 20px
+  border-radius: 50%
+
+  &[data-lang^="ae"]
+    background: url(../assets/ae.png) center no-repeat
+
+//TODO- почистить
+.whatsapp
+  background: #{$whatsapp_green}
+  color: #fff
+  font-weight: 500
+  border: none
+  &::after
+    display: inline-block
+    content: ''
+    width: 18px
+    height: 18px
+    vertical-align: -3px
+    margin-left: 10px
+    background: url(../assets/whatsapp_white.svg) center no-repeat
+
+.illustration
+  &-greetings
+      width: 385px
+      height: 378px
+      background-image: url(../assets/greetings-image.svg)
+  &-delivery
+    position: relative
+    // width: 310px
+    height: 183px
+    &::after
+      content:''
+      display: block
+      position: absolute
+      width: 372px
+      height: 426px
+      background: url(../assets/delivery.png) center no-repeat
+      background-size: contain
+      left: 9px
+      top: -77px
+  &-app
+    width: 520px
+    height: 372px
+    background-image: url(../assets/app.svg)
+
+  background-size: contain
+  background-repeat: no-repeat
+  @media (max-width: 992px)
+    width: 100%
+
+  
+.stage
+  &-rounded
+    border-radius: var(--bs-border-radius-pill)
+  &-inverse
+    background: #{$electric-blue}
+    color: #{$white}
+    padding: 60px 0 60px
+    a 
+      color: #{white}
+      &:hover
+        color: #{white}
+        opacity: 0.7
+  &-description
+    line-height: #{$line-height-lg}
+    margin-bottom: 20px
+
+  .subcaption
+    padding-right: 23%
+  .heading-sup
+    margin-bottom: #{$indent-sm}
+    display: flex
+    align-items: center
+    .icon
+      margin-left: 6px
+
+.capitalize
+  letter-spacing: 0.125em
+  text-transform: uppercase
+
+.h5,
+.h4,
+.h3,
+.h2,
+.h1
+  letter-spacing: -0.035em
+.h6
+  letter-spacing: 0.125em
+  text-transform: uppercase
+.h5
+  font-weight: 700
+
+.text
+  font-weight: 400
+  /* or 24px */
+  &-s
+    font-size: 16px
+    letter-spacing: -0.015em
+    line-height: #{$line-height-lg}
+  &-m
+    font-size: 18px
+    letter-spacing: -0.015em
+    line-height: #{$line-height-lg}
+  &-l
+    font-size: 20px
+    letter-spacing: -0.015em
+    line-height: #{$line-height-lg}
+
+// :root
+//   --whatsapp_green: #58BE55
+.btn
+  letter-spacing: -0.035em
+  display: flex
+  align-items: center
+  justify-content: center
+  &-dark
+    border: 1px solid #{$dark_grey}
+  &-icon
+    &.btn-lg
+      &::after
+        width: 28px
+        height: 28px
+    &::after
+      display: inline-block
+      content: ''
+      width: 18px
+      height: 18px
+      vertical-align: -3px
+      margin-left: 10px
+    &-whatsapp
+      &::after
+        background: url(../assets/whatsapp_white.svg) center no-repeat
+        background-size: contain
+
+  &-arrow
+    border: none
+    // background: #{$air-grey}
+    // color: #{$electric-blue}
+    &::after
+      content: ''
+      width: 16px
+      height: 30px
+      fill: currentColor
+      background: url(../assets/arrow.svg)
+      display: inline-block
+      margin-left: 4px
+      vertical-align: -7px
+      transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)
+    &:hover
+      color: #{$electric-blue}
+      background: #{$air-grey}
+      &::after
+        transform: translateX(6px)
+.navbar
+  &-nav
+    letter-spacing: -0.032em
+.paragraph
+  margin: 32px 0 30px
+
+.card-list-item
+  display: flex
+  align-self: stretch
+.card
+  min-height: 320px
+  &-icon
+    background-position: left top
+    background-repeat: no-repeat
+    height: 50px
+  &-index
+    font-weight: 600
+    line-height: 1.15
+    font-size: 18px
+  &-text
+    line-height: 1.35
+    letter-spacing: -0.015em
+
+.icon
+  background-size: contain
+  background-repeat: no-repeat
+  &-small
+    display: inline-block
+    width: 20px
+    height: 20px
+    vertical-align: middle
+  &-device
+    background-image: url(../assets/device.svg)
+  &-box
+    background-image: url(../assets/box.svg)
+  &-calc
+    background-image: url(../assets/calc.svg)
+  &-link
+    background-image: url(../assets/link.svg)
+  &-wallet
+    background-image: url(../assets/wallet.svg)
+  &-cart
+    background-image: url(../assets/cart.png)
+  &-diamond
+    background-image: url(../assets/diamond.png)
+  &-loudspeaker
+    background-image: url(../assets/loudspeaker.png)
+    position: relative
+    top: -1px
+  &-tg
+    background-image: url(../assets/socials/tg.svg)
+  &-vk
+    background-image: url(../assets/socials/vk.svg)
+  &-zen
+    background-image: url(../assets/socials/zen.svg)
+  &-inst
+    background-image: url(../assets/socials/inst.svg)
+  &-youtube
+    background-image: url(../assets/socials/youtube.svg)
+
+.socials
+  display: flex
+  padding-left: 0
+  margin-bottom: 0
+  margin-top: 15px
+  list-style: none
+  &-icon
+    display: inline-block
+    width: 32px
+    height: 32px
+    background-size: contain
+    background-repeat: no-repeat
+  &-item
+    & + &
+      margin-left: 15px
+
+.partner
+  border-radius: #{$border-radius-lg}
+  background: #{$air-grey}
+  overflow: hidden
+  
+  &-logo
+    padding-top:63%
+    background: url(../assets/default-partner-logo.vsg)
+  &-button
+    height: 100%
+    width: 100%
+    font-size: #{$font-size-lg}
+    letter-spacing: -0.035em
+  
+.grid
+  display: grid
+  gap: #{$indent-l}
+  &-5
+    grid-template-columns: repeat(5, 1fr)
+
+.banner
+  border-radius: #{$border-radius-xl}
+  padding: 60px
+  min-height: 314px
+  color: #FFFFFF
+  &-summersale
+    background-color: #{$blueberry_yogurt}
+    background-image: url(../assets/summersale.png)
+    background-position: right -90px top -155px
+    background-size: 622px
+    background-repeat: no-repeat
+  &-caption
+    font-family: "PP Gatwick"
+    font-weight: 700
+    font-size: 40px
+    line-height: 112%
+    letter-spacing: -0.035em
+    text-transform: uppercase
+    color: #FFFFFF
+  .paragraph
+    margin: 20px 0 20px
+    &:last-child
+    margin-bottom: 0
+
+.list
+  margin: 34px 15% 30px 0
+  padding-left: 30px
+  li
+    margin-bottom: 20px
+.video
+  width: 570px
+  border-radius: #{$border-radius-xl}
+  height: 414px
+  position: relative
+  background: #{$air-grey}
+  .play-btn
+    cursor: pointer
+    position: absolute
+    content:''
+    width:32px
+    height:32px
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    background: url(../assets/play.svg) center no-repeat
+  
+.reviews
+  margin: 40px 20px 0
+.review
+  position: relative
+  z-index: 1
+  padding: 25px 0 20px 20px
+  background: #fff
+  &-author
+    font-weight: 500
+    margin-top: 20px
+    letter-spacing: -0.035em
+  &-content
+    position: relative
+    z-index: 1
+  &::before
+    content:''
+    position: absolute
+    top: 0
+    left: 10px
+    width:60px
+    height:50px
+    background: url(../assets/quote.svg) no-repeat
+.app-btn-group
+  display: flex
+  align-items: center
+  gap: 30px
+.app-btn
+  width: 180px
+  height: 48px
+  border-radius: 8px
+  display: inline-block
+  &-android
+    background-image: url(../assets/gplay.svg)
+  &-ios
+    background-image: url(../assets/appstore.svg)
+
+.footer
+  padding: 80px 60px 40px
+  background: #{$black}
+  color: #{$white}
+  a
+    color: #{$white}
+  .app-btn
+    border: 1px solid #{$dark-grey}
+  h6,
+  .h6
+    color: #{$dark-grey}
+    text-transform: uppercase
+    margin-bottom: 10px
+  .nav-item
+    &:first-child
+      margin-top: -12px
+    &:last-child
+      margin-bottom: -5px
+.disclaimer
+  color: #{$dark-grey}
+.vertical-spreaded
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+  height: 100%
+
+
+@media (max-width: 992px)
+  .navbar-collapse
+    margin-top:20px

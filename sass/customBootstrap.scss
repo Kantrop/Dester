@@ -1,0 +1,92 @@
+@import "variables";
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+@font-face {
+    font-family: "PP Gatwick";
+    src: url("../assets/Gatwick-Bold.otf") format("opentype")
+   }
+
+$primary: $electric_blue;
+$secondary: $dark_grey;
+$light: $air_grey;
+$dark: $black;
+
+$link-decoration: none;
+$indent-0: 0;
+$indent-xs: 12px;
+$indent-sm: 20px;
+$indent-m: 24px;
+$indent-l: 30px;
+$indent-xl: 32px;
+$indent-xxl: 36px;
+$indent-xxxl: 40px;
+$indent-xxxxl: 48px;
+$indent-xxxxxl: 60px;
+
+$spacer: 24px !default;
+$spacers: (
+    0: 0,
+    1: $indent-xs,
+    2: $indent-sm,
+    3: $indent-m,
+    4: $indent-l,
+    5: $indent-xl,
+    6: $indent-xxl,
+    7: $indent-xxxl,
+    8: $indent-xxxxl,
+    9: $indent-xxxxxl,
+    10: 100px,
+    stage: 124px,
+) !default;
+
+$body-color: $black;
+$paragraph-margin-bottom: $indent-xl;
+$paragraph-margin-top: $indent-xl;
+$grid-gutter-width: $indent-xs;
+
+$border-color: $dark-grey;
+$border-radius: 8px;
+$border-radius-lg: 20px;
+$border-radius-xl: 40px;
+$border-radius-pill: 60px;
+$btn-border-radius-lg: 12px;
+
+$box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
+$font-family-sans-serif: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+$font-size-base: 16px;
+$font-size-lg: 18px;
+$line-height-base: 1.125;
+$line-height-sm: 1.1;
+$line-height-lg: 1.35;
+
+$h1-font-size: 82px;
+$h2-font-size: 62px;
+$h3-font-size: 42px;
+$h4-font-size: 20px;
+$h5-font-size: 18px;
+$h6-font-size: 16px;
+
+$headings-margin-bottom: 0;
+$headings-font-weight: 700;
+$headings-line-height: $line-height-sm;
+
+//TODO - перезадать $input-btn-padding-y  и прочее, а это убрать?
+$input-btn-padding-y: 10px;
+$input-btn-padding-x: 20px;
+
+$input-btn-padding-y-lg: 17px;
+$input-btn-padding-x-lg: 32px;
+$input-btn-font-size-lg: 20px;
+$btn-font-weight: 600;
+
+$navbar-padding-y: 15px;
+$navbar-nav-link-padding-x: 13px;
+$nav-link-padding-y: 10px; //?
+
+$card-border-radius: $border-radius-lg;
+$card-color: $black;
+$card-title-spacer-y: 14px;
+
+$container-padding-x: 80px;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
