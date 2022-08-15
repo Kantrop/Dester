@@ -4,17 +4,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <meta property="og:locale" content="en" />
     <meta property="og:title" content="Dester" />
     <meta
       property="og:description"
       content="Order what you love from US & Europe stores delivered to your doorstep"
     />
-    <meta property="og:image" content="assets/social-template.jpg" />
+    <meta property="og:image" content="/assets/social-template.jpg" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://foo.bar/" />
 
-    <link rel="shortcut icon" href="/images/icons/favicons/fav_logo_2x.ico" />
-    <link rel="apple-touch-icon" href="/images/icons/pwa/apple/default.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/assets/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#2d89ef" />
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
 
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta
@@ -61,11 +87,13 @@
                   <a class="nav-link" href="#">FAQ</a>
                 </li>
               </ul>
-              <div class="lang" data-lang="ae"></div>
-              <button class="btn btn-green ms-8">
-                <span>go to WhatsApp</span
-                ><span class="icon btn-icon icon-whatsapp"></span>
-              </button>
+              <div class="line-group">
+                <div class="lang" data-lang="ae"></div>
+                <button class="btn btn-green ms-8" >
+                  <span>go to WhatsApp</span
+                  ><span class="icon btn-icon icon-whatsapp"></span>
+                </button>
+              </div>
             </div>
           </div>
         </nav>
@@ -73,7 +101,7 @@
     </header>
     <section class="stage stage-greetings mt-9">
       <div class="container">
-        <div class="row">
+        <div class="row gy-9">
           <div class="col-lg col-sm-12">
             <div class="h2">
               Order what you love
@@ -464,12 +492,14 @@
               <div class="col-auto">
                 <a
                   class="app-btn app-btn-ios"
+                  role="button"
                   href="https://apps.apple.com/us/app/some-app-name/id1166101014?itsct=apps_box_badge&amp;itscg=30200"
                 ></a>
               </div>
               <div class="col-auto">
                 <a
                   class="app-btn app-btn-android"
+                  role="button"
                   href="http://play.google.com/store/?pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
                 ></a>
               </div>
@@ -579,12 +609,14 @@
                 <div class="col-auto">
                   <a
                     class="app-btn app-btn-ios"
+                    role="button"
                     href="https://apps.apple.com/us/app/some-app-name/id1166101014?itsct=apps_box_badge&amp;itscg=30200"
                   ></a>
                 </div>
                 <div class="col-auto">
                   <a
                     class="app-btn app-btn-android"
+                    role="button"
                     href="http://play.google.com/store/?pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
                   ></a>
                 </div>
@@ -595,9 +627,18 @@
         <div class="row">
           <div class="col-sm-8">
             <div class="disclaimer text-s">
-              © 2022 Dester FZ-LLC. A4-402, Building no. A4, Al Hamra Industrial
-              Zone-FZ, RAK, United Arab Emirates Reg. No. 0000004022588 Licence
-              No. 45000068
+              © 2022 Dester FZ-LLC.
+              <span
+                itemprop="address"
+                itemscope
+                itemtype="http://schema.org/PostalAddress"
+                ><span itemprop="streetAddress">A4-402, Building no. A4</span>,
+                <span itemprop="addressLocality"
+                  >Al Hamra Industrial Zone-FZ</span
+                >, <span itemprop="addressRegion">RAK</span>,
+                <span itemprop="addressCountry">United Arab Emirates</span> Reg.
+                No. 0000004022588 Licence No. 45000068</span
+              >
             </div>
           </div>
         </div>
