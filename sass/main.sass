@@ -1,5 +1,17 @@
 @use './customBootstrap' as *
 
+.test-bg
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background: url(../bg.png) top center
+  background-size: 1440px
+  z-index: 100
+  pointer-events: none
+  opacity: 0.5
+
 html
   overflow-x: hidden
 
@@ -26,6 +38,7 @@ body
   display: block
   width: 104px
   height: 40px
+  margin: -1px 0
   background: url(../assets/logo.svg) no-repeat left top
 
 .header
@@ -33,6 +46,7 @@ body
   top: 0
   background: #{white}
   z-index: 10
+  box-shadow: 5px 0px 30px rgba(0, 0, 0, 0.1)
   &-content
     display: flex
     align-items: center
@@ -41,29 +55,20 @@ body
     justify-content: flex-end
   .navbar-nav
     margin-right: 12px
+  .nav-link
+    color: #{$black}
+  .btn
+    line-height: 1.12
+    font-weight: 500
 
 .lang
   width: 20px
   height: 20px
   border-radius: 50%
+  cursor: pointer
 
   &[data-lang^="ae"]
     background: url(../assets/ae.png) center no-repeat
-
-//TODO- почистить
-.whatsapp
-  background: #{$whatsapp_green}
-  color: #fff
-  font-weight: 500
-  border: none
-  &::after
-    display: inline-block
-    content: ''
-    width: 18px
-    height: 18px
-    vertical-align: -3px
-    margin-left: 10px
-    background: url(../assets/whatsapp_white.svg) center no-repeat
 
 .illustration
   background-repeat: no-repeat
@@ -84,12 +89,12 @@ body
       height: 426px
       background: url(../assets/delivery.png) center no-repeat
       background-size: contain
-      left: 9px
-      top: -77px
+      left: 10px
+      top: -75px
   &-app
     width: 520px
     height: 372px
-    background-image: url(../assets/app.svg)
+    background-image: url(../assets/appx3.png)
 
     background-size: contain
     background-repeat: no-repeat
@@ -111,11 +116,14 @@ body
         opacity: 0.7
   &-description
     line-height: #{$line-height-lg}
+    font-weight: 600
     margin-bottom: 20px
 
   .subcaption
     padding-right: 23%
   .heading-sup
+    *
+      font-weight: 500
     margin-bottom: #{$indent-sm}
     display: flex
     align-items: center
@@ -170,21 +178,33 @@ body
     border-radius: 50%
     padding: 16px
   &-primary
-    &:hover
+    &:hover,
+    &:focus,
+    &:active
       color: #{$white}
       background-color: #{$primary}
   &-light
     color: #{$primary}
-    &:hover
+    &:hover,
+    &:focus,
+    &:active
       color: #{$primary}
       background: #{$air-grey}
   &-dark
     border: 1px solid #{$dark_grey}
+    background: #{$black}
+    &:hover,
+    &:focus,
+    &:active
+      border: 1px solid #{$white}
+      background: #{$black}
   &-green
     color: #{$white}
     background-color: #{$whatsapp_green}
     border: none
-    &:hover
+    &:hover,
+    &:focus,
+    &:active
       border: none
       color: #{$white}
       background-color: #{$whatsapp_hover}
@@ -194,33 +214,36 @@ body
     width: 18px
     height: 18px
     vertical-align: -3px
-    margin-left: 10px
+    margin-left: 9px
   &-arrow
     border: none
     // background: #{$air-grey}
     // color: #{$electric-blue}
     &::after
       border-style: solid
-      border-width: 2.5px 2.5px 0 0
+      border-width: 2.7px 2.7px 0 0
       content: ''
       display: inline-block
       width: 9px
       height: 9px
       margin-right: 14px
       position: relative
-      left: 8px
-      top: 1px
+      left: 6.5px
+      top: 0px
       transform: rotate(45deg)
       vertical-align: middle
       transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)
-    &:hover
+    &:hover,
+    &:focus,
+    &:active
       &::after
         transform: translateX(6px) rotate(45deg)
 .navbar
+  align-items: flex-start
   &-nav
     letter-spacing: -0.032em
 .paragraph
-  margin: 32px 0 30px
+  margin: 32px 0
 
 .card-list-item
   display: flex
@@ -236,7 +259,6 @@ body
     height: 50px
   &-index
     font-weight: 600
-    line-height: 22px
     font-size: 18px
     letter-spacing: -0.035em
   &-text
@@ -400,23 +422,24 @@ body
   height: 414px
   position: relative
   background: #{$air-grey}
-  .play-btn
-    cursor: pointer
-    position: absolute
-    content: ''
-    width: 32px
-    height: 32px
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
-    background: url(../assets/play.svg) center no-repeat
+  &.stopped
+    .play-btn
+      cursor: pointer
+      position: absolute
+      content: ''
+      width: 32px
+      height: 32px
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      background: url(../assets/play.svg) center no-repeat
 
 .reviews
   margin: 40px 20px 0
 .review
   position: relative
   z-index: 1
-  padding: 25px 0 20px 20px
+  padding: 25px 15px 20px 19px
   background: #fff
   &-author
     font-weight: 500
@@ -425,6 +448,7 @@ body
   &-content
     position: relative
     z-index: 1
+    line-height: 133%
   &::before
     content: ''
     position: absolute
@@ -443,6 +467,7 @@ body
   height: 48px
   border-radius: 8px
   display: inline-block
+  vertical-align: middle
   &-android
     background-image: url(../assets/gplay.svg)
   &-ios
@@ -468,6 +493,16 @@ body
       margin-top: -10px
     &:last-child
       margin-bottom: -10px
+  .payment-types
+    margin-top: 20px
+    display: flex
+    flex-wrap: wrap
+    gap: 15px
+    align-items: flex-start
+  .btn-dark
+    padding-top: 15px
+    padding-bottom: 15px
+      
 .disclaimer
   color: #{$dark-grey}
 .vertical-spreaded
