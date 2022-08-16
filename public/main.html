@@ -4,6 +4,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!--
+      разметка для превью, когда ссылкой делятся в месенджерах и соцсетях
+    -->
     <meta property="og:locale" content="en" />
     <meta property="og:title" content="Dester" />
     <meta
@@ -13,6 +16,7 @@
     <meta property="og:image" content="/assets/social-template.jpg" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://foo.bar/" />
+    <!---->
 
     <link
       rel="apple-touch-icon"
@@ -51,9 +55,10 @@
     <title>Dester</title>
 
     <link rel="stylesheet" href="./css/main.css" />
+    <script src="/js/init.js"></script>
+    <script src="/js/scripts.js"></script>
   </head>
   <body>
-    <div class="test-bg"></div>
     <header class="header">
       <div class="container">
         <nav class="navbar navbar-expand-lg">
@@ -90,7 +95,7 @@
               </ul>
               <div class="line-group">
                 <div class="lang" data-lang="ae"></div>
-                <button class="btn btn-green ms-8 header-btn" >
+                <button class="btn btn-green ms-8 header-btn">
                   <span>go to WhatsApp</span
                   ><span class="icon btn-icon icon-whatsapp"></span>
                 </button>
@@ -102,8 +107,8 @@
     </header>
     <section class="stage stage-greetings mt-9">
       <div class="container">
-        <div class="row gy-9">
-          <div class="col-lg col-sm-12">
+        <div class="row gy-7">
+          <div class="col-lg col-sm-12 order-sm-2 order-lg-1">
             <div class="h2">
               Order what you love
               <br />
@@ -115,9 +120,13 @@
               We buy & deliver your shopping orders from top USA and Europe
               websites like Amazon, eBay, iHerb, Walmart, Nike and more.
             </p>
-            <button class="btn btn-light btn-arrow btn-lg">Order here</button>
+            <button
+              class="btn btn-light btn-arrow btn-lg btn-adaptive-lg-wide btn-adaptive-lg-primary"
+            >
+              Order here
+            </button>
           </div>
-          <div class="col-ms-12 col-lg-auto">
+          <div class="col-ms-12 col-lg-auto order-sm-1 order-lg-2">
             <div class="illustration illustration-greetings"></div>
           </div>
         </div>
@@ -228,9 +237,7 @@
           </div>
         </div>
         <div class="mt-7">
-          <div
-            class="row g-4 row-cols-lg-5 row-cols-md-4 row-cols-sm-3 row-cols-2"
-          >
+          <div class="row g-4 row-cols-lg-5 row-cols-md-3">
             <div class="col">
               <a class="partner" href="#">
                 <div class="partner-logo"></div>
@@ -276,9 +283,11 @@
                 <div class="partner-logo"></div>
               </a>
             </div>
-            <div class="col">
+            <div class="col col-md-12">
               <div class="partner">
-                <a class="btn btn-arrow btn-primary partner-button">
+                <a
+                  class="btn btn-arrow btn-primary partner-button btn-adaptive-lg-wide btn-adaptive-lg-light"
+                >
                   See more
                 </a>
               </div>
@@ -308,13 +317,13 @@
       </div>
     </section>
 
-    <section class="stage mt-stage">
+    <section class="stage stage-video mt-stage">
       <div class="container">
         <div class="heading-sup">
           <span class="h6">Experience </span
           ><span class="icon icon-small icon-diamond"></span>
         </div>
-        <div class="row gx-10 gy-8">
+        <div class="row gx-10 gy-lg-4 gy-md-2">
           <div class="col-lg-6 col-sm-12">
             <div class="h2">
               Over 14 years at&nbsp;the&nbsp;international e-commerce
@@ -330,14 +339,16 @@
               </li>
               <li>We have three logistics centers in the US, EU, UAE</li>
             </ul>
-            <button class="btn btn-light btn-arrow btn-lg">
-              More about us
-            </button>
           </div>
-          <div class="col-sm-12 col-lg-6">
-            <div class="video stopped mt-3">
+          <div class="col-md-12 col-lg-6 lg-out-vflow">
+            <div class="video stopped">
               <div class="play-btn"></div>
             </div>
+          </div>
+          <div class="col-md-12">
+            <button class="btn btn-light btn-arrow btn-lg btn-adaptive-lg-wide">
+              More about us
+            </button>
           </div>
         </div>
       </div>

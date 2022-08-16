@@ -13101,6 +13101,7 @@ body {
   width: 385px;
   height: 378px;
   background-image: url(../assets/greetings-image.svg);
+  background-position: center;
 }
 .illustration-delivery {
   position: relative;
@@ -13150,6 +13151,20 @@ body {
   line-height: 135%;
   font-weight: 600;
   margin-bottom: 20px;
+}
+.stage-video .video {
+  margin-top: 24px;
+}
+@media (max-width: 992px) {
+  .stage-video .video {
+    margin-top: 0;
+    padding-top: 56.25%;
+    height: 0;
+    width: 100%;
+  }
+}
+.stage-video .list {
+  margin-bottom: 0;
 }
 .stage .subcaption {
   padding-right: 23%;
@@ -13509,11 +13524,14 @@ body {
 }
 
 .list {
-  margin: 32px 0 30px;
+  margin: 32px 0;
   padding-left: 30px;
 }
 .list li {
   margin-bottom: 20px;
+}
+.list li:last-child {
+  margin-bottom: 0;
 }
 
 .video {
@@ -13664,6 +13682,23 @@ body {
   align-items: center;
 }
 
+.lg-out-vflow {
+  height: 0px;
+}
+@media (max-width: 992px) {
+  .lg-out-vflow {
+    height: auto;
+  }
+}
+
+.gy-lg-4 {
+  --bs-gutter-y: 32px;
+}
+
+.gy-md-2 {
+  --bs-gutter-y: 20px;
+}
+
 @media (max-width: 992px) {
   .navbar-collapse {
     margin-top: 20px;
@@ -13672,6 +13707,34 @@ body {
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
+  }
+  .btn-adaptive-lg-wide {
+    width: 100%;
+  }
+  .btn-adaptive-lg-wide:after {
+    content: none !important;
+  }
+  .btn-adaptive-lg-primary {
+    color: #FFFFFF !important;
+    background-color: #4833F5 !important;
+  }
+  .btn-adaptive-lg-primary:hover, .btn-adaptive-lg-primary:focus, .btn-adaptive-lg-primary:active {
+    color: #FFFFFF !important;
+    background-color: #4833F5 !important;
+  }
+  .btn-adaptive-lg-light {
+    color: #4833F5 !important;
+    background: #F6F6F6 !important;
+  }
+  .btn-adaptive-lg-light:hover, .btn-adaptive-lg-light:focus, .btn-adaptive-lg-light:active {
+    color: #4833F5 !important;
+    background: #F6F6F6 !important;
+  }
+  .banner-summersale {
+    background-position: left 258px top -153px;
+  }
+  .stage-rounded {
+    border-radius: 0;
   }
 }
 
