@@ -99,8 +99,6 @@ body
 
     background-size: contain
     background-repeat: no-repeat
-  @media (max-width: 992px)
-    width: 100%
 
 .stage
   &-rounded
@@ -127,9 +125,6 @@ body
         padding-top: 56.25%
         height: 0
         width: 100%
-        
-    .list
-      margin-bottom: 0
   .subcaption
     padding-right: 23%
   .heading-sup
@@ -554,8 +549,8 @@ body
 
 .gy-lg-4
   --bs-gutter-y: 32px
-.gy-md-2
-  --bs-gutter-y: 20px
+.gy-md-3
+  --bs-gutter-y: 40px
 
 @media (max-width: 992px)
   .navbar-collapse
@@ -595,3 +590,29 @@ body
   .stage
     &-rounded
       border-radius: 0
+
+  .illustration
+    width: 100%
+    &-delivery
+      &:after
+        right: -140px
+    &-app
+      padding-top: 70%
+  .g-4
+    --bs-gutter-y: 20px
+    --bs-gutter-x: 20px
+
+.container
+  max-width: 1240px !important
+  --bs-gutter-x: 48px
+
+@media (max-width: 700px)
+  .banner-summersale
+    background-position: right top 0
+    background-size: 201px
+
+@media (max-width: 450px)
+  .illustration
+    &-greetings
+      padding-top: 98%
+      height: auto

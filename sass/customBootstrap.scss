@@ -19,6 +19,16 @@ $indent-xxxl: 40px;
 $indent-xxxxl: 48px;
 $indent-xxxxxl: 60px;
 
+$grid-breakpoints: (
+  xxs: 0,
+  xs: 1px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+) !default;
+
 $spacer: 24px !default;
 $spacers: (
     0: 0,
@@ -61,6 +71,24 @@ $h3-font-size: 42px;
 $h4-font-size: 20px;
 $h5-font-size: 18px;
 $h6-font-size: 16px;
+h1,.h1{
+    font-size: $h1-font-size !important;
+}
+h2,.h2{
+    font-size: $h2-font-size !important;
+}
+h3,.h3{
+    font-size: $h3-font-size !important;
+}
+h4,.h4{
+    font-size: $h4-font-size !important;
+}
+h5,.h5{
+    font-size: $h5-font-size !important;
+}
+h5,.h5{
+    font-size: $h6-font-size !important;
+}
 
 $headings-margin-bottom: 0;
 $headings-font-weight: 700;
