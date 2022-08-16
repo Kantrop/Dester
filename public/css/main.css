@@ -14935,6 +14935,11 @@ body {
   --bs-gutter-y: 40px;
 }
 
+.container {
+  max-width: 1240px !important;
+  --bs-gutter-x: 48px;
+}
+
 @media (max-width: 992px) {
   .navbar-collapse {
     margin-top: 20px;
@@ -14977,29 +14982,179 @@ body {
   }
   .illustration-delivery:after {
     right: -140px;
-  }
-  .illustration-app {
-    padding-top: 70%;
+    left: auto;
   }
   .g-4 {
     --bs-gutter-y: 20px;
     --bs-gutter-x: 20px;
   }
-}
-.container {
-  max-width: 1240px !important;
-  --bs-gutter-x: 48px;
-}
-
-@media (max-width: 700px) {
-  .banner-summersale {
-    background-position: right top 0;
-    background-size: 201px;
+  .g-4-logo {
+    transform: scale(0.5);
+  }
+  .partner-btn {
+    margin-top: 40px;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 700px) {
+  body {
+    font-size: 14px;
+  }
+  .text {
+    font-size: 14px;
+  }
+  .text-l {
+    font-size: 14px;
+  }
+  .h2, h2 {
+    font-size: 24px !important;
+  }
+  .h3, h3 {
+    font-size: 24px !important;
+  }
+  .h4, h4 {
+    font-size: 14px !important;
+  }
+  .h6, h6 {
+    font-size: 12px !important;
+  }
+  .stage-inverse {
+    padding: 24px 0;
+  }
+  .stage-greetings {
+    text-align: center;
+    margin-top: 12px !important;
+    margin-bottom: 48px !important;
+  }
+  .stage .subcaption {
+    padding-right: 0;
+    margin: 16px 0 20px;
+  }
+  .stage .heading-sup {
+    margin-bottom: 10px;
+  }
+  .stage-video .list {
+    margin-bottom: 0;
+  }
+  .stage-delivery .h3, .stage-delivery h3 {
+    font-size: 18px !important;
+  }
+  .stage-delivery .paragraph {
+    font-size: 12px !important;
+  }
+  .stage-delivery .btn {
+    border: none;
+    background: none;
+    padding: 0;
+    color: #fff;
+  }
+  .illustration-delivery {
+    transform: scale(0.5);
+    height: 0;
+  }
+  .illustration-delivery:after {
+    right: -210px;
+  }
+  .mt-stage {
+    margin-top: 48px !important;
+  }
+  .g-2 {
+    --bs-gutter-y: 8px;
+    --bs-gutter-x: 8px;
+  }
+  .g-4 {
+    --bs-gutter-y: 8px;
+    --bs-gutter-x: 8px;
+  }
+  .gy-7 {
+    --bs-gutter-y: 20px;
+  }
+  .container {
+    --bs-gutter-x: 32px;
+  }
+  .banner {
+    padding: 28px 20px;
+    border-radius: 16px;
+    min-height: 132px;
+  }
+  .banner-summersale {
+    background-position: right -30px top -25px;
+    background-size: 201px;
+  }
+  .banner-caption {
+    font-size: 16px;
+  }
+  .banner .paragraph {
+    display: none;
+  }
+  .partner {
+    border-radius: 8px;
+  }
+  .partner-logo {
+    transform: scale(0.5);
+  }
+  .partner-btn {
+    margin-top: 20px;
+  }
+  .btn {
+    font-size: 14px !important;
+  }
+  .mt-7 {
+    margin-top: 20px !important;
+  }
+  .list {
+    margin: 20px 0;
+  }
+  .list li {
+    margin-bottom: 10px;
+  }
+  .gy-md-3 {
+    --bs-gutter-y: 20px;
+  }
+  .reviews {
+    margin: 20px 10px 0;
+  }
+  .review:before {
+    width: 35px;
+    height: 27px;
+    left: 15px;
+    top: 15px;
+    background-size: contain;
+  }
+  .stage .app-btn {
+    width: 100%;
+    height: auto;
+    padding-top: 25.5%;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .footer {
+    padding: 32px 0;
+  }
+  .footer .my-10 {
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
+  }
+  .footer .gy-7 {
+    --bs-gutter-y: 40px;
+  }
+  .footer .g-9 {
+    --bs-gutter-x: 24px;
+    --bs-gutter-y: 24px;
+  }
+  .footer .nav-link {
+    font-size: 14px;
+  }
+  .footer .disclaimer {
+    font-size: 12px !important;
+  }
+}
+@media (max-width: 520px) {
   .illustration-greetings {
     padding-top: 98%;
+    height: auto;
+  }
+  .illustration-app {
+    padding-top: 70%;
     height: auto;
   }
 }

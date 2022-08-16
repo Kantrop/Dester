@@ -552,6 +552,10 @@ body
 .gy-md-3
   --bs-gutter-y: 40px
 
+.container
+  max-width: 1240px !important
+  --bs-gutter-x: 48px
+  
 @media (max-width: 992px)
   .navbar-collapse
     margin-top: 20px
@@ -596,23 +600,142 @@ body
     &-delivery
       &:after
         right: -140px
-    &-app
-      padding-top: 70%
+        left: auto
   .g-4
     --bs-gutter-y: 20px
     --bs-gutter-x: 20px
+    
+    &-logo
+      transform: scale(0.5)
 
-.container
-  max-width: 1240px !important
-  --bs-gutter-x: 48px
+  .partner-btn
+      margin-top: 40px
 
 @media (max-width: 700px)
-  .banner-summersale
-    background-position: right top 0
-    background-size: 201px
+  body
+    font-size: 14px
+  .text
+    font-size: 14px
+    &-l
+      font-size: 14px
+  .h2, h2
+    font-size: 24px !important
+  .h3, h3
+    font-size: 24px !important
+  .h4, h4
+    font-size: 14px !important
+  .h6, h6
+    font-size: 12px !important
+  .stage
+    &-inverse
+      padding: 24px 0
+    &-greetings
+      text-align: center
+      margin-top: 12px !important
+      margin-bottom: 48px !important
+    .subcaption
+      padding-right: 0
+      margin: 16px 0 20px
+    .heading-sup
+      margin-bottom: 10px
+    &-video
+      .list
+        margin-bottom: 0
+    &-delivery
+      .h3, h3
+        font-size: 18px !important
+      .paragraph
+        font-size: 12px !important
+      .btn
+        border: none
+        background: none
+        padding: 0
+        color: #fff
+  .illustration
+    &-delivery
+      transform: scale(0.5)
+      height: 0
+      &:after
+        right: -210px
+  .mt-stage
+    margin-top: 48px !important
+  
+  .g-2
+    --bs-gutter-y: 8px
+    --bs-gutter-x: 8px
+  .g-4
+    --bs-gutter-y: 8px
+    --bs-gutter-x: 8px
+  .gy-7
+    --bs-gutter-y: 20px
+  .container
+    --bs-gutter-x: 32px
 
-@media (max-width: 450px)
+  .banner
+    padding: 28px 20px
+    border-radius: 16px
+    min-height: 132px
+    &-summersale
+      background-position: right -30px top -25px
+      background-size: 201px
+    &-caption
+      font-size: 16px
+    .paragraph
+      display: none
+
+  .partner
+    border-radius: 8px
+    &-logo
+      transform: scale(0.5)
+  .partner-btn
+      margin-top: 20px
+  .btn
+    font-size: 14px !important
+  .mt-7
+    margin-top: 20px !important
+
+  .list
+    margin: 20px 0
+    li
+      margin-bottom: 10px
+  .gy-md-3
+    --bs-gutter-y: 20px
+  .reviews
+    margin: 20px 10px 0
+  .review
+    &:before
+      width:35px
+      height:27px
+      left:15px
+      top:15px
+      background-size: contain
+  .stage .app-btn
+    width: 100%
+    height: auto
+    padding-top: 25.5%
+    background-size: contain
+    background-repeat: no-repeat
+
+  .footer
+    padding: 32px 0
+    .my-10
+      margin-top: 40px !important
+      margin-bottom: 40px !important
+    .gy-7
+      --bs-gutter-y: 40px
+    .g-9
+      --bs-gutter-x: 24px
+      --bs-gutter-y: 24px
+    .nav-link
+      font-size: 14px
+    .disclaimer
+      font-size: 12px !important
+
+@media (max-width: 520px)
   .illustration
     &-greetings
       padding-top: 98%
+      height: auto
+    &-app
+      padding-top: 70%
       height: auto
