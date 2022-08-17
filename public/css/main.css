@@ -14422,10 +14422,12 @@ body {
   padding-right: 23%;
 }
 .stage .heading-sup {
-  font-weight: 500;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
+}
+.stage .heading-sup * {
+  font-weight: 500;
 }
 .stage .heading-sup .icon {
   margin-left: 6px;
