@@ -260,6 +260,7 @@ body
 .card-list-item
   display: flex
   align-self: stretch
+  height: 100%
 .card
   border: none
   min-height: 320px
@@ -535,6 +536,12 @@ body
   flex-direction: column
   height: 100%
 
+.swiper-list
+  .swiper-slide
+    height: auto
+  .swiper-wrapper.row
+    width: auto
+
 .swiper-button-next
   right: -25px!important
   z-index: 1
@@ -758,6 +765,8 @@ body
     padding: 14px 18px
     border-radius: 100px
     justify-content: space-between
+    box-shadow: none
+    background-color: #{$air-grey}
     &-content
       display: none
     &-text
@@ -845,7 +854,11 @@ body
   &-body
     margin-top: 30px
 
-@media (max-width: 700px)
+.swiper-list
+  .swiper-pagination
+    display: none
+
+@media (max-width: 768px)
   .fixed
     left: 16px
     right: 16px
@@ -901,6 +914,8 @@ body
         right: -210px
   .mt-stage
     margin-top: 48px !important
+  .mt-9
+    margin-top: 60px
 
   .g-2
     --bs-gutter-y: 8px
@@ -951,12 +966,6 @@ body
       left: 15px
       top: 15px
       background-size: contain
-  .stage .app-btn
-    width: 100%
-    height: auto
-    padding-top: 25.5%
-    background-size: contain
-    background-repeat: no-repeat
 
   .footer
     padding: 32px 0
@@ -973,24 +982,33 @@ body
     .disclaimer
       font-size: 12px !important
 
-  .swiper-wrapper
-    &.row
-      flex-wrap: nowrap
-      --bs-gutter-x: 0
+  .swiper-button-next
+    right: -12px!important
+  .swiper-button-prev
+    left: -12px!important
+
+@media (max-width: 575px)
+  .stage .app-btn
+    width: 100%
+    height: auto
+    padding-top: 25.5%
+    background-size: contain
+    background-repeat: no-repeat
   .swiper-list
     padding-bottom: 26px
     margin-bottom: 20px
     .swiper-pagination
+      display: block
       bottom: 0
       &-bullet
         background: #{$white}
         opacity: 0.5
         &-active
           opacity: 1
-  .swiper-button-next
-    right: -12px!important
-  .swiper-button-prev
-    left: -12px!important
+  .swiper-wrapper
+    &.row
+      flex-wrap: nowrap
+      --bs-gutter-x: 0
 
 @media (max-width: 520px)
   .illustration
