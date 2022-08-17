@@ -10,8 +10,8 @@ const toggleClassWithAnimationDelay = (el, btn, extra) => {
   if (el.classList.contains("opened")) {
     el.classList.add("closing");
     el.classList.remove("opened");
-    
-    extra?.classList.add("closing")
+
+    extra?.classList.add("closing");
     extra?.classList.remove("opened");
 
     btn.classList.add("collapsed");
@@ -56,5 +56,7 @@ document.addEventListener("scroll", () => {
 const socialOverlayBtn = document.querySelector("[data-target=socialOverlay]");
 const socialOverlay = document.querySelector("#socialOverlay");
 socialOverlayBtn.addEventListener("click", () => {
-  toggleClassWithAnimationDelay(socialOverlay, socialOverlayBtn);
+  if (window.innerHeight < 575) {
+    toggleClassWithAnimationDelay(socialOverlay, socialOverlayBtn);
+  }
 });

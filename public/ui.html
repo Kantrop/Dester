@@ -2,45 +2,7 @@
 <html lang="en">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <meta property="og:locale" content="en" />
-    <meta property="og:title" content="Dester" />
-    <meta
-      property="og:description"
-      content="Order what you love from US & Europe stores delivered to your doorstep"
-    />
-    <meta property="og:image" content="/assets/social-template.jpg" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://foo.bar/" />
-
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/assets/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/assets/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/assets/favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
-    <link
-      rel="mask-icon"
-      href="/assets/favicon/safari-pinned-tab.svg"
-      color="#5bbad5"
-    />
-    <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
-    <meta name="msapplication-TileColor" content="#2d89ef" />
-    <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=100%, initial-scale=1" />
 
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta
@@ -50,6 +12,11 @@
 
     <title>Dester</title>
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
@@ -57,18 +24,7 @@
       <div class="container">
         <nav class="navbar navbar-expand-lg">
           <a class="navbar-brand logo" href="/" title="Dester"></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <div class="navbar-collapse" id="headerMenu">
             <div class="header-content">
               <ul class="navbar-nav me-1">
                 <li class="nav-item">
@@ -87,201 +43,301 @@
                   <a class="nav-link" href="#">FAQ</a>
                 </li>
               </ul>
-              <div class="line-group">
-                <div class="lang" data-lang="ae"></div>
-                <button class="btn btn-green ms-8" >
-                  <span>go to WhatsApp</span
-                  ><span class="icon btn-icon icon-whatsapp"></span>
-                </button>
-              </div>
             </div>
+          </div>
+          <div class="line-group">
+            <div class="lang" data-lang="ae"></div>
+            <button class="btn btn-green ms-8 header-btn">
+              <span>go to WhatsApp</span
+              ><span class="icon btn-icon icon-whatsapp"></span>
+            </button>
+            <button
+              class="navbar-toggler header-menu-toggler collapsed"
+            ></button>
           </div>
         </nav>
       </div>
     </header>
-    <section class="stage mt-9">
+
+    <section class="stage mt-stage">
       <div class="container">
-        <div class="row gy-9">
-          <div class="col-lg col-sm-12">
-            <div class="h2">
-              Order what you love
-              <br />
-              from US & Europe stores
-              <br />
-              delivered to your doorstep
-            </div>
-            <p class="paragraph subcaption text-l">
-              We buy & deliver your shopping orders from top USA and Europe
-              websites like Amazon, eBay, iHerb, Walmart, Nike and more.
-            </p>
-            <button class="btn btn-light btn-arrow btn-lg">Order here</button>
+        <div class="alert alert-primary" role="alert">
+          Headings dont have margins. <b>It IS feature.</b> You should wrap
+          content in class="paragraph" instead
+        </div>
+        <div class="paragraph">
+          <h1>h1. Bootstrap heading</h1>
+          <h2>h2. Bootstrap heading</h2>
+          <h3>h3. Bootstrap heading</h3>
+          <h4>h4. Bootstrap heading</h4>
+          <h5>h5. Bootstrap heading</h5>
+          <h6>h6. Bootstrap heading</h6>
+          <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+          <p>
+            <del>This line of text is meant to be treated as deleted text.</del>
+          </p>
+          <p>
+            <s
+              >This line of text is meant to be treated as no longer
+              accurate.</s
+            >
+          </p>
+          <p>
+            <ins
+              >This line of text is meant to be treated as an addition to the
+              document.</ins
+            >
+          </p>
+          <p><u>This line of text will render as underlined.</u></p>
+          <p>
+            <small
+              >This line of text is meant to be treated as fine print.</small
+            >
+          </p>
+          <p><strong>This line rendered as bold text.</strong></p>
+          <p><em>This line rendered as italicized text.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="stage mt-stage">
+      <div class="container">
+        <h3>Buttons</h3>
+        <h4 class="mt-4">Used</h4>
+        <div class="paragraph">
+          <div class="d-flex mt-4" style="gap: 30px">
+            <button type="button" class="btn btn-primary">Primary</button>
+            <button type="button" class="btn btn-primary btn-arrow">
+              Arrow
+            </button>
+            <button type="button" class="btn btn-success">Success</button>
+            <button type="button" class="btn btn-light">Light</button>
+            <button type="button" class="btn btn-light btn-arrow">Arrow</button>
+            <button type="button" class="btn btn-dark">Dark</button>
           </div>
-          <div class="col-ms-12 col-lg-auto">
-            <div class="illustration illustration-greetings"></div>
+        </div>
+
+        <h4 class="mt-4">All</h4>
+        <div class="paragraph">
+          <div class="d-flex mt-4" style="gap: 30px">
+            <button type="button" class="btn btn-primary">Primary</button>
+            <button type="button" class="btn btn-secondary">Secondary</button>
+            <button type="button" class="btn btn-success">Success</button>
+            <button type="button" class="btn btn-danger">Danger</button>
+            <button type="button" class="btn btn-warning">Warning</button>
+            <button type="button" class="btn btn-info">Info</button>
+            <button type="button" class="btn btn-light">Light</button>
+            <button type="button" class="btn btn-dark">Dark</button>
+
+            <button type="button" class="btn btn-link">Link</button>
+          </div>
+        </div>
+        <div class="paragraph">
+          <div class="d-flex mt-4" style="gap: 30px">
+            <button type="button" class="btn btn-outline-primary">
+              Primary
+            </button>
+            <button type="button" class="btn btn-outline-secondary">
+              Secondary
+            </button>
+            <button type="button" class="btn btn-outline-success">
+              Success
+            </button>
+            <button type="button" class="btn btn-outline-danger">Danger</button>
+            <button type="button" class="btn btn-outline-warning">
+              Warning
+            </button>
+            <button type="button" class="btn btn-outline-info">Info</button>
+            <button type="button" class="btn btn-outline-light">Light</button>
+            <button type="button" class="btn btn-outline-dark">Dark</button>
+          </div>
+        </div>
+        <div class="paragraph">
+          <div class="d-flex mt-4" style="gap: 30px">
+            <button type="button" class="btn btn-primary btn-lg">
+              Large button
+            </button>
+            <button type="button" class="btn btn-secondary btn-lg">
+              Large button
+            </button>
+          </div>
+          <div class="d-flex mt-4" style="gap: 30px">
+            <button type="button" class="btn btn-primary btn-sm">
+              Small button
+            </button>
+            <button type="button" class="btn btn-secondary btn-sm">
+              Small button
+            </button>
+          </div>
+          <div class="d-flex mt-4" style="gap: 30px">
+            <button type="button" class="btn btn-primary" disabled>
+              Primary button
+            </button>
+            <button type="button" class="btn btn-secondary" disabled>
+              Button
+            </button>
+            <button type="button" class="btn btn-outline-primary" disabled>
+              Primary button
+            </button>
+            <button type="button" class="btn btn-outline-secondary" disabled>
+              Button
+            </button>
           </div>
         </div>
       </div>
     </section>
-    <section class="stage mt-stage stage-inverse stage-rounded">
+
+    <section class="stage mt-stage stage-inverse">
       <div class="container">
-        <div class="row">
-          <div class="col">
-            <div class="h3">How to order</div>
-            <div class="row g-2 mt-2 row-cols-lg-3 row-cols-sm-2 row-cols-1">
-              <div class="card-list-item">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="card-index">01</div>
-                    <div class="card-icon icon-device mt-9"></div>
-                    <div class="h5 card-title">Choose a product</div>
-                    <p class="card-text mb-1">
-                      Find a product you want from any store in the USA or
-                      Europe (Amazon, eBay, iHerb, Walmart, Nike or other)
-                    </p>
-                  </div>
-                </div>
+        <h3>Cards on inverse</h3>
+        <div class="paragraph row">
+          <div class="col-auto">
+            <div class="card" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
               </div>
-              <div class="card-list-item">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="card-index">02</div>
-                    <div class="card-icon icon-link mt-9"></div>
-                    <div class="h5 card-title">Choose a product</div>
-                    <p class="card-text mb-1">
-                      Send us a link or screenshot to this product via WhatsApp
-                      messenger. We are avaliable every day from 9am to 9pm.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="card-list-item">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="card-index">03</div>
-                    <div class="card-icon icon-calc mt-9"></div>
-                    <div class="h5 card-title">Get the final price</div>
-                    <p class="card-text mb-1">
-                      We will calculate the final price delivered to your door
-                      (including shipping, customs and service fees).
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="card-list-item">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="card-index">04</div>
-                    <div class="card-icon icon-wallet mt-9"></div>
-                    <div class="h5 card-title">Confirm and pay the order</div>
-                    <p class="card-text mb-1">
-                      Confirm your order and pay for it. So we will buyout your
-                      items immediatelly.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="card-list-item">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="card-index">05</div>
-                    <div class="card-icon icon-box mt-9"></div>
-                    <div class="h5 card-title">Get the order</div>
-                    <p class="card-text mb-1">
-                      We will ship it from the US or Europe, clear UAE customs
-                      and deliver it to you doors in 3-7 days
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="card-list-item">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="card-index">06</div>
-                    <div class="card-icon icon-box mt-9"></div>
-                    <div class="h5 card-title">Get the order</div>
-                    <p class="card-text mb-1">
-                      We will ship it from the US or Europe, clear UAE customs
-                      and deliver it to you doors in 3-7 days
-                    </p>
-                  </div>
-                </div>
+            </div>
+          </div>
+          <div class="col-xs-3">
+            <div class="card">
+              <div class="card-body">
+                <div class="card-index">01</div>
+                <div class="card-icon icon-device mt-9"></div>
+                <div class="h5 card-title">Choose a product</div>
+                <p class="card-text mb-1">
+                  Find a product you want from any store in the USA or Europe
+                  (Amazon, eBay, iHerb, Walmart, Nike or other)
+                </p>
               </div>
             </div>
           </div>
         </div>
-        <div class="h4 mt-7 stage-description">
-          Some questions remain?
-          <a href="mailto:a@a.a" class="underline">Write&nbsp;to&nbsp;us </a>
+      </div>
+    </section>
+
+    <section class="stage mt-stage">
+      <div class="container">
+        <h3>List</h3>
+        <ul class="list">
+          <li>An item</li>
+          <li>A second item</li>
+          <li>A third item</li>
+          <li>A fourth item</li>
+          <li>And a fifth one</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="stage mt-stage">
+      <div class="container">
+        <h3>Table</h3>
+        <div class="paragraph">
+          <table class="table table-borderless">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="stage stage-delivery mt-stage stage-inverse">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="h3">Ready to shop with Dester?</div>
+            <p class="paragraph subcaption text-m">
+              Let Dester take care of your shopping
+            </p>
+            <button class="btn btn-light btn-arrow btn-lg">
+              Go to WhatsApp
+            </button>
+          </div>
+          <div class="col-xs-3">
+            <div class="illistration illustration-delivery"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stage mt-stage">
+      <div class="container">
+        <h3>Overlay</h3>
+        <div class="paragraph">
+          <button class="btn btn-primary btn-arrow" id="overlay-btn-example">
+            trigger
+          </button>
+        </div>
+        <div class="overlay" id="overayExample">
+          <div class="overlay-content">
+            <div class="overlay-text">Overlay Caption</div>
+            <div class="overlay-body">Content</div>
+          </div>
+        </div>
+        <script>
+          const overlayBtn = document.querySelector("#overlay-btn-example");
+          const overlay = document.querySelector("#overayExample");
+          overlayBtn.addEventListener("click", () => {
+            // if(window.innerHeight < 575) {
+            toggleClassWithAnimationDelay(overlay, overlayBtn);
+            // }s
+          });
+        </script>
+      </div>
+    </section>
+
+    <section class="stage mt-stage">
+      <div class="container">
+        <h3>Review</h3>
+
+        <div class="review">
+          <div class="text text-m review-content">
+            Great service, I worried about my first package but everything went
+            smoothly, support team is quick and helpful, found me a good
+            alternative to what I wanted. Very simple interface i used just
+            WhatsApp as usual. I’m happy with all. Thanks you!
+          </div>
+          <div class="review-author">Mohammed A.</div>
         </div>
       </div>
     </section>
     <section class="stage mt-stage">
       <div class="container">
-        <div class="heading-sup">
-          <span class="h6">Shopping ideas </span
-          ><span class="icon icon-small icon-cart"></span>
-        </div>
-        <div class="row">
-          <div class="col-xl-6 col-lg-8 col-md-12">
-            <div class="h2">Best online stores for&nbsp;best prices</div>
-          </div>
-        </div>
-        <div class="mt-7">
-          <div
-            class="row g-4 row-cols-lg-5 row-cols-md-4 row-cols-sm-3 row-cols-2"
-          >
-            <div class="col">
-              <a class="partner">
-                <div class="partner-logo"></div>
-              </a>
-            </div>
-            <div class="col">
-              <a class="partner">
-                <div class="partner-logo"></div>
-              </a>
-            </div>
-            <div class="col">
-              <a class="partner">
-                <div class="partner-logo"></div>
-              </a>
-            </div>
-            <div class="col">
-              <a class="partner">
-                <div class="partner-logo"></div>
-              </a>
-            </div>
-            <div class="col">
-              <a class="partner">
-                <div class="partner-logo"></div>
-              </a>
-            </div>
-            <div class="col">
-              <a class="partner">
-                <div class="partner-logo"></div>
-              </a>
-            </div>
-            <div class="col">
-              <a class="partner">
-                <div class="partner-logo"></div>
-              </a>
-            </div>
-            <div class="col">
-              <a class="partner">
-                <div class="partner-logo"></div>
-              </a>
-            </div>
-            <div class="col">
-              <a class="partner">
-                <div class="partner-logo"></div>
-              </a>
-            </div>
-            <div class="col">
-              <div class="partner">
-                <a class="btn btn-arrow btn-primary partner-button">
-                  See more
-                </a>
-              </div>
-            </div>
+        <h3>Partner</h3>
+        <div class="paragraph">
+          <div class="col-3">
+            <a class="partner" href="#">
+              <div class="partner-logo"></div>
+            </a>
           </div>
         </div>
       </div>
@@ -307,210 +363,6 @@
       </div>
     </section>
 
-    <section class="stage mt-stage">
-      <div class="container">
-        <div class="heading-sup">
-          <span class="h6">Experience </span
-          ><span class="icon icon-small icon-diamond"></span>
-        </div>
-        <div class="row gx-10 gy-8">
-          <div class="col-lg-6 col-sm-12">
-            <div class="h2">
-              Over 14 years at&nbsp;the&nbsp;international e-commerce
-            </div>
-            <ul class="list text text-l">
-              <li>
-                We select the most favorable offers for you in online stores
-                in&nbsp;the&nbsp;USA and Europe
-              </li>
-              <li>
-                More than 1.000.000 packages have been delivered to buyers and
-                international companies around the world
-              </li>
-              <li>We have three logistics centers in the US, EU, UAE</li>
-            </ul>
-            <button class="btn btn-light btn-arrow btn-lg">
-              More about us
-            </button>
-          </div>
-          <div class="col-sm-12 col-lg-6">
-            <div class="video stopped mt-3">
-              <div class="play-btn"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="stage mt-stage">
-      <div class="container">
-        <div class="heading-sup">
-          <span class="h6">Reviews </span
-          ><span class="icon icon-small icon-loudspeaker"></span>
-        </div>
-        <div class="h2">What customers are saying</div>
-        <div
-          id="reviewCarousel"
-          class="carousel multiple-carousel slide"
-          data-bs-ride="carousel"
-        >
-          <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
-              <div class="reviews">
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="review">
-                      <div class="text text-m review-content">
-                        Great service, I worried about my first package but
-                        everything went smoothly, support team is quick and
-                        helpful, found me a good alternative to what I wanted.
-                        Very simple interface i used just WhatsApp as usual. I’m
-                        happy with all. Thanks you!
-                      </div>
-                      <div class="review-author">Mohammed A.</div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="review">
-                      <div class="text text-m review-content">
-                        Great service, I worried about my first package but
-                        everything went smoothly, support team is quick and
-                        helpful, found me a good alternative to what I wanted.
-                        Very simple interface i used just WhatsApp as usual. I’m
-                        happy with all. Thanks you!
-                      </div>
-                      <div class="review-author">Mohammed A.</div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="review">
-                      <div class="text text-m review-content">
-                        Great service, I worried about my first package but
-                        everything went smoothly, support team is quick and
-                        helpful, found me a good alternative to what I wanted.
-                        Very simple interface i used just WhatsApp as usual. I’m
-                        happy with all. Thanks you!
-                      </div>
-                      <div class="review-author">Mohammed A.</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="reviews">
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="review">
-                      <div class="text text-m review-content">
-                        Great service, I worried about my first package but
-                        everything went smoothly, support team is quick and
-                        helpful, found me a good alternative to what I wanted.
-                        Very simple interface i used just WhatsApp as usual. I’m
-                        happy with all. Thanks you!
-                      </div>
-                      <div class="review-author">Mohammed A.</div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="review">
-                      <div class="text text-m review-content">
-                        Great service, I worried about my first package but
-                        everything went smoothly, support team is quick and
-                        helpful, found me a good alternative to what I wanted.
-                        Very simple interface i used just WhatsApp as usual. I’m
-                        happy with all. Thanks you!
-                      </div>
-                      <div class="review-author">Mohammed A.</div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="review">
-                      <div class="text text-m review-content">
-                        Great service, I worried about my first package but
-                        everything went smoothly, support team is quick and
-                        helpful, found me a good alternative to what I wanted.
-                        Very simple interface i used just WhatsApp as usual. I’m
-                        happy with all. Thanks you!
-                      </div>
-                      <div class="review-author">Mohammed A.</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <a
-            class="carousel-control-prev bg-transparent w-aut"
-            href="#reviewCarousel"
-            role="button"
-            data-bs-slide="prev"
-          >
-            <span class="btn btn-arrow" aria-hidden="true"></span>
-          </a>
-          <a
-            class="carousel-control-next bg-transparent w-aut"
-            href="#reviewCarousel"
-            role="button"
-            data-bs-slide="next"
-          >
-            <span class="btn btn-arrow" aria-hidden="true"></span>
-          </a>
-        </div>
-      </div>
-    </section>
-    <section class="stage mt-stage stage-inverse">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <div class="h3">Ready to shop with Dester?</div>
-            <p class="paragraph subcaption text-l">
-              Let Dester take care of your shopping
-            </p>
-            <button class="btn btn-light btn-arrow btn-lg">
-              Go to WhatsApp
-            </button>
-          </div>
-          <div class="col-sm-3">
-            <div class="illistration illustration-delivery"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="stage mt-stage">
-      <div class="container">
-        <div class="row gy-7">
-          <div class="col-lg col-sm-12">
-            <div class="h2">
-              Download mobile app to&nbsp;create and track your&nbsp;orders
-            </div>
-            <p class="paragraph subcaption text-l">
-              Some text some text some text some text some textsome text some
-              text
-            </p>
-            <div class="row g-4">
-              <div class="col-auto">
-                <a
-                  class="app-btn app-btn-ios"
-                  role="button"
-                  href="https://apps.apple.com/us/app/some-app-name/id1166101014?itsct=apps_box_badge&amp;itscg=30200"
-                ></a>
-              </div>
-              <div class="col-auto">
-                <a
-                  class="app-btn app-btn-android"
-                  role="button"
-                  href="http://play.google.com/store/?pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
-                ></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-auto">
-            <div class="illustration illustration-app"></div>
-          </div>
-        </div>
-      </div>
-    </section>
     <footer class="footer mt-stage">
       <div class="container">
         <div class="row">
@@ -540,19 +392,16 @@
 
                   <ul class="socials">
                     <li class="socials-item">
-                      <a href="#" class="icon icon-l icon-tg"></a>
+                      <a href="#" class="icon icon-l icon-color-fb"></a>
                     </li>
                     <li class="socials-item">
-                      <a href="#" class="icon icon-l icon-vk"></a>
+                      <a href="#" class="icon icon-l icon-color-inst"></a>
                     </li>
                     <li class="socials-item">
-                      <a href="#" class="icon icon-l icon-inst"></a>
+                      <a href="#" class="icon icon-l icon-color-youtube"></a>
                     </li>
                     <li class="socials-item">
-                      <a href="#" class="icon icon-l icon-zen"></a>
-                    </li>
-                    <li class="socials-item">
-                      <a href="#" class="icon icon-l icon-youtube"></a>
+                      <a href="#" class="icon icon-l icon-white-tiktok"></a>
                     </li>
                   </ul>
                 </div>
@@ -651,40 +500,69 @@
           </div>
         </div>
       </div>
-    </footer>
-
-    <div class="fixed bottom">
-      <div class="row">
-        <div class="col-auto">
-          <div class="hover-block">
-            <span class="text-l">Follow us</span>
-            <div class="hover-block-content">
-              <div class="hover-block-collapsed">
-                <ul class="socials">
-                  <li class="socials-item">
-                    <a href="#" class="icon icon-l icon-color-fb"></a>
-                  </li>
-                  <li class="socials-item">
-                    <a href="#" class="icon icon-l icon-color-inst"></a>
-                  </li>
-                  <li class="socials-item">
-                    <a href="#" class="icon icon-l icon-color-youtube"></a>
-                  </li>
-                  <li class="socials-item">
-                    <a href="#" class="icon icon-l icon-color-tiktok"></a>
-                  </li>
-                </ul>
+      <div class="fixed bottom">
+        <div class="row g-2">
+          <div class="col-xs-6 col-lg-auto">
+            <div class="hover-block collapsed" data-target="socialOverlay">
+              <span class="hover-block-text">Follow us</span>
+              <span class="hover-block-text hover-block-text-collapsed"
+                >Close</span
+              >
+              <div class="hover-block-content">
+                <div class="hover-block-collapsed">
+                  <ul class="socials">
+                    <li class="socials-item">
+                      <a href="#" class="icon icon-l icon-color-fb"></a>
+                    </li>
+                    <li class="socials-item">
+                      <a href="#" class="icon icon-l icon-color-inst"></a>
+                    </li>
+                    <li class="socials-item">
+                      <a href="#" class="icon icon-l icon-color-youtube"></a>
+                    </li>
+                    <li class="socials-item">
+                      <a href="#" class="icon icon-l icon-color-tiktok"></a>
+                    </li>
+                  </ul>
+                </div>
               </div>
+              <div class="hover-block-icon"></div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-lg-auto">
+            <div class="btn btn-l btn-circle btn-green fixed-whatsapp-btn">
+              <span class="fixed-whatsapp-btn-text"
+                ><span class="fixed-whatsapp-btn-subtext">Go to</span>
+                Whatsapp</span
+              ><span class="icon icon-m icon-whatsapp"></span>
             </div>
           </div>
         </div>
-        <div class="col-auto">
-          <div class="btn btn-l btn-circle btn-green">
-            <span class="icon icon-m icon-whatsapp"></span>
+      </div>
+      <div class="overlay" id="socialOverlay">
+        <div class="overlay-content">
+          <div class="overlay-text">
+            Ideas to buy, orders unpacking, reviews and more!
+          </div>
+          <div class="overlay-body">
+            <ul class="socials">
+              <li class="socials-item">
+                <a href="#" class="icon icon-l icon-color-fb"></a>
+              </li>
+              <li class="socials-item">
+                <a href="#" class="icon icon-l icon-color-inst"></a>
+              </li>
+              <li class="socials-item">
+                <a href="#" class="icon icon-l icon-color-youtube"></a>
+              </li>
+              <li class="socials-item">
+                <a href="#" class="icon icon-l icon-color-tiktok"></a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
       integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
@@ -699,5 +577,8 @@
       defer
       async
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/init.js"></script>
+    <script src="./js/scripts.js"></script>
   </body>
 </html>

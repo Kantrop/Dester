@@ -136,8 +136,8 @@ h5,
   font-size: 18px !important;
 }
 
-h5,
-.h5 {
+h6,
+.h6 {
   font-size: 16px !important;
 }
 
@@ -14481,6 +14481,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: none;
+}
+.btn:focus, .btn:active, .btn:active:focus {
+  box-shadow: none;
+  outline: none;
 }
 .btn-lg {
   font-size: 20px;
@@ -14491,31 +14496,29 @@ body {
   border-radius: 50%;
   padding: 16px;
 }
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+.btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   color: #ffffff;
   background-color: #4833f5;
 }
-.btn-light {
-  color: #4833f5;
-}
-.btn-light:hover, .btn-light:focus, .btn-light:active {
+.btn-light, .btn-light:hover, .btn-light:focus, .btn-light:active {
+  border: none;
   color: #4833f5;
   background: #f6f6f6;
 }
-.btn-dark {
+.btn-dark, .btn-dark:focus {
   border: 1px solid #555658;
   background: #1b1b1b;
 }
-.btn-dark:hover, .btn-dark:focus, .btn-dark:active {
+.btn-dark:hover, .btn-dark:active {
   border: 1px solid #ffffff;
   background: #1b1b1b;
 }
-.btn-green {
+.btn-green, .btn-green:focus {
   color: #ffffff;
   background-color: #58be55;
   border: none;
 }
-.btn-green:hover, .btn-green:focus, .btn-green:active {
+.btn-green:hover, .btn-green:active {
   border: none;
   color: #ffffff;
   background-color: #167d13;
@@ -14546,7 +14549,7 @@ body {
   vertical-align: middle;
   transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-.btn-arrow:hover::after, .btn-arrow:focus::after, .btn-arrow:active::after {
+.btn-arrow:hover::after, .btn-arrow:active::after {
   transform: translateX(6px) rotate(45deg);
 }
 
@@ -14554,6 +14557,7 @@ body {
   letter-spacing: -0.032em;
 }
 
+p,
 .paragraph {
   margin: 32px 0;
 }
@@ -14659,6 +14663,9 @@ body {
 }
 .icon-color-youtube {
   background-image: url(../assets/socials/cl-youtube.svg);
+}
+.icon-white-tiktok {
+  background-image: url(../assets/socials/white-tiktok.svg);
 }
 
 .fixed .socials {
@@ -15175,6 +15182,7 @@ body {
     justify-content: space-between;
     box-shadow: none;
     background-color: #f6f6f6;
+    cursor: pointer;
   }
   .hover-block-content {
     display: none;

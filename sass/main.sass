@@ -175,14 +175,18 @@ body
     letter-spacing: -0.015em
     line-height: #{$line-height-lg}
 
-// :root
-//   --whatsapp_green: #58BE55
 .btn
   line-height: 135%
   letter-spacing: -0.035em
   display: flex
   align-items: center
   justify-content: center
+  box-shadow: none
+  &:focus,
+  &:active,
+  &:active:focus
+    box-shadow: none
+    outline: none
   &-lg
     font-size: 20px
     line-height: 135%
@@ -191,32 +195,36 @@ body
     border-radius: 50%
     padding: 16px
   &-primary
+    &,
     &:hover,
     &:focus,
     &:active
       color: #{$white}
       background-color: #{$primary}
   &-light
-    color: #{$primary}
+    &,
     &:hover,
     &:focus,
     &:active
+      border: none
       color: #{$primary}
       background: #{$air-grey}
   &-dark
-    border: 1px solid #{$dark_grey}
-    background: #{$black}
+    &,
+    &:focus
+      border: 1px solid #{$dark_grey}
+      background: #{$black}
     &:hover,
-    &:focus,
     &:active
       border: 1px solid #{$white}
       background: #{$black}
   &-green
-    color: #{$white}
-    background-color: #{$whatsapp_green}
-    border: none
+    &,
+    &:focus
+      color: #{$white}
+      background-color: #{$whatsapp_green}
+      border: none
     &:hover,
-    &:focus,
     &:active
       border: none
       color: #{$white}
@@ -247,13 +255,13 @@ body
       vertical-align: middle
       transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)
     &:hover,
-    &:focus,
     &:active
       &::after
         transform: translateX(6px) rotate(45deg)
 .navbar
   &-nav
     letter-spacing: -0.032em
+p,
 .paragraph
   margin: 32px 0
 
@@ -331,6 +339,9 @@ body
       background-image: url(../assets/socials/cl-fb.svg)
     &-youtube
       background-image: url(../assets/socials/cl-youtube.svg)
+  &-white
+    &-tiktok
+      background-image: url(../assets/socials/white-tiktok.svg)
 
 .fixed
   .socials
@@ -767,6 +778,7 @@ body
     justify-content: space-between
     box-shadow: none
     background-color: #{$air-grey}
+    cursor: pointer
     &-content
       display: none
     &-text
