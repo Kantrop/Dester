@@ -2,28 +2,37 @@ const headerButton = document.querySelector(".header-menu-toggler");
 let timer;
 const ANIMATION_DURATION = 500;
 
-const toggleClassWithAnimationDelay = (el, btn) => {
+// TODO rewrite extra
+const toggleClassWithAnimationDelay = (el, btn, extra) => {
   if (timer) {
     return;
   }
   if (el.classList.contains("opened")) {
     el.classList.add("closing");
     el.classList.remove("opened");
+    
+    extra?.classList.add("closing")
+    extra?.classList.remove("opened");
+
     btn.classList.add("collapsed");
     timer =
       !timer &&
       setTimeout(() => {
         el.classList.remove("closing");
+        extra?.classList.remove("closing");
         timer = clearTimeout(timer);
       }, ANIMATION_DURATION);
   } else {
     el.classList.add("opening");
+    extra?.classList.add("opening");
     btn.classList.remove("collapsed");
     timer =
       !timer &&
       setTimeout(() => {
         el.classList.remove("opening");
         el.classList.add("opened");
+        extra?.classList.remove("opening");
+        extra?.classList.add("opened");
         timer = clearTimeout(timer);
       }, ANIMATION_DURATION);
   }
@@ -31,7 +40,8 @@ const toggleClassWithAnimationDelay = (el, btn) => {
 
 headerButton.addEventListener("click", (e) => {
   const headerMenu = document.querySelector("#headerMenu");
-  toggleClassWithAnimationDelay(headerMenu, headerButton);
+  const header = document.querySelector(".header");
+  toggleClassWithAnimationDelay(headerMenu, headerButton, header);
 });
 
 const body = document.querySelector("body");

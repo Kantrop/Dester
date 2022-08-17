@@ -33,7 +33,7 @@ setAdaptiveSwiper = (width) => {
     }
     swiperList = new Swiper(".swiper-list", {
       slidesPerView: 1,
-      spaceBetween: 10,
+      spaceBetween: 8,
       pagination: {
         el: ".swiper-list .swiper-pagination",
         clickable: true,

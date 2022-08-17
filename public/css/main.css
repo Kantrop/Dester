@@ -14319,6 +14319,9 @@ body {
   background: white;
   z-index: 10;
 }
+.header.opening, .header.opened {
+  z-index: 30;
+}
 .header-content {
   display: flex;
   align-items: center;
@@ -14418,7 +14421,7 @@ body {
 .stage .subcaption {
   padding-right: 23%;
 }
-.stage .heading-sup * {
+.stage .heading-sup {
   font-weight: 500;
   margin-bottom: 20px;
   display: flex;
@@ -15028,6 +15031,7 @@ body {
     top: 50px;
     left: 16px;
     display: block;
+    visibility: hidden;
   }
   .navbar-collapse:before, .navbar-collapse.closing:before {
     opacity: 0;
@@ -15035,11 +15039,13 @@ body {
   }
   .navbar-collapse.closing:before {
     display: block;
+    visibility: visible;
     opacity: 0;
     bottom: 100vh;
   }
   .navbar-collapse.opened, .navbar-collapse.opening {
     display: block;
+    visibility: visible;
     opacity: 1;
     top: 70px;
   }
@@ -15049,12 +15055,14 @@ body {
   }
   .navbar-collapse.opened:before, .navbar-collapse.opening:before {
     display: block;
+    visibility: visible;
     opacity: 1;
     bottom: 0;
   }
   .navbar-collapse:before {
     content: "";
     opacity: 0;
+    visibility: hidden;
     background: #ffffff;
     position: fixed;
     transition: all 0.5s;
@@ -15298,6 +15306,10 @@ body {
   .stage .heading-sup {
     margin-bottom: 10px;
   }
+  .stage .heading-sup .icon {
+    width: 13px;
+    height: 13px;
+  }
   .stage-video .list {
     margin-bottom: 0;
   }
@@ -15415,6 +15427,7 @@ body {
   }
   .swiper-wrapper.row {
     flex-wrap: nowrap;
+    --bs-gutter-x: 0;
   }
   .swiper-list {
     padding-bottom: 26px;

@@ -50,6 +50,9 @@ body
   transition: box-shadow 0.1s
   background: #{white}
   z-index: 10
+  &.opening,
+  &.opened
+    z-index: 30
   &-content
     display: flex
     align-items: center
@@ -132,11 +135,10 @@ body
   .subcaption
     padding-right: 23%
   .heading-sup
-    *
-      font-weight: 500
-      margin-bottom: #{$indent-sm}
-      display: flex
-      align-items: center
+    font-weight: 500
+    margin-bottom: #{$indent-sm}
+    display: flex
+    align-items: center
     .icon
       margin-left: 6px
 
@@ -632,17 +634,20 @@ body
       top: 50px
       left: 16px
       display: block
+      visibility: hidden
       &:before
         opacity: 0
         bottom: 100vh
     &.closing
       &:before
         display: block
+        visibility: visible
         opacity: 0
         bottom: 100vh
     &.opened,
     &.opening
       display: block
+      visibility: visible
       opacity: 1
       top: 70px
       // z-index: 2
@@ -651,11 +656,13 @@ body
         z-index: 2
       &:before
         display: block
+        visibility: visible
         opacity: 1
         bottom: 0
     &:before
       content: ''
       opacity: 0
+      visibility: hidden
       background: #{$white}
       position: fixed
       transition: all 0.5s
@@ -869,6 +876,9 @@ body
       margin: 16px 0 20px
     .heading-sup
       margin-bottom: 10px
+      .icon
+        width: 13px
+        height: 13px
     &-video
       .list
         margin-bottom: 0
@@ -965,6 +975,7 @@ body
   .swiper-wrapper
     &.row
       flex-wrap: nowrap
+      --bs-gutter-x: 0
   .swiper-list
     padding-bottom: 26px
     margin-bottom: 20px
