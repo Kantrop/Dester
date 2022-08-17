@@ -41,12 +41,15 @@ body
   margin: -1px 0
   background: url(../assets/logo.svg) no-repeat left top
 
+.scrolled
+  .header
+    box-shadow: 5px 0px 30px rgba(0, 0, 0, 0.1)
 .header
   position: sticky
   top: 0
+  transition: box-shadow 0.1s
   background: #{white}
   z-index: 10
-  box-shadow: 5px 0px 30px rgba(0, 0, 0, 0.1)
   &-content
     display: flex
     align-items: center
@@ -101,6 +104,7 @@ body
     background-repeat: no-repeat
 
 .stage
+  overflow: hidden
   &-rounded
     border-radius: var(--bs-border-radius-pill)
   &-inverse
@@ -130,9 +134,9 @@ body
   .heading-sup
     *
       font-weight: 500
-    margin-bottom: #{$indent-sm}
-    display: flex
-    align-items: center
+      margin-bottom: #{$indent-sm}
+      display: flex
+      align-items: center
     .icon
       margin-left: 6px
 
@@ -245,7 +249,6 @@ body
       &::after
         transform: translateX(6px) rotate(45deg)
 .navbar
-  align-items: flex-start
   &-nav
     letter-spacing: -0.032em
 .paragraph
@@ -270,7 +273,6 @@ body
   &-text
     line-height: 1.35
     letter-spacing: -0.015em
-  
 
 .icon
   background-size: contain
@@ -326,11 +328,13 @@ body
     &-youtube
       background-image: url(../assets/socials/cl-youtube.svg)
 
+.fixed
+  .socials
+    margin-top: 15px
 .socials
   display: flex
   padding-left: 0
   margin-bottom: 0
-  margin-top: 15px
   list-style: none
   &-item
     transition: all 0.3s
@@ -347,6 +351,13 @@ body
   border-radius: 20px
   background: #{$white}
   overflow: hidden
+  &-text
+    font-size: 20px
+    font-weight: 600
+    &-collapsed
+      display: none
+  &-icon
+    display: none
   &-content
     margin-right: -30px
     width: 30px // офсет для анимации закрытия с баунсом
@@ -381,7 +392,7 @@ body
   &-logo
     padding-top: 62%
     background: url(../assets/default-partner-logo.svg) center no-repeat
-  &-button
+  .btn
     height: 100%
     width: 100%
     font-size: #{$font-size-lg}
@@ -445,6 +456,7 @@ body
 
 .reviews
   margin: 40px 20px 0
+  position: relative
 .review
   position: relative
   z-index: 1
@@ -511,7 +523,7 @@ body
   .btn-dark
     padding-top: 15px
     padding-bottom: 15px
-      
+
 .disclaimer
   color: #{$dark-grey}
 .vertical-spreaded
@@ -520,23 +532,30 @@ body
   flex-direction: column
   height: 100%
 
-.carousel-control-prev
-  top: 30px
-  left: -25px
-  justify-content: flex-start
-  .btn-arrow
-    color: #{$primary}
-.carousel-control-next
-  top: 30px
-  right: -25px
-  justify-content: flex-end
-  .btn-arrow
-    color: #{$primary}
-.carousel-control-prev
-  .btn-arrow
-    transform: rotate(180deg)
-.carousel-item
-  transition: all 1s cubic-bezier(0.50, 1.26, 0.64, 1)
+.swiper-button-next
+  right: -25px!important
+  z-index: 1
+.swiper-button-prev
+  left: -25px!important
+  z-index: 1
+.swiper-button-next:after,
+.swiper-button-prev:after
+  content: ''!important
+  border-style: solid
+  border-width: 2.7px 2.7px 0 0
+  content: ''
+  display: inline-block
+  width: 9px
+  height: 9px
+  margin-right: 14px
+  position: relative
+  left: 6.5px
+  top: 0px
+  transform: rotate(45deg)
+  vertical-align: middle
+  color: #{$primary}
+.swiper-button-prev:after
+  transform: rotate(-135deg)
 
 .line-group
   display: flex
@@ -555,15 +574,106 @@ body
 .container
   max-width: 1240px !important
   --bs-gutter-x: 48px
-  
+.navbar-toggler
+  width: 20px
+  height: 20px
+  position: relative
+  padding: 2px
+  margin-left: 15px
+  &,
+  &:hover,
+  &:active,
+  &:focus
+    outline: none
+    border: none
+    box-shadow: none
+    background: none
+  &:before,
+  &:after
+    content: ''
+    border: 1px solid #{$black}
+    width: 19px
+    display: block
+    position: absolute
+    left: 1px
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)
+  &:before
+    transform: rotate(45deg)
+    top: 9px
+    left: 1px
+  &:after
+    transform: rotate(-45deg)
+    bottom: 9px
+    left: 1px
+  &.collapsed
+    &:before
+      transform: rotate(0deg)
+      top: 4px
+    &:after
+      transform: rotate(0deg)
+      bottom: 4px
+
+.fixed-whatsapp
+  &-btn-text
+    display: none
+
 @media (max-width: 992px)
+  .navbar
+    > *
+      position: relative
+      z-index: 2
+  .navbar-collapse
+    display: none
+    &,
+    &.closing
+      transition: all 0.5s
+      position: absolute
+      opacity: 0
+      top: 50px
+      left: 16px
+      display: block
+      &:before
+        opacity: 0
+        bottom: 100vh
+    &.closing
+      &:before
+        display: block
+        opacity: 0
+        bottom: 100vh
+    &.opened,
+    &.opening
+      display: block
+      opacity: 1
+      top: 70px
+      // z-index: 2
+      > *
+        position: relative
+        z-index: 2
+      &:before
+        display: block
+        opacity: 1
+        bottom: 0
+    &:before
+      content: ''
+      opacity: 0
+      background: #{$white}
+      position: fixed
+      transition: all 0.5s
+      top: 68px
+      bottom: 100vh
+      left: 0
+      right: 0
+      z-index: 1
+      bottom: 100vh
+
   .navbar-collapse
     margin-top: 20px
   .header-content
     flex-wrap: wrap
     align-items: flex-start
     justify-content: space-between
-    
+  .header-btn
+    display: none
   .btn-adaptive
     &-lg-wide
       width: 100%
@@ -601,17 +711,138 @@ body
       &:after
         right: -140px
         left: auto
+    &-app
+      padding-top: 70%
+      height: auto
   .g-4
     --bs-gutter-y: 20px
     --bs-gutter-x: 20px
-    
+
     &-logo
       transform: scale(0.5)
 
   .partner-btn
-      margin-top: 40px
+    margin-top: 40px
+
+  .fixed
+    left: 24px
+    &-bottom
+      bottom: 58px
+  .fixed-whatsapp-btn
+    width: 100%
+    font-size: 14px
+    justify-content: space-between
+    background: #{$black}
+    border-radius: 100px
+    padding: 14px 18px
+    &:hover,
+    &:active,
+    &:focus
+      background: #{$black}
+    &-text
+      display: inline
+    .icon-m
+      width: 18px
+      height: 18px
+      margin-left: 8px
+  .hover-block
+    font-size: 14px
+    padding: 14px 18px
+    border-radius: 100px
+    justify-content: space-between
+    &-content
+      display: none
+    &-text
+      font-size: 14px
+    &-icon
+      position: relative
+      display: block
+      width: 20px
+      height: 20px
+      background: #{$air-grey} url(../assets/rabbit.png) center no-repeat
+      background-size: 18px
+    .hover-block-icon
+      &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        opacity: 0
+        transition: all 0.5s
+        background: #{$air-grey} url(../assets/cross.svg) center no-repeat
+    &:not(.collapsed)
+      .hover-block-text
+        display: none
+      .hover-block-text-collapsed
+        display: block
+      .hover-block-icon
+        &::after
+          opacity: 1
+  .overlay
+    height: 258px
+.overlay
+  height: 266px
+  position: fixed
+  bottom: -300px
+  left: 0
+  right: 0
+  opacity: 0
+  z-index: 10
+  // display: none
+  transition: all 0.5s
+  &.opened,
+  &.opening
+    opacity: 1
+    bottom: 0
+    &:before
+      display: block
+      opacity: 0.7
+  &.opened,
+  &.opening,
+  &.closing
+    display: block
+  &::before
+    display: none
+    transition: all 0.3s
+    content: ''
+    z-index: 10
+    position: fixed
+    bottom: 0
+    left: 0
+    top: 0
+    background: #{$black}
+    opacity: 0
+    right: 0
+  &-content
+    position: relative
+    z-index: 10
+    width: 100%
+    height: 100%
+    padding: 60px 30px 0
+    display: flex
+    align-items: center
+    background: #FFFFFF
+    border-radius: 30px 30px 0px 0px
+    flex-direction: column
+  &-text
+    font-weight: 600
+    font-size: 14px
+    line-height: 112%
+    color: #{$black}
+    text-align: center
+    &-collapsed
+      display: none
+  &-body
+    margin-top: 30px
 
 @media (max-width: 700px)
+  .fixed
+    left: 16px
+    right: 16px
+  .overlay
+    height: 258px
   body
     font-size: 14px
   .text
@@ -659,7 +890,7 @@ body
         right: -210px
   .mt-stage
     margin-top: 48px !important
-  
+
   .g-2
     --bs-gutter-y: 8px
     --bs-gutter-x: 8px
@@ -688,7 +919,7 @@ body
     &-logo
       transform: scale(0.5)
   .partner-btn
-      margin-top: 20px
+    margin-top: 20px
   .btn
     font-size: 14px !important
   .mt-7
@@ -704,10 +935,10 @@ body
     margin: 20px 10px 0
   .review
     &:before
-      width:35px
-      height:27px
-      left:15px
-      top:15px
+      width: 35px
+      height: 27px
+      left: 15px
+      top: 15px
       background-size: contain
   .stage .app-btn
     width: 100%
@@ -731,6 +962,24 @@ body
     .disclaimer
       font-size: 12px !important
 
+  .swiper-wrapper
+    &.row
+      flex-wrap: nowrap
+  .swiper-list
+    padding-bottom: 26px
+    margin-bottom: 20px
+    .swiper-pagination
+      bottom: 0
+      &-bullet
+        background: #{$white}
+        opacity: 0.5
+        &-active
+          opacity: 1
+  .swiper-button-next
+    right: -12px!important
+  .swiper-button-prev
+    left: -12px!important
+
 @media (max-width: 520px)
   .illustration
     &-greetings
@@ -739,3 +988,7 @@ body
     &-app
       padding-top: 70%
       height: auto
+@media (max-width: 375px)
+  .fixed-whatsapp-btn
+    &-subtext
+      display: none
