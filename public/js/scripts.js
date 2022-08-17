@@ -56,7 +56,7 @@ document.addEventListener("scroll", () => {
 const socialOverlayBtn = document.querySelector("[data-target=socialOverlay]");
 const socialOverlay = document.querySelector("#socialOverlay");
 socialOverlayBtn.addEventListener("click", () => {
-  if (window.innerHeight < 575) {
+  if (window.innerWidth < 992) {
     toggleClassWithAnimationDelay(socialOverlay, socialOverlayBtn);
   }
 });

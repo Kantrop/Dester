@@ -59,7 +59,7 @@
       </div>
     </header>
 
-    <section class="stage mt-stage">
+    <section class="stage mt-9">
       <div class="container">
         <div class="alert alert-primary" role="alert">
           Headings dont have margins. <b>It IS feature.</b> You should wrap
@@ -72,7 +72,11 @@
           <h4>h4. Bootstrap heading</h4>
           <h5>h5. Bootstrap heading</h5>
           <h6>h6. Bootstrap heading</h6>
-          <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+          <p class="text text-l">Big. You can use the mark tag to <mark>highlight</mark> text.</p>
+          <p>
+          <p class="text text-s">Small. You can use the mark tag to <mark>highlight</mark> text.</p>
+          <p>
+          <p>Normal. You can use the mark tag to <mark>highlight</mark> text.</p>
           <p>
             <del>This line of text is meant to be treated as deleted text.</del>
           </p>
@@ -203,7 +207,7 @@
               </div>
             </div>
           </div>
-          <div class="col-xs-3">
+          <div class="col-md-4 col-lg-3">
             <div class="card">
               <div class="card-body">
                 <div class="card-index">01</div>
@@ -293,6 +297,9 @@
       <div class="container">
         <h3>Overlay</h3>
         <div class="paragraph">
+            But you cant close it outside
+        </div>
+        <div class="paragraph">
           <button class="btn btn-primary btn-arrow" id="overlay-btn-example">
             trigger
           </button>
@@ -307,9 +314,7 @@
           const overlayBtn = document.querySelector("#overlay-btn-example");
           const overlay = document.querySelector("#overayExample");
           overlayBtn.addEventListener("click", () => {
-            // if(window.innerHeight < 575) {
             toggleClassWithAnimationDelay(overlay, overlayBtn);
-            // }s
           });
         </script>
       </div>
@@ -500,69 +505,69 @@
           </div>
         </div>
       </div>
-      <div class="fixed bottom">
-        <div class="row g-2">
-          <div class="col-xs-6 col-lg-auto">
-            <div class="hover-block collapsed" data-target="socialOverlay">
-              <span class="hover-block-text">Follow us</span>
-              <span class="hover-block-text hover-block-text-collapsed"
-                >Close</span
-              >
-              <div class="hover-block-content">
-                <div class="hover-block-collapsed">
-                  <ul class="socials">
-                    <li class="socials-item">
-                      <a href="#" class="icon icon-l icon-color-fb"></a>
-                    </li>
-                    <li class="socials-item">
-                      <a href="#" class="icon icon-l icon-color-inst"></a>
-                    </li>
-                    <li class="socials-item">
-                      <a href="#" class="icon icon-l icon-color-youtube"></a>
-                    </li>
-                    <li class="socials-item">
-                      <a href="#" class="icon icon-l icon-color-tiktok"></a>
-                    </li>
-                  </ul>
-                </div>
+      
+    </footer><div class="fixed bottom">
+      <div class="row g-2">
+        <div class="col-xs-6 col-lg-auto">
+          <div class="hover-block collapsed" data-target="socialOverlay">
+            <span class="hover-block-text">Follow us</span>
+            <span class="hover-block-text hover-block-text-collapsed"
+              >Close</span
+            >
+            <div class="hover-block-content">
+              <div class="hover-block-collapsed">
+                <ul class="socials">
+                  <li class="socials-item">
+                    <a href="#" class="icon icon-l icon-color-fb"></a>
+                  </li>
+                  <li class="socials-item">
+                    <a href="#" class="icon icon-l icon-color-inst"></a>
+                  </li>
+                  <li class="socials-item">
+                    <a href="#" class="icon icon-l icon-color-youtube"></a>
+                  </li>
+                  <li class="socials-item">
+                    <a href="#" class="icon icon-l icon-color-tiktok"></a>
+                  </li>
+                </ul>
               </div>
-              <div class="hover-block-icon"></div>
             </div>
+            <div class="hover-block-icon"></div>
           </div>
-          <div class="col-xs-6 col-lg-auto">
-            <div class="btn btn-l btn-circle btn-green fixed-whatsapp-btn">
-              <span class="fixed-whatsapp-btn-text"
-                ><span class="fixed-whatsapp-btn-subtext">Go to</span>
-                Whatsapp</span
-              ><span class="icon icon-m icon-whatsapp"></span>
-            </div>
+        </div>
+        <div class="col-xs-6 col-lg-auto">
+          <div class="btn btn-l btn-circle btn-green fixed-whatsapp-btn">
+            <span class="fixed-whatsapp-btn-text"
+              ><span class="fixed-whatsapp-btn-subtext">Go to</span>
+              Whatsapp</span
+            ><span class="icon icon-m icon-whatsapp"></span>
           </div>
         </div>
       </div>
-      <div class="overlay" id="socialOverlay">
-        <div class="overlay-content">
-          <div class="overlay-text">
-            Ideas to buy, orders unpacking, reviews and more!
-          </div>
-          <div class="overlay-body">
-            <ul class="socials">
-              <li class="socials-item">
-                <a href="#" class="icon icon-l icon-color-fb"></a>
-              </li>
-              <li class="socials-item">
-                <a href="#" class="icon icon-l icon-color-inst"></a>
-              </li>
-              <li class="socials-item">
-                <a href="#" class="icon icon-l icon-color-youtube"></a>
-              </li>
-              <li class="socials-item">
-                <a href="#" class="icon icon-l icon-color-tiktok"></a>
-              </li>
-            </ul>
-          </div>
+    </div>
+    <div class="overlay" id="socialOverlay">
+      <div class="overlay-content">
+        <div class="overlay-text">
+          Ideas to buy, orders unpacking, reviews and more!
+        </div>
+        <div class="overlay-body">
+          <ul class="socials">
+            <li class="socials-item">
+              <a href="#" class="icon icon-l icon-color-fb"></a>
+            </li>
+            <li class="socials-item">
+              <a href="#" class="icon icon-l icon-color-inst"></a>
+            </li>
+            <li class="socials-item">
+              <a href="#" class="icon icon-l icon-color-youtube"></a>
+            </li>
+            <li class="socials-item">
+              <a href="#" class="icon icon-l icon-color-tiktok"></a>
+            </li>
+          </ul>
         </div>
       </div>
-    </footer>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
       integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"

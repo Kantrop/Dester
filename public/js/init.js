@@ -50,6 +50,5 @@ setAdaptiveSwiper = (width) => {
 
 setAdaptiveSwiper(575);
 window.addEventListener("resize", () => {
-  console.log(window.innerWidth);
   setAdaptiveSwiper(575);
 });
