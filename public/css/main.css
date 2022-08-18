@@ -14623,6 +14623,9 @@ p,
 .icon-wallet {
   background-image: url(../assets/wallet.svg);
 }
+.icon-map {
+  background-image: url(../assets/map.svg);
+}
 .icon-cart {
   background-image: url(../assets/cart.png);
 }
@@ -15004,6 +15007,7 @@ p,
 .navbar-toggler:before, .navbar-toggler:after {
   content: "";
   border: 1px solid #1b1b1b;
+  background: #1b1b1b;
   width: 19px;
   display: block;
   position: absolute;
