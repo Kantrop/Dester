@@ -14853,6 +14853,9 @@ p,
   padding: 25px 15px 20px 19px;
   background: #fff;
 }
+.review p {
+  margin: 0;
+}
 .review-author {
   font-weight: 500;
   margin-top: 20px;
