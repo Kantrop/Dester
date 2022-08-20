@@ -122,4 +122,12 @@ $card-title-spacer-y: 15px;
 
 $container-padding-x: 80px;
 
+$accordion-border-width: 0;
+$accordion-border-radius: 0;
+$accordion-button-active-bg: none;
+$accordion-button-active-color: none;
+$accordion-icon-transform: rotate(45deg);
+$accordion-button-active-icon: url("data:image/svg+xml, <svg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'> <rect y='8' width='17' height='1' rx='0.5' fill='#1B1B1B'/> <rect x='9' width='17' height='0.999999' rx='0.5' transform='rotate(90 9 0)' fill='#1B1B1B'/> </svg>");
+$accordion-button-icon: url("data:image/svg+xml, <svg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'> <rect y='8' width='17' height='1' rx='0.5' fill='#1B1B1B'/> <rect x='9' width='17' height='0.999999' rx='0.5' transform='rotate(90 9 0)' fill='#1B1B1B'/> </svg>");
+
 @import "../node_modules/bootstrap/scss/bootstrap";

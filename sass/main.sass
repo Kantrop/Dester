@@ -742,7 +742,26 @@ p,
       border-radius: 8px
       &.active
         background: rgba(72, 51, 245, 0.2)
+.accordion-header
+  button
+    padding: 20px 0
+.accordion-collapse
+  border-bottom: 1px solid #{$light_gray}
+  transition: all 0.5s
+  &.show
+    border-color: #{$black}
+  &.collapse:not(.show)
+    display: block
+    height: 0px
+    overflow: hidden
+  .accordion-body
+    padding: 0 0 20px 0
+    line-height: 135%
 
+.inline-list
+  margin-top: 8px
+  li + li
+    margin-top: 8px
 
 @media (max-width: 992px)
   .navbar
