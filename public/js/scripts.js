@@ -1,9 +1,10 @@
+// header menu workaround
 const headerButton = document.querySelector(".header-menu-toggler");
 let timer;
 const ANIMATION_DURATION = 500;
 
-// TODO rewrite extra
 const toggleClassWithAnimationDelay = (el, btn, extra) => {
+  // TODO rewrite extra
   if (timer) {
     return;
   }
@@ -43,7 +44,9 @@ headerButton.addEventListener("click", (e) => {
   const header = document.querySelector(".header");
   toggleClassWithAnimationDelay(headerMenu, headerButton, header);
 });
+//
 
+// toggle scrolled flag
 const body = document.querySelector("body");
 document.addEventListener("scroll", () => {
   if (window.scrollY > 1) {
@@ -52,7 +55,9 @@ document.addEventListener("scroll", () => {
     body.classList.remove("scrolled");
   }
 });
+//
 
+// handle overlay
 const socialOverlayBtn = document.querySelector("[data-target=socialOverlay]");
 const socialOverlay = document.querySelector("#socialOverlay");
 socialOverlayBtn.addEventListener("click", () => {
@@ -60,25 +65,31 @@ socialOverlayBtn.addEventListener("click", () => {
     toggleClassWithAnimationDelay(socialOverlay, socialOverlayBtn);
   }
 });
+//
 
+// scroll to anchor
 const hashItems = document.querySelectorAll(`.by-hash .nav-link`);
-Array.from(hashItems).forEach(item => item.addEventListener('click', function(e) {
-  e.preventDefault();
-  const hash = this.getAttribute('href')
-  console.log('click', hash)
-  document.querySelector(hash).scrollIntoView({ 
-    behavior: 'smooth' 
-  });
-  window.scrollBy(0, -100);
-})
+Array.from(hashItems).forEach((item) =>
+  item.addEventListener("click", function (e) {
+    e.preventDefault();
+    const hash = this.getAttribute("href");
+    window.location.hash = hash;
+    const targetItem = document.querySelector(hash);
+    window.scroll(0, targetItem.offsetTop - 100);
+  })
 );
 
 const handleHash = () => {
   const pagehash = window.location.hash;
   const activeItems = document.querySelectorAll(`.by-hash .active`);
   const items = document.querySelectorAll(`.by-hash [href="${pagehash}"]`);
-  Array.from(activeItems).map(item => item.classList.remove('active'))
-  Array.from(items).map(item => item.classList.add('active'))
-}
-handleHash()
-window.addEventListener('popstate', handleHash);
+
+  Array.from(activeItems).map((item) => item.classList.remove("active"));
+  Array.from(items).map((item) => item.classList.add("active"));
+
+  const targetItem = document.querySelector(pagehash);
+  window.scroll(0, targetItem.offsetTop - 100);
+};
+handleHash(); // move to onLoad listener?
+window.addEventListener("popstate", handleHash);
+//

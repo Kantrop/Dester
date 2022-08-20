@@ -18,7 +18,13 @@ html
 body
   position: relative
   scroll-behavior: smooth
-
+  line-height: 135%
+table
+  td
+    padding: 12px
+    vertical-align: top
+  tr:nth-child(even) 
+    background: #{$air-grey}
 .underline
   display: inline-block
   text-decoration: none
@@ -106,6 +112,9 @@ body
 
     background-size: contain
     background-repeat: no-repeat
+
+.heading
+  word-break: break-all
 
 .stage
   overflow: hidden
@@ -452,7 +461,7 @@ p,
 .list
   margin: 32px 0
   padding-left: 30px
-  li
+  & > li
     margin-bottom: 20px
     &:last-child
       margin-bottom: 0
@@ -1030,9 +1039,13 @@ p,
   .mt-7
     margin-top: 20px !important
 
+  .partner-block
+    .partner-logo
+      transform: none
+
   .list
     margin: 20px 0
-    li
+    & > li
       margin-bottom: 10px
   .gy-md-3
     --bs-gutter-y: 20px
@@ -1088,6 +1101,8 @@ p,
     &.row
       flex-wrap: nowrap
       --bs-gutter-x: 0
+  .navbar-aside
+    margin-right: 0!important
 
 @media (max-width: 520px)
   .illustration

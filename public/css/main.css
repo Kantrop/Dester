@@ -14280,6 +14280,15 @@ html {
 body {
   position: relative;
   scroll-behavior: smooth;
+  line-height: 135%;
+}
+
+table td {
+  padding: 12px;
+  vertical-align: top;
+}
+table tr:nth-child(even) {
+  background: #f6f6f6;
 }
 
 .underline {
@@ -14382,6 +14391,10 @@ body {
   background-image: url(../assets/appx3.png);
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.heading {
+  word-break: break-all;
 }
 
 .stage {
@@ -14804,10 +14817,10 @@ p,
   margin: 32px 0;
   padding-left: 30px;
 }
-.list li {
+.list > li {
   margin-bottom: 20px;
 }
-.list li:last-child {
+.list > li:last-child {
   margin-bottom: 0;
 }
 
@@ -15494,10 +15507,13 @@ p,
   .mt-7 {
     margin-top: 20px !important;
   }
+  .partner-block .partner-logo {
+    transform: none;
+  }
   .list {
     margin: 20px 0;
   }
-  .list li {
+  .list > li {
     margin-bottom: 10px;
   }
   .gy-md-3 {
@@ -15566,6 +15582,9 @@ p,
   .swiper-wrapper.row {
     flex-wrap: nowrap;
     --bs-gutter-x: 0;
+  }
+  .navbar-aside {
+    margin-right: 0 !important;
   }
 }
 @media (max-width: 520px) {
