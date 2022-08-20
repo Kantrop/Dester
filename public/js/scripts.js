@@ -60,3 +60,25 @@ socialOverlayBtn.addEventListener("click", () => {
     toggleClassWithAnimationDelay(socialOverlay, socialOverlayBtn);
   }
 });
+
+const hashItems = document.querySelectorAll(`.by-hash .nav-link`);
+Array.from(hashItems).forEach(item => item.addEventListener('click', function(e) {
+  e.preventDefault();
+  const hash = this.getAttribute('href')
+  console.log('click', hash)
+  document.querySelector(hash).scrollIntoView({ 
+    behavior: 'smooth' 
+  });
+  window.scrollBy(0, -100);
+})
+);
+
+const handleHash = () => {
+  const pagehash = window.location.hash;
+  const activeItems = document.querySelectorAll(`.by-hash .active`);
+  const items = document.querySelectorAll(`.by-hash [href="${pagehash}"]`);
+  Array.from(activeItems).map(item => item.classList.remove('active'))
+  Array.from(items).map(item => item.classList.add('active'))
+}
+handleHash()
+window.addEventListener('popstate', handleHash);

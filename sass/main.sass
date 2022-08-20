@@ -17,6 +17,7 @@ html
 
 body
   position: relative
+  scroll-behavior: smooth
 
 .underline
   display: inline-block
@@ -108,6 +109,8 @@ body
 
 .stage
   overflow: hidden
+  &-common
+    overflow: visible
   &-rounded
     border-radius: var(--bs-border-radius-pill)
   &-inverse
@@ -641,6 +644,106 @@ p,
   &-btn-text
     display: none
 
+.overlay
+  height: 266px
+  position: fixed
+  bottom: -300px
+  left: 0
+  right: 0
+  opacity: 0
+  z-index: 10
+  // display: none
+  transition: all 0.5s
+  &.opened,
+  &.opening
+    opacity: 1
+    bottom: 0
+    &:before
+      display: block
+      opacity: 0.7
+  &.opened,
+  &.opening,
+  &.closing
+    display: block
+  &::before
+    display: none
+    transition: all 0.3s
+    content: ''
+    z-index: 10
+    position: fixed
+    bottom: 0
+    left: 0
+    top: 0
+    background: #{$black}
+    opacity: 0
+    right: 0
+  &-content
+    position: relative
+    z-index: 10
+    width: 100%
+    height: 100%
+    padding: 60px 30px 0
+    display: flex
+    align-items: center
+    background: #FFFFFF
+    border-radius: 30px 30px 0px 0px
+    flex-direction: column
+  &-text
+    font-weight: 600
+    font-size: 14px
+    line-height: 112%
+    color: #{$black}
+    text-align: center
+    &-collapsed
+      display: none
+  &-body
+    margin-top: 30px
+
+.swiper-list
+  .swiper-pagination
+    display: none
+
+.partners-group
+  margin-bottom: 60px
+  &:last-child
+    margin-bottom: 0
+  &-caption
+    font-size: 24px
+    margin-bottom:24px
+    font-weight: 700
+.partner-block
+  &-content
+    background: #{$air-grey}
+    padding: 16px
+    border-radius: 8px
+    min-height: 239px
+    height: 100%
+    display: flex
+    flex-direction: column
+  &-link
+    margin-top: 16px
+    word-break: break-all
+    margin-bottom: 24px
+  &-action
+    margin-top: auto
+    .btn
+      width: 100%
+      &:hover
+        background-color: #1300B1
+  .partner-logo
+    background-color: #{$white}
+    border-radius: 8px
+.navbar
+  &-aside
+    position: sticky
+    top: 90px
+    .nav-link
+      padding: 16px
+      border-radius: 8px
+      &.active
+        background: rgba(72, 51, 245, 0.2)
+
+
 @media (max-width: 992px)
   .navbar
     > *
@@ -814,64 +917,6 @@ p,
           opacity: 1
   .overlay
     height: 258px
-.overlay
-  height: 266px
-  position: fixed
-  bottom: -300px
-  left: 0
-  right: 0
-  opacity: 0
-  z-index: 10
-  // display: none
-  transition: all 0.5s
-  &.opened,
-  &.opening
-    opacity: 1
-    bottom: 0
-    &:before
-      display: block
-      opacity: 0.7
-  &.opened,
-  &.opening,
-  &.closing
-    display: block
-  &::before
-    display: none
-    transition: all 0.3s
-    content: ''
-    z-index: 10
-    position: fixed
-    bottom: 0
-    left: 0
-    top: 0
-    background: #{$black}
-    opacity: 0
-    right: 0
-  &-content
-    position: relative
-    z-index: 10
-    width: 100%
-    height: 100%
-    padding: 60px 30px 0
-    display: flex
-    align-items: center
-    background: #FFFFFF
-    border-radius: 30px 30px 0px 0px
-    flex-direction: column
-  &-text
-    font-weight: 600
-    font-size: 14px
-    line-height: 112%
-    color: #{$black}
-    text-align: center
-    &-collapsed
-      display: none
-  &-body
-    margin-top: 30px
-
-.swiper-list
-  .swiper-pagination
-    display: none
 
 @media (max-width: 768px)
   .fixed
@@ -1033,6 +1078,7 @@ p,
     &-app
       padding-top: 70%
       height: auto
+
 @media (max-width: 375px)
   .fixed-whatsapp-btn
     &-subtext
