@@ -856,6 +856,36 @@ p,
 .dimensions
   padding: 0
 
+.logo-animated
+  border-radius: 50%
+  background: #{$black}
+  position: relative
+  overflow: hidden
+  max-width: 240px
+  max-height: 240px
+  width:100%
+  &::before
+    content: ''
+    padding-top: 100%
+    display: block
+  &::after
+    content: ''
+    position: absolute
+    width:100%
+    height:100%
+    background: url(../assets/dester.svg) no-repeat
+    background-size: contain
+    top: 22.5%
+    right: 5%
+    animation: dester-jump 1.5s cubic-bezier(0.22, 1, 0.36, 1)
+    animation-fill-mode: forwards
+@keyframes dester-jump
+  from
+    top: 52%
+    right: 100%
+  to
+    top: 22.5%
+    right: 5%
 
 @media (max-width: 992px)
   .navbar
