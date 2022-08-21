@@ -102,13 +102,10 @@
 
     <section class="stage stage-common mt-9">
       <div class="container">
-        <h2 class="mb-9">
-          Shipping cost to UAE
-        </h2>
+        <h2 class="mb-9">Shipping cost to UAE</h2>
         <form
           name="tariff_form"
           method="post"
-          action="/en/tariffs/ajax/pricing"
           data-selector="tariffs-calculation"
         >
           <div class="row g-5">
@@ -165,17 +162,22 @@
                       <label for="weight" class="small form-label"
                         >Weight, kg</label
                       >
-                      <input
-                        type="number"
-                        name="weight"
-                        id="weight"
-                        value="1"
-                        min="0"
-                        step="0.001"
-                        autocomplete="off"
-                        required="required"
-                        class="form-control"
-                      />
+                      <div class="spinner">
+                          <input
+                          name="weight"
+                          id="weight"
+                          value="1"
+                          min="0"
+                          step="0.001"
+                          autocomplete="off"
+                          required="required"
+                          class="form-control"
+                          data-rule="quantity"
+                          class="input-number"
+                        />
+                        <span class="down"></span>
+                        <span class="up"></span>
+                      </div>
                     </div>
                   </div>
                   <div class="col-6">
@@ -212,71 +214,88 @@
                   />
                   <div class="control">
                     <span>
-                      <label for="param_dim_switch trigger" data-bs-toggle="collapse" data-bs-toggle="collapse" data-bs-target="#collapseExample" class="underline">
+                      <label
+                        for="param_dim_switch trigger"
+                        data-bs-toggle="collapse"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample"
+                        class="underline"
+                      >
                         Indicate approx. dimensions (optional)
                       </label>
                     </span>
                   </div>
 
-                  <div class="row collapse-block collapse row-cols-xs-3"  id="collapseExample">
+                  <div
+                    class="row collapse-block collapse row-cols-xs-3"
+                    id="collapseExample"
+                  >
                     <div class="control">
                       <label for="dimensions_x" class="small form-label"
                         >Length, cm</label
                       >
-                      <input
-                        type="number"
-                        name="dimensions_x"
-                        id="dimensions_x"
-                        value="10"
-                        autocomplete="off"
-                        min="0.01"
-                        step="0.01"
-                        class="form-control"
-                      />
+                      <div class="spinner">
+                          <input
+                          name="dimensions_x"
+                          id="dimensions_x"
+                          value="10"
+                          autocomplete="off"
+                          min="0.01"
+                          step="0.01"
+                          class="form-control"
+                        />
+                        <span class="down"></span>
+                        <span class="up"></span>
+                      </div>
                     </div>
                     <div class="control">
                       <label for="dimensions_y" class="small form-label"
                         >Width, cm</label
                       >
-                      <input
-                        type="number"
-                        name="dimensions_y"
-                        id="dimensions_y"
-                        value="10"
-                        autocomplete="off"
-                        min="0.01"
-                        step="0.01"
-                        class="form-control"
-                      />
+                      <div class="spinner">
+                        <input
+                          name="dimensions_y"
+                          id="dimensions_y"
+                          value="10"
+                          autocomplete="off"
+                          min="0.01"
+                          step="0.01"
+                          class="form-control"
+                        />
+                        <span class="down"></span>
+                        <span class="up"></span>
+                      </div>
                     </div>
                     <div class="control">
                       <label for="dimensions_z" class="small form-label"
                         >Height, cm</label
                       >
-                      <input
-                        type="number"
-                        name="dimensions_z"
-                        id="dimensions_z"
-                        value="10"
-                        autocomplete="off"
-                        min="0.01"
-                        step="0.01"
-                        class="form-control"
-                      />
+                      <div class="spinner">
+                        <input
+                          name="dimensions_z"
+                          id="dimensions_z"
+                          value="10"
+                          autocomplete="off"
+                          min="0.01"
+                          step="0.01"
+                          class="form-control"
+                        />
+                        <span class="down"></span>
+                        <span class="up"></span>
                     </div>
                   </div>
                 </div>
 
                 <div class="mt-7">
-                  <input
+                  <button
                     type="submit"
-                    name="submit"
                     id="submit"
-                    value="Calculate"
-                    class="btn btn-light btn-lg"
-                  />
+                    class="btn btn-light btn-lg btn-arrow"
+                  >Calculate</button>
+
                 </div>
               </div>
+            </div>
             </div>
             <div class="col-xs-12 col-md-6">
               <div class="calculation-results">
@@ -368,7 +387,9 @@
                   ></div>
                 </div>
                 <div class="mt-7">
-                  <button class="btn btn-primary btn-arrow btn-lg">Create order</button>
+                  <button class="btn btn-primary btn-arrow btn-lg">
+                    Create order
+                  </button>
                   <div class="calculation-results-disclaimer">
                     *VAT and Customs Duty are paid upon receipt.
                   </div>
@@ -644,20 +665,36 @@
         e.preventDefault();
         clearCalculationResults();
         clearErrors();
+        console.log(new FormData(form));
         fetch("https://mydester.com/en/tariffs/ajax/pricing", {
           method: "POST",
-          data: new FormData(form),
-        }).then((result) => {
-          let content = JSON.parse(result.data.content);
-          if (content.hasOwnProperty("errors")) {
-            showErrors(content.errors);
-          } else {
-            fillCalculationResults(content);
-          }
-        });
+          body: new FormData(form),
+        })
+          .then((response) => {
+            return response.json();
+          })
+          .then(async (result) => {
+            let { content } = JSON.parse(result.data?.content);
+            if (content.hasOwnProperty("errors")) {
+              showErrors(content.errors);
+            } else {
+              fillCalculationResults(content);
+            }
+          });
       });
       form.dispatchEvent(new Event("submit"));
     </script>
+
+    <!-- input customization workaround -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+      $('select').select2({
+        minimumResultsForSearch: -1
+      });
+    </script>
+    <!--  -->
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

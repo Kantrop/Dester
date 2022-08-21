@@ -1,4 +1,5 @@
 @use './customBootstrap' as *
+@use './select2'
 
 .test-bg
   position: absolute
@@ -25,6 +26,10 @@ table
     vertical-align: top
   tr:nth-child(even) 
     background: #{$air-grey}
+input,
+select
+  -webkit-appearance: none
+
 .underline
   display: inline
   text-decoration: none
@@ -797,8 +802,11 @@ p,
     font-weight: 500
     font-size: 16px
   .collapse-block
+    .control
     .form-control
+      color: #{$black}
       background: #{$air-grey}
+    .spinner
       color: #{$black}
 
 .calculation-results

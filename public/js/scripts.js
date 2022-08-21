@@ -87,8 +87,8 @@ const handleHash = () => {
   const activeItems = document.querySelectorAll(`.by-hash .active`);
   const items = document.querySelectorAll(`.by-hash [href="${pagehash}"]`);
 
-  Array.from(activeItems).map((item) => item.classList.remove("active"));
-  Array.from(items).map((item) => item.classList.add("active"));
+  Array.from(activeItems).forEach((item) => item.classList.remove("active"));
+  Array.from(items).forEach((item) => item.classList.add("active"));
 
   const targetItem = document.querySelector(pagehash);
   window.scroll(0, targetItem.offsetTop - 100);
@@ -96,3 +96,16 @@ const handleHash = () => {
 handleHash(); // move to onLoad listener?
 window.addEventListener("popstate", handleHash);
 //
+
+
+const inputNumbers = document.querySelectorAll(`.spinner input`)
+Array.from(inputNumbers).forEach((item) => {
+  const step = item.getAttribute('step') || '0.0';
+  const stepNumber = +step;
+  item.parentNode.querySelector('.up').addEventListener('click', () => {
+    item.value = (+item.value + stepNumber).toFixed(step.length - 2)
+  })
+  item.parentNode.querySelector('.down').addEventListener('click', () => {
+    item.value = (+item.value - stepNumber).toFixed(step.length - 2)
+  })
+});

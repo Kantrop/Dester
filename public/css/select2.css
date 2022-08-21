@@ -1,0 +1,130 @@
+.select2-container--default .select2-selection--single {
+  background: #1300B1 !important;
+  border: none !important;
+  height: auto !important;
+  width: auto !important;
+  padding: 16px !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: #fff !important;
+  font-seize: 16px !important;
+  font-weight: 400 !important;
+  padding: 0 !important;
+  line-height: 135% !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  top: 50% !important;
+  right: 16px !important;
+  transform: translateY(-50%);
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  border: none !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b::after {
+  border-style: solid;
+  border-width: 2.7px 2.7px 0 0;
+  content: "";
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-right: 14px;
+  position: relative;
+  left: -5px;
+  top: -11px;
+  transform: rotate(135deg);
+  vertical-align: middle;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b::after {
+  top: -7px;
+  transform: rotate(-45deg);
+}
+
+.select2-results__option.select2-results__option--selectable {
+  background: #d4d0f7 !important;
+  padding: 12px !important;
+  color: #1B1B1B !important;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  background: #F7F7F7 !important;
+}
+
+.select2-results__option.select2-results__option--selected {
+  height: auto !important;
+  width: auto !important;
+  padding: 16px !important;
+}
+.select2-results__option.select2-results__option--selected::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 13px;
+  margin-right: 8px;
+  position: relative;
+  vertical-align: middle;
+  background: url("data:image/svg+xml, <svg width='16' height='13' viewBox='0 0 16 13' fill='none' xmlns='http://www.w3.org/2000/svg'> <path d='M15.1709 0.258472C15.5805 0.629007 15.6121 1.26138 15.2415 1.67092L5.74154 12.1709C5.55778 12.374 5.29877 12.4929 5.02498 12.4997C4.75118 12.5065 4.48656 12.4008 4.29289 12.2071L0.292893 8.20711C-0.0976311 7.81659 -0.0976311 7.18342 0.292893 6.7929C0.683417 6.40238 1.31658 6.40238 1.70711 6.7929L4.96376 10.0496L13.7585 0.329094C14.129 -0.0804445 14.7614 -0.112063 15.1709 0.258472Z' fill='%231B1B1B'/></svg> ");
+}
+
+.select2 {
+  width: 100% !important;
+}
+
+.spinner a.up,
+.spinner a.down {
+  height: 10px;
+  width: 10px;
+  font-size: 14px;
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  color: #999;
+}
+
+.spinner {
+  position: relative;
+}
+.spinner .up,
+.spinner .down {
+  position: absolute;
+  bottom: 14px;
+  right: 16px;
+  width: 18px;
+  height: 18px;
+  font-size: 12px;
+  height: 9px;
+}
+.spinner .up::after,
+.spinner .down::after {
+  pointer-events: none;
+  border-style: solid;
+  border-width: 2.7px 2.7px 0 0;
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 14px;
+  position: relative;
+  left: 5px;
+  top: -10px;
+  transform: rotate(135deg);
+  vertical-align: middle;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.spinner .up {
+  bottom: auto;
+  top: 14px;
+}
+.spinner .up::after {
+  transform: rotate(-45deg);
+  top: -5px;
+}
+
+/*# sourceMappingURL=select2.css.map */
