@@ -81,6 +81,9 @@ Array.from(hashItems).forEach((item) =>
 
 const handleHash = () => {
   const pagehash = window.location.hash;
+  if(!pagehash) {
+    return
+  }
   const activeItems = document.querySelectorAll(`.by-hash .active`);
   const items = document.querySelectorAll(`.by-hash [href="${pagehash}"]`);
 
