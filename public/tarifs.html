@@ -110,7 +110,7 @@
         >
           <div class="row g-5">
             <div class="col-xs-12 col-md-6">
-              <div class="calculation-params">
+              <div class="form-ui calculation-params">
                 <div class="heading">Shipping calculator to Emirates</div>
                 <div class="control">
                   <label for="country_from_id" class="small form-label"
@@ -163,7 +163,7 @@
                         >Weight, kg</label
                       >
                       <div class="spinner">
-                          <input
+                        <input
                           name="weight"
                           id="weight"
                           value="1"
@@ -235,7 +235,7 @@
                         >Length, cm</label
                       >
                       <div class="spinner">
-                          <input
+                        <input
                           name="dimensions_x"
                           id="dimensions_x"
                           value="10"
@@ -282,20 +282,21 @@
                         />
                         <span class="down"></span>
                         <span class="up"></span>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="mt-7">
-                  <button
-                    type="submit"
-                    id="submit"
-                    class="btn btn-light btn-lg btn-arrow"
-                  >Calculate</button>
-
+                  <div class="mt-7">
+                    <button
+                      type="submit"
+                      id="submit"
+                      class="btn btn-light btn-lg btn-arrow"
+                    >
+                      Calculate
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
             </div>
             <div class="col-xs-12 col-md-6">
               <div class="calculation-results">
@@ -390,7 +391,7 @@
                   <button class="btn btn-primary btn-arrow btn-lg">
                     Create order
                   </button>
-                  <div class="calculation-results-disclaimer">
+                  <div class="button-disclaimer">
                     *VAT and Customs Duty are paid upon receipt.
                   </div>
                 </div>
@@ -399,6 +400,103 @@
           </div>
         </form>
       </div>
+      <!-- calculation logic -->
+      <script>
+        let result_elements = {
+          item_price: document.querySelector(
+            '[data-selector="calculation-results-item"]'
+          ),
+          shipping_price: document.querySelector(
+            '[data-selector="calculation-results-shipping"]'
+          ),
+          service_fee: document.querySelector(
+            '[data-selector="calculation-results-service"]'
+          ),
+          customs_duty: document.querySelector(
+            '[data-selector="calculation-results-customs"]'
+          ),
+          vat: document.querySelector(
+            '[data-selector="calculation-results-vat"]'
+          ),
+          total_price: document.querySelector(
+            '[data-selector="calculation-results-total"]'
+          ),
+          total_price_aed: document.querySelector(
+            '[data-selector="calculation-results-total-aed"]'
+          ),
+        };
+        let informer = document.querySelector(
+          '[data-selector="calculation-informer"]'
+        );
+        let calculator = document.querySelector(
+          '[data-selector="tariffs-calculation"]'
+        );
+        let form = document.querySelector('form[name="tariff_form"]');
+
+        function clearCalculationResults() {
+          let empty = "—";
+          for (let key in result_elements) {
+            result_elements[key].innerHTML = empty;
+          }
+        }
+
+        function fillCalculationResults(results) {
+          for (let key in result_elements) {
+            result_elements[key].innerHTML = results[key];
+          }
+        }
+
+        function clearErrors() {
+          calculator?.classList.remove("error");
+          informer.innerHTML = "";
+        }
+
+        function showErrors(errors) {
+          for (let key in errors) {
+            calculator?.classList.add("error");
+            informer.innerHTML =
+              '<span class="' + key + '-over">' + errors[key] + "</span>";
+          }
+        }
+
+        form.addEventListener("submit", function (e) {
+          console.log(e);
+          e.preventDefault();
+          clearCalculationResults();
+          clearErrors();
+          console.log(new FormData(form));
+          fetch("https://mydester.com/en/tariffs/ajax/pricing", {
+            method: "POST",
+            body: new FormData(form),
+          })
+            .then((response) => {
+              return response.json();
+            })
+            .then(async (result) => {
+              let { content } = JSON.parse(result.data?.content);
+              if (content.hasOwnProperty("errors")) {
+                showErrors(content.errors);
+              } else {
+                fillCalculationResults(content);
+              }
+            });
+        });
+        form.dispatchEvent(new Event("submit"));
+      </script>
+
+      <!-- input customization workaround -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <link
+        href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+        rel="stylesheet"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+      <script>
+        $("select").select2({
+          minimumResultsForSearch: -1,
+        });
+      </script>
+      <!--  -->
     </section>
 
     <footer class="footer mt-stage">
@@ -602,99 +700,6 @@
         </div>
       </div>
     </div>
-    <script>
-      let result_elements = {
-        item_price: document.querySelector(
-          '[data-selector="calculation-results-item"]'
-        ),
-        shipping_price: document.querySelector(
-          '[data-selector="calculation-results-shipping"]'
-        ),
-        service_fee: document.querySelector(
-          '[data-selector="calculation-results-service"]'
-        ),
-        customs_duty: document.querySelector(
-          '[data-selector="calculation-results-customs"]'
-        ),
-        vat: document.querySelector(
-          '[data-selector="calculation-results-vat"]'
-        ),
-        total_price: document.querySelector(
-          '[data-selector="calculation-results-total"]'
-        ),
-        total_price_aed: document.querySelector(
-          '[data-selector="calculation-results-total-aed"]'
-        ),
-      };
-      let informer = document.querySelector(
-        '[data-selector="calculation-informer"]'
-      );
-      let calculator = document.querySelector(
-        '[data-selector="tariffs-calculation"]'
-      );
-      let form = document.querySelector('form[name="tariff_form"]');
-
-      function clearCalculationResults() {
-        let empty = "—";
-        for (let key in result_elements) {
-          result_elements[key].innerHTML = empty;
-        }
-      }
-
-      function fillCalculationResults(results) {
-        for (let key in result_elements) {
-          result_elements[key].innerHTML = results[key];
-        }
-      }
-
-      function clearErrors() {
-        calculator?.classList.remove("error");
-        informer.innerHTML = "";
-      }
-
-      function showErrors(errors) {
-        for (let key in errors) {
-          calculator?.classList.add("error");
-          informer.innerHTML =
-            '<span class="' + key + '-over">' + errors[key] + "</span>";
-        }
-      }
-
-      form.addEventListener("submit", function (e) {
-        console.log(e);
-        e.preventDefault();
-        clearCalculationResults();
-        clearErrors();
-        console.log(new FormData(form));
-        fetch("https://mydester.com/en/tariffs/ajax/pricing", {
-          method: "POST",
-          body: new FormData(form),
-        })
-          .then((response) => {
-            return response.json();
-          })
-          .then(async (result) => {
-            let { content } = JSON.parse(result.data?.content);
-            if (content.hasOwnProperty("errors")) {
-              showErrors(content.errors);
-            } else {
-              fillCalculationResults(content);
-            }
-          });
-      });
-      form.dispatchEvent(new Event("submit"));
-    </script>
-
-    <!-- input customization workaround -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <script>
-      $('select').select2({
-        minimumResultsForSearch: -1
-      });
-    </script>
-    <!--  -->
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

@@ -2680,7 +2680,7 @@ progress {
   height: 1.135em;
 }
 .form-control::placeholder {
-  color: #6c757d;
+  color: #4833f5;
   opacity: 1;
 }
 .form-control:disabled {
