@@ -116,8 +116,8 @@ h1,
   font-size: 82px !important;
 }
 
-h2,
-.h2 {
+h2:not(.scaling),
+.h2:not(.scaling) {
   font-size: 62px !important;
 }
 

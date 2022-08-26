@@ -76,8 +76,8 @@ h1,
 .h1 {
     font-size: $h1-font-size !important;
 }
-h2,
-.h2 {
+h2:not(.scaling),
+.h2:not(.scaling) {
     font-size: $h2-font-size !important;
 }
 h3,
