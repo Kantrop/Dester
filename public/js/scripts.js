@@ -110,7 +110,8 @@ Array.from(inputNumbers).forEach((item) => {
   })
 });
 
-document.querySelectorAll('input:not([type=checkbox]):not([type=radio]), .select2-selection.select2-selection--single').forEach((input) => {
+// hide socials on field focus
+document.querySelectorAll('input:not([type=checkbox]):not([type=radio])').forEach((input) => {
   input.addEventListener("focus", (e) => {
     console.log('focus', e)
     body.classList.add('focused');
@@ -120,7 +121,31 @@ document.querySelectorAll('input:not([type=checkbox]):not([type=radio]), .select
     body.classList.remove('focused');
   });
 })
-$?.('select').on("select2:close", function(e) {
-  console.log('remove')
-  body.classList.remove('focused');
-}); 
+if(window.$) {
+  $('select').on("select2:close", function(e) {
+    console.log('remove')
+    body.classList.remove('focused');
+  }); 
+  $('select').on("select2:opening", function(e) {
+    console.log('remove')
+    body.classList.add('focused');
+  }); 
+}
+//
+
+// orderlist info tooltip
+document.querySelectorAll('.order-item-stage').forEach((order) => {
+  order.addEventListener('mouseover', function() {
+    const popup = this.querySelector('.order-item-stage-popup');
+    const topOffset = popup.getBoundingClientRect().top;
+
+    if(topOffset < 90){
+      popup.classList.add('to-bottom')
+    }
+  });
+  order.addEventListener('mouseleave', function() {
+    const popup = this.querySelector('.order-item-stage-popup');
+    popup.classList.remove('to-bottom')
+  });
+});
+//

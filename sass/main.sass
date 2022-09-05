@@ -976,8 +976,8 @@ p,
     &-btn
       color: #{$primary}
       cursor: help
-      &:hover + .order-item-stage-popup
-        display: block
+    &:hover .order-item-stage-popup
+      display: block
     &-popup
       display: none
       position: absolute
@@ -986,6 +986,24 @@ p,
       min-width: 250px
       animation: fade-in 0.5s 
       animation-fill-mode: forwards
+      z-index: 1
+      &::before
+        content:''
+        position: absolute
+        top:-20px
+        left:0
+        right:0
+        height: 20px
+      &::after
+        content:''
+        position: absolute
+        bottom:-20px
+        left:0
+        right:0
+        height: 20px
+      &.to-bottom
+        bottom: auto
+        top: 150%
       .timeline
         padding-right: 14px
         text-align: left
@@ -1371,7 +1389,10 @@ p,
       padding: 0px
     &-package
       padding: 24px
-
+    &-stage
+      &-popup
+        width: 100%
+        left: 0
 @media (max-width: 575px)
   .stage .app-btn
     width: 100%
