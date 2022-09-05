@@ -460,11 +460,9 @@
         }
 
         form.addEventListener("submit", function (e) {
-          console.log(e);
           e.preventDefault();
           clearCalculationResults();
           clearErrors();
-          console.log(new FormData(form));
           fetch("https://mydester.com/en/tariffs/ajax/pricing", {
             method: "POST",
             body: new FormData(form),
@@ -495,6 +493,8 @@
         $("select").select2({
           minimumResultsForSearch: -1,
         });
+        $("select").on('select2:closing', console.log);
+        docuemtn.addEventListener('select2:closing', () => console.log('window'))
       </script>
       <!--  -->
     </section>

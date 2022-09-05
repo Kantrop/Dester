@@ -109,3 +109,18 @@ Array.from(inputNumbers).forEach((item) => {
     item.value = (+item.value - stepNumber).toFixed(step.length - 2)
   })
 });
+
+document.querySelectorAll('input:not([type=checkbox]):not([type=radio]), .select2-selection.select2-selection--single').forEach((input) => {
+  input.addEventListener("focus", (e) => {
+    console.log('focus', e)
+    body.classList.add('focused');
+  });
+  input.addEventListener("blur", (e) => {
+    console.log('blur', e)
+    body.classList.remove('focused');
+  });
+})
+$?.('select').on("select2:close", function(e) {
+  console.log('remove')
+  body.classList.remove('focused');
+}); 
