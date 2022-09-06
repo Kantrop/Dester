@@ -16055,6 +16055,11 @@ p,
     width: 100%;
     left: 0;
   }
+  .focused .fixed.bottom,
+.hide-fixed .fixed.bottom {
+    bottom: 0;
+    transform: translateY(100%);
+  }
 }
 @media (max-width: 575px) {
   .stage .app-btn {
@@ -16085,11 +16090,6 @@ p,
   }
   .navbar-aside {
     margin-right: 0 !important;
-  }
-  .focused .fixed.bottom,
-.hide-fixed .fixed.bottom {
-    bottom: 0;
-    transform: translateY(100%);
   }
 }
 @media (max-width: 520px) {
