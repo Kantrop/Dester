@@ -1393,6 +1393,12 @@ p,
       &-popup
         width: 100%
         left: 0
+  .focused .fixed,
+  .hide-fixed .fixed
+    &.bottom
+      bottom: 0
+      transform: translateY(100%)
+      
 @media (max-width: 575px)
   .stage .app-btn
     width: 100%
@@ -1417,12 +1423,6 @@ p,
       --bs-gutter-x: 0
   .navbar-aside
     margin-right: 0!important
-  .focused .fixed,
-  .hide-fixed .fixed
-    &.bottom
-      bottom: 0
-      transform: translateY(100%)
-
 
 @media (max-width: 520px)
   .illustration
