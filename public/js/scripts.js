@@ -113,21 +113,17 @@ Array.from(inputNumbers).forEach((item) => {
 // hide socials on field focus
 document.querySelectorAll('input:not([type=checkbox]):not([type=radio])').forEach((input) => {
   input.addEventListener("focus", (e) => {
-    console.log('focus', e)
     body.classList.add('focused');
   });
   input.addEventListener("blur", (e) => {
-    console.log('blur', e)
     body.classList.remove('focused');
   });
 })
 if(window.$) {
   $('select').on("select2:close", function(e) {
-    console.log('remove')
     body.classList.remove('focused');
   }); 
   $('select').on("select2:opening", function(e) {
-    console.log('remove')
     body.classList.add('focused');
   }); 
 }
