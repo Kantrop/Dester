@@ -419,6 +419,13 @@ p,
   right: 23px
   &.bottom
     bottom: 23px
+.sticky
+  position: sticky
+  z-index: 20
+  right: 23px
+  &.bottom
+    bottom: 23px
+
 
 .partner
   border-radius: #{$border-radius-lg}
@@ -810,7 +817,7 @@ p,
       background: #{$air-grey}
     .spinner
       color: #{$black}
-
+.gray-form,
 .calculation-results
   background: #{$air-grey}
   border-radius: 40px
@@ -1070,6 +1077,159 @@ p,
     opacity: 1
     transform: translateY(0)
 
+.cart-item
+  & + &
+    margin-top: #{$indent-xxl}
+    padding-top: #{$indent-xxl}
+    border-top: 1px solid #{$middle_gray}
+  &-id
+    color: #{$dark_grey}
+    background: #{$light_gray}
+    border-radius: 50%
+    width: 24px
+    height: 24px
+    align-items: center
+    display: flex
+    justify-content: center
+      
+  &-image
+    text-align: center
+    img
+      max-height: 200px
+      max-width: 100%
+  &-quantity
+    font-size: 14px
+    color: #A6A6A6
+  &-price
+    margin-bottom: 4px
+    &-old
+      text-decoration: line-through
+      font-weight: bold
+      color: #{$dark_grey}
+    &-old + &-actual
+      color: #{$whatsapp-green}
+      margin-left: 0.5em
+    &-actual
+      font-weight: bold
+
+  &-options-list
+    font-size: 14px
+    color: #{$dark_grey}
+    display: flex
+    flex-wrap: wrap
+    margin-top: #{$indent-xs}
+  &-option
+    margin-right: #{$indent-sm}
+    dl
+      display: flex
+      margin: 0
+    dt
+      margin-right: #{$indent-xs}
+
+.payment-options
+  position: relative
+  transition: all 0.4s
+  min-height: 150px
+  min-width: 300px
+  margin-bottom: #{$indent-sm}
+  [data-target]
+    cursor: pointer
+  &-caption
+    font-size: 14px
+    margin-bottom: 12px
+  label
+    display: block
+    flex: 1
+  &-list
+    position: relative
+    top: 0px
+    background: #{$electric-blue}
+    color: #{$white}
+    padding: 24px
+    border-radius: #{$border-radius-lg}
+    transition: all 0.4s
+    a
+      color: #{white}
+      &:hover
+        color: #{white}
+        opacity: 0.7
+  &-item
+    display: flex
+    transition: all 0.3s
+    input
+      display: initial
+    &-name
+      display: flex
+      justify-content: space-between
+      transition: all 0.4s
+      overflow: hidden
+      height: 0
+      box-sizing: content-box
+      font-size: 18px
+      font-weight: 700
+      opacity: 0
+      overflow: hidden
+  input:checked + .payment-options-item-name
+      height: 30px
+      opacity: 1
+      .radiobtn
+        opacity: 0
+        width: 0
+        margin-right: 0
+  .payment-options-change
+    transition: all 0.3s
+    height: 1.2em
+    margin-top: #{$indent-sm}
+    display: block
+  &.opened,
+  &.opening,
+  &.closing
+    .payment-options-list
+      position: absolute
+      width:100%
+      top: -10px
+      box-shadow: 5px 15px 30px rgba(0, 0, 0, 0.3)
+    input:checked + .payment-options-item-name
+      .radiobtn
+        opacity: 1
+        width: 30px
+        margin-right: 0.3em
+  &.opened
+    .payment-options-item + .payment-options-item
+      margin-top: 24px
+      
+    .payment-options-change
+      opacity: 0
+      height: 0
+      margin-top: 0
+      overflow: hidden
+    .payment-options-item-name
+      opacity: 1
+      height: 30px
+      overflow: visible
+
+.radiobtn
+  width:30px
+  height:30px
+  position: relative
+  vertical-align: middle
+  transition: all 0.3s
+  margin-right: 0.3em
+  display: inline-block
+  &:after
+    content: ''
+    width:30px
+    height:30px
+    display: inline-block
+    border-radius: 50%
+    background: #{$white}
+    border: 1px solid #{$deep_blu}
+    position: absolute
+    transition: all 0.3s
+    left: 0
+  
+input[type=radio]:checked + * .radiobtn:after
+  border-width: 10px
 
 
 @media (max-width: 992px)
@@ -1258,6 +1418,8 @@ p,
     font-size: 14px
     &-l
       font-size: 14px
+    &-s
+      font-size: 12px
   .h2:not(.scaling), h2:not(.scaling)
     font-size: 24px !important
   .h3, h3
@@ -1394,7 +1556,7 @@ p,
         width: 100%
         left: 0
   .focused .fixed,
-  .hide-fixed .fixed
+  .hide-fixed .fixed:not(.force-shown)
     &.bottom
       bottom: 0
       transform: translateY(100%)
@@ -1423,6 +1585,11 @@ p,
       --bs-gutter-x: 0
   .navbar-aside
     margin-right: 0!important
+  .cart-item-options
+    &-list
+      display: block
+      dl
+        flex-wrap: wrap
 
 @media (max-width: 520px)
   .illustration

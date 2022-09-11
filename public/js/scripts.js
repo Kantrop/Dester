@@ -145,3 +145,13 @@ document.querySelectorAll('.order-item-stage').forEach((order) => {
   });
 });
 //
+
+// handle collapse
+const collapseBtns = document.querySelectorAll("[data-target=customCollapse]");
+const collapseOverlay = document.querySelector("#customCollapseOverlay");
+Array.from(collapseBtns).forEach((collapseBtn) => {
+  collapseBtn.addEventListener("click", () => {
+    toggleClassWithAnimationDelay(collapseOverlay, collapseBtn)
+  });
+});
+//
