@@ -58,6 +58,876 @@
         </nav>
       </div>
     </header>
+    <section class="stage mt-9">
+      <div class="container">
+        <h2>Alerts</h2>
+
+        <div class="row mb-3 paragraph">
+          <div class="col-md-4">
+            <div class="alert alert-primary">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Assumenda cum dignissimos doloremque explicabo quos repellat
+              similique, tenetur veniam? Atque consequatur dolorem ex incidunt
+              maiores obcaecati odio quas quo rem soluta!
+            </div>
+          </div>
+
+          <div class="col-md-8">
+            <div class="row gx-2">
+              <div class="col-6 col-sm-4 col-lg-3">
+                <div class="alert alert-primary">Alert Primary</div>
+              </div>
+              <div class="col-6 col-sm-4 col-lg-3">
+                <div class="alert alert-secondary">Alert Secondary</div>
+              </div>
+              <div class="col-6 col-sm-4 col-lg-3">
+                <div class="alert alert-success">Alert Success</div>
+              </div>
+              <div class="col-6 col-sm-4 col-lg-3">
+                <div class="alert alert-info">Alert Info</div>
+              </div>
+              <div class="col-6 col-sm-4 col-lg-3">
+                <div class="alert alert-warning">Alert Warning</div>
+              </div>
+              <div class="col-6 col-sm-4 col-lg-3">
+                <div class="alert alert-danger">Alert Danger</div>
+              </div>
+              <div class="col-6 col-sm-4 col-lg-3">
+                <div class="alert alert-light">Alert Light</div>
+              </div>
+              <div class="col-6 col-sm-4 col-lg-3">
+                <div class="alert alert-dark">Alert Dark</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stage mt-9">
+      <div class="container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Главная</a></li>
+            <li class="breadcrumb-item"><a href="#">Библиотека</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Данные</li>
+          </ol>
+        </nav>
+        <h2>Breadcrumb</h2>
+      </div>
+    </section>
+    <section class="stage mt-9">
+      <div class="container">
+        <h2>Grid Breakpoints</h2>
+
+        <div class="row paragraph">
+          <div class="col-sm-12">
+            <table class="table table-borderless">
+              <thead>
+                <tr>
+                  <th>Breakpoint</th>
+                  <th>Class infix</th>
+                  <th>Dimensions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>X-Small</td>
+                  <td><em>None</em></td>
+                  <td>&lt;576px</td>
+                </tr>
+                <tr>
+                  <td>Small</td>
+                  <td><code>sm</code></td>
+                  <td>≥576px</td>
+                </tr>
+                <tr>
+                  <td>Medium</td>
+                  <td><code>md</code></td>
+                  <td>≥768px</td>
+                </tr>
+                <tr>
+                  <td>Large</td>
+                  <td><code>lg</code></td>
+                  <td>≥992px</td>
+                </tr>
+                <tr>
+                  <td>Extra large</td>
+                  <td><code>xl</code></td>
+                  <td>≥1200px</td>
+                </tr>
+                <tr>
+                  <td>Extra extra large</td>
+                  <td><code>xxl</code></td>
+                  <td>≥1400px</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mt-9">
+      <div class="container">
+        <h2>Components</h2>
+
+        <div class="row paragraph">
+          <div class="col-lg-4">
+            <h3 class="h4">Dropdowns</h3>
+            <div class="paragraph">
+              <div class="dropdown">
+                <span
+                  class="link-restyle me-2"
+                  aria-expanded="false"
+                  data-bs-toggle="dropdown"
+                  >Link</span
+                >
+                <button
+                  class="btn btn-primary btn-sm dropdown-toggle"
+                  type="button"
+                  aria-expanded="false"
+                  data-bs-toggle="dropdown"
+                >
+                  Button
+                </button>
+
+                <ul class="dropdown-menu">
+                  <li><div class="dropdown-header">Dropdown header</div></li>
+                  <li>
+                    <span class="dropdown-item-text">Dropdown item text</span>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="javascript:">Link item</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item active" href="javascript:"
+                      >Active item</a
+                    >
+                  </li>
+                  <li><span class="dropdown-item">Span item</span></li>
+                  <li>
+                    <a class="dropdown-item disabled" href="javascript:"
+                      >Disabled item</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><div class="dropdown-item">Separated item</div></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <h3 class="h4">Popovers</h3>
+            <div class="paragraph">
+              <div class="btn-group btn-group-sm">
+                <button
+                  type="button"
+                  class="btn btn-sm btn-primary"
+                  data-bs-toggle="popover"
+                  data-bs-content="And here's some amazing content. It's very engaging. Right?"
+                >
+                  Click to toggle popover
+                </button>
+                <a
+                  tabindex="0"
+                  class="btn btn-sm btn-secondary popover-dismiss"
+                  role="button"
+                  data-bs-toggle="popover"
+                  data-bs-trigger="focus"
+                  title="Dismissible popover"
+                  data-bs-content="And here's some amazing content. It's very engaging. Right?"
+                  >Dismissible popover</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <h3 class="h4">Modal</h3>
+
+            <div class="paragraph">
+              <div class="btn-group btn-group-sm">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target='[data-modal="sample"]'
+                >
+                  Data attr
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-modal="selector"
+                >
+                  JS init
+                </button>
+              </div>
+
+              <div class="modal fade" tabindex="-1" data-modal="sample">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h2 class="modal-title h5">Modal title</h2>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Modal body text goes here.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-primary btn-arrow"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stage mt-9">
+      <div class="container">
+        <h2>Forms</h2>
+        <div class="paragraph">
+          <h3>Buttons</h3>
+          <div class="row paragraph">
+            <div class="col-lg-6">
+              <h4 class="mb-2">Button Types</h4>
+              <div class="d-flex mb-3 paragprah">
+                <button class="btn btn-primary btn-arrow me-2">Button</button>
+                <input
+                  class="btn btn-primary me-2"
+                  type="submit"
+                  value="Submit"
+                />
+                <a class="btn btn-primary btn-arrow" href="javascript:">Link</a>
+              </div>
+
+              <h4 class="mb-2">Button Sizes</h4>
+              <div class="d-flex align-items-start mb-3">
+                <button class="btn btn-primary btn-arrow btn-lg me-2">
+                  Large
+                </button>
+                <button class="btn btn-primary btn-arrow me-2">Default</button>
+                <button class="btn btn-primary btn-sm">Small</button>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <h4 class="mb-2">Button Themes</h4>
+              <div class="row g-2 mb-3">
+                <div class="col-6 col-sm-4 col-md-3">
+                  <button class="btn btn-primary btn-arrow">Primary</button>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3">
+                  <button class="btn btn-secondary">Secondary</button>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3">
+                  <button class="btn btn-success">Success</button>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3">
+                  <button class="btn btn-info">Info</button>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3">
+                  <button class="btn btn-warning">Warning</button>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3">
+                  <button class="btn btn-danger">Danger</button>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3">
+                  <button class="btn btn-light btn-arrow">Light</button>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3">
+                  <button class="btn btn-dark">Dark</button>
+                </div>
+              </div>
+
+              <h4 class="mb-2">Button Outline Themes</h4>
+              <div class="row g-2 mb-3">
+                <div class="col-6 col-sm-4 col-md-3">
+                  <button class="btn btn-outline-primary">Primary</button>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3">
+                  <button class="btn btn-outline-secondary">Secondary</button>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3">
+                  <button class="btn btn-outline-success">Success</button>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3">
+                  <button class="btn btn-outline-info">Info</button>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3">
+                  <button class="btn btn-outline-warning">Warning</button>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3">
+                  <button class="btn btn-outline-danger">Danger</button>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3">
+                  <button class="btn btn-outline-light">Light</button>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3">
+                  <button class="btn btn-outline-dark">Dark</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="mb-4">Form Controls</h3>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-ui">
+                <div class="heading">Form Control Types</div>
+                <div class="control">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Text Input"
+                    aria-label="Text Input"
+                  />
+                </div>
+                <div class="control">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Disabled Text Input"
+                    disabled
+                    aria-label="Disabled Text Input"
+                    value="value"
+                  />
+                </div>
+                <div class="control">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Readonly Text Input"
+                    readonly
+                    aria-label="Readonly Text Input"
+                  />
+                </div>
+
+                <div class="control">
+                  <textarea
+                    rows="3"
+                    class="form-control"
+                    placeholder="Textarea"
+                    aria-label="Textarea"
+                  ></textarea>
+                </div>
+                <div class="control">
+                  <textarea
+                    rows="3"
+                    class="form-control"
+                    placeholder="Disabled Textarea"
+                    disabled
+                    aria-label="Disabled Textarea"
+                  ></textarea>
+                </div>
+                <div class="control">
+                  <textarea
+                    rows="3"
+                    class="form-control"
+                    placeholder="Readonly Textarea"
+                    readonly
+                    aria-label="Readonly Textarea"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <div class="form-ui">
+                <h4 class="heading">Form Control Sizes</h4>
+                <div class="control">
+                  <input
+                    type="text"
+                    class="form-control form-control-lg"
+                    placeholder="Large Text Input"
+                    aria-label="Large Text Input"
+                  />
+                </div>
+                <div class="control">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Default Text Input"
+                    aria-label="Default Text Input"
+                  />
+                </div>
+                <div class="control">
+                  <input
+                    type="text"
+                    class="form-control form-control-sm mb-2"
+                    placeholder="Small Text Input"
+                    aria-label="Small Text Input"
+                  />
+                </div>
+                <div class="control">
+                  <textarea
+                    rows="3"
+                    class="form-control form-control-lg mb-2"
+                    placeholder="Large Textarea"
+                    aria-label="Large Textarea"
+                  ></textarea>
+                </div>
+
+                <div class="control">
+                  <textarea
+                    rows="3"
+                    class="form-control"
+                    placeholder="Default Textarea"
+                    aria-label="Default Textarea"
+                  ></textarea>
+                </div>
+                <div class="control">
+                  <textarea
+                    rows="3"
+                    class="form-control form-control-sm mb-2"
+                    placeholder="Small Textarea"
+                    aria-label="Small Textarea"
+                  ></textarea>
+                </div>
+
+                <div class="control">
+                  <textarea
+                    rows="3"
+                    class="form-control"
+                    placeholder="Textarea with autosize"
+                    data-autosize
+                    aria-label="Textarea with autosize"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="mt-6">Form Select</h3>
+          <div class="form-ui paragraph">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <div class="control">
+              <select class="form-select mb-2" aria-label="Select">
+                <option value="0" selected disabled>Select item...</option>
+                <option value="1">First item</option>
+                <option value="2">Second item</option>
+                <option value="3">Third item</option>
+              </select>
+            </div>
+              <div class="control">
+              <select
+                class="form-select mb-2"
+                disabled
+                aria-label="Disabled Select"
+              >
+                <option value="0">Disabled Select</option>
+              </select>
+            </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div class="control">
+              <select
+                class="form-select form-select-lg mb-2"
+                aria-label="Large Select"
+              >
+                <option value="0">Large Select</option>
+              </select>
+            </div>
+              <div class="control">
+              <select class="form-select mb-2" aria-label="Default Select">
+                <option value="0">Default Select</option>
+              </select>
+            </div>
+              <div class="control">
+              <select
+                class="form-select form-select-sm mb-2"
+                aria-label="Small Select"
+              >
+                <option value="0">Small Select</option>
+              </select>
+            </div>
+            </div>
+          </div>
+</div>
+          <h3 class="mt-6">Checks and Radios</h3>
+          <div class="form-ui paragraph">
+          <div class="row">
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="control"><div>
+                <input
+                  class="form-check-input"
+                  id="uikit_checkbox[default]"
+                  type="checkbox"
+                />
+                <label class="form-check-label" for="uikit_checkbox[default]"
+                  >Checkbox</label
+                ></div>
+              </div>
+              <div class="control"><div>
+                <input
+                  class="form-check-input"
+                  id="uikit_checkbox[checked]"
+                  type="checkbox"
+                  checked
+                />
+                <label class="form-check-label" for="uikit_checkbox[checked]"
+                  >Checkbox <code>:checked</code></label
+                ></div>
+              </div>
+              <div class="control"><div>
+                <input
+                  class="form-check-input"
+                  id="uikit_checkbox[disabled]"
+                  type="checkbox"
+                  disabled
+                />
+                <label class="form-check-label" for="uikit_checkbox[disabled]"
+                  >Checkbox <code>:disabled</code></label
+                ></div>
+              </div>
+              <div class="control"><div>
+                <input
+                  class="form-check-input"
+                  id="uikit_checkbox[disabled][checked]"
+                  type="checkbox"
+                  checked
+                  disabled
+                />
+                <label
+                  class="form-check-label"
+                  for="uikit_checkbox[disabled][checked]"
+                  >Checkbox <code>:disabled</code> <code>:checked</code></label
+                ></div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3"><div>
+              <div class="control"><div>
+                <input
+                  class="form-check-input"
+                  id="uikit_radio[default]"
+                  type="radio"
+                  name="uikit_radio"
+                />
+                <label class="form-check-label" for="uikit_radio[default]"
+                  >Radio</label
+                ></div></div>
+              </div>
+              <div class="control"><div>
+                <input
+                  class="form-check-input"
+                  id="uikit_radio[checked]"
+                  type="radio"
+                  name="uikit_radio"
+                  checked
+                />
+                <label class="form-check-label" for="uikit_radio[checked]"
+                  >Radio <code>:checked</code></label
+                ></div>
+              </div>
+              <div class="control"><div>
+                <input
+                  class="form-check-input"
+                  id="uikit_radio[disabled]"
+                  type="radio"
+                  name="uikit_radio_disabled"
+                  disabled
+                />
+                <label class="form-check-label" for="uikit_radio[disabled]"
+                  >Radio <code>:disabled</code></label
+                ></div>
+              </div>
+              <div class="control">
+                <div>
+                <input
+                  class="form-check-input"
+                  id="uikit_radio[disabled][checked]"
+                  type="radio"
+                  name="uikit_radio_disabled"
+                  disabled
+                  checked
+                />
+                <label
+                  class="form-check-label"
+                  for="uikit_radio[disabled][checked]"
+                  >Radio <code>:disabled</code> <code>:checked</code></label
+                >
+              </div>
+              </div>
+              <hr>
+              <h3 class="heading">Custom radio</h3>
+              <div class="control">
+                <div>
+                  <label>
+                    <input type="radio" name="uikit_radio" value="paypal" />
+                    <div>
+                      <span>
+                        <span class="radiobtn"></span>
+                        <span>Tron (TRC)</span>
+                      </span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="control form-switch">
+                <div>
+                <input
+                  class="form-check-input"
+                  id="uikit_switch[default]"
+                  type="checkbox"
+                />
+                <label class="form-check-label" for="uikit_switch[default]"
+                  >Switch</label
+                >
+              </div>
+              </div>
+              <div class="control form-switch">
+                <div>
+                <input
+                  class="form-check-input"
+                  id="uikit_switch[checked]"
+                  type="checkbox"
+                  checked
+                />
+                <label class="form-check-label" for="uikit_switch[checked]"
+                  >Switch <code>:checked</code></label
+                >
+              </div>
+              </div>
+              <div class="control form-switch">
+                <div>
+                <input
+                  class="form-check-input"
+                  id="uikit_switch[disabled]"
+                  type="checkbox"
+                  disabled
+                />
+                <label class="form-check-label" for="uikit_switch[disabled]"
+                  >Switch <code>:disabled</code></label
+                ></div>
+              </div>
+              <div class="control form-switch ">
+                <div>
+                <input
+                  class="form-check-input"
+                  id="uikit_switch[disabled][checked]"
+                  type="checkbox"
+                  checked
+                  disabled
+                />
+                <label
+                  class="form-check-label"
+                  for="uikit_switch[disabled][checked]"
+                  >Switch <code>:disabled</code> <code>:checked</code></label
+                >
+              </div>
+              </div>
+            </div>
+          </div>
+          </div>
+
+          <h3>Form Validation</h3>
+          <div class="form-ui paragraph">
+          <div class="mb-3">
+            <fieldset class="row gx-2">
+              <legend class="h4 heading">Visual demo</legend>
+              <div class="col-sm-6 col-md-3 mb-2">
+                <label for="uikit_validation[f_name]" class="form-label"
+                  >First name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="uikit_validation[f_name]"
+                  value=""
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div class="col-sm-6 col-md-3 mb-2">
+                <label for="uikit_validation[l_name]" class="form-label"
+                  >Last name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="uikit_validation[l_name]"
+                  value=""
+                  autocomplete="off"
+                  required
+                  aria-describedby="uikit_validation[l_name][message]"
+                />
+                <div id="uikit_validation[l_name][message]" class="form-text">
+                  Additional message.
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3 mb-2">
+                <label for="uikit_validation[city]" class="form-label"
+                  >City</label
+                >
+                <input
+                  type="text"
+                  class="form-control is-invalid"
+                  id="uikit_validation[city]"
+                  value=""
+                  autocomplete="off"
+                  required
+                  aria-describedby="uikit_validation[city][invalid]"
+                />
+                <div
+                  id="uikit_validation[city][invalid]"
+                  class="invalid-feedback"
+                >
+                  Error message.
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3 mb-2">
+                <label for="uikit_validation[state]" class="form-label"
+                  >State</label
+                >
+                <select
+                  class="form-select is-valid"
+                  id="uikit_validation[state]"
+                  required
+                  aria-describedby="uikit_validation[state][valid]"
+                >
+                  <option value="0" disabled>...</option>
+                  <option value="1" selected>...</option>
+                  <option value="2">...</option>
+                </select>
+                <div id="uikit_validation[state][valid]" class="valid-feedback">
+                  Success message.
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          </div>
+
+          <form action="#" id="uikit_validation_live[form]" class="mb-3">
+            <div class="form-ui paragraph">
+            <fieldset class="row gx-2">
+              <div class="heading">Action demo</div>
+              <div class="col-sm-6 col-md-3 mb-2">
+                <div class="control">
+                <label for="uikit_validation_live[name]" class="form-label"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="uikit_validation_live[name]"
+                  value=""
+                  autocomplete="off"
+                  required
+                />
+                <div class="valid-feedback">Correct value.</div>
+                <div class="invalid-feedback">Incorrect value.</div>
+              </div>
+              </div>
+              <div class="col-sm-6 col-md-3 mb-2">
+                <div class="control">
+                <label for="uikit_validation_live[email]" class="form-label"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="uikit_validation_live[email]"
+                  value=""
+                  autocomplete="off"
+                  required
+                />
+                <div class="valid-feedback">Correct value.</div>
+                <div class="invalid-feedback">Incorrect value.</div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3 mb-2">
+                <div class="control">
+                <label for="uikit_validation_live[phone]" class="form-label"
+                  >Phone</label
+                >
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="uikit_validation_live[phone]"
+                  value=""
+                  autocomplete="off"
+                  pattern="[\d\s\-+()]{5,}"
+                  required
+                />
+                <div class="valid-feedback">Correct value.</div>
+                <div class="invalid-feedback">Incorrect value.</div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3 mb-2">
+                <div class="control">
+                <label for="uikit_validation_live[gender]" class="form-label"
+                  >Gender</label
+                >
+                <select
+                  class="form-select"
+                  id="uikit_validation_live[gender]"
+                  required
+                >
+                  <option selected disabled>Choose your destiny</option>
+                  <option value="1">Male</option>
+                  <option value="2">Female</option>
+                  <option value="3">Combat Helicopter</option>
+                </select>
+                <div class="valid-feedback">Correct value.</div>
+                <div class="invalid-feedback">Incorrect value.</div>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-lg btn-light btn-arrow">Submit</button>
+              </div>
+            </fieldset>
+            </div>
+          </form>
+        </div>
+        <div class="alert alert-warning">
+          <p>
+            Несмотря на&nbsp;указанный у&nbsp;поля <b>Phone</b>
+            <code>type="tel"</code>, к&nbsp;нему применяются те&nbsp;же самые
+            правила валидации, что и&nbsp;к&nbsp;полю с
+            <code>type="text"</code>. Это связано с&nbsp;большими различиями
+            форматов телефонных номеров в&nbsp;разных странах,
+            а&nbsp;так&nbsp;же всевозможными &laquo;магазинными&raquo;
+            вариациями вида:<span class="text-nowrap">555-HOT-GAYS</span>.
+          </p>
+          <p>
+            Такое поле всегда будет возвращать состояние <code>:valid</code>.
+            Чтобы избежать подобной ситуации, полю можно добавить специальный
+            атрибут-маску, например, <code>pattern="[\d\s\-+()]{5,}"</code>.
+            С&nbsp;таким атрибутом поле перейдёт в&nbsp;состояние
+            <code>:valid</code>, только если в&nbsp;него введены: цифры,
+            пробелы, знак минус, знак плюс и&nbsp;скобки, а&nbsp;также что оно
+            должно быть не&nbsp;менее 5&nbsp;символов.
+          </p>
+          <p class="mb-0">
+            Также стоит обратить внимание на&nbsp;поведение <code>select</code>
+            <b>Gender</b>, которому по&nbsp;умолчанию установлен
+            <code>option</code> с&nbsp;атрибутом
+            <code>disabled</code> и&nbsp;без атрибута <code>value</code>.
+            Несмотря на&nbsp;все ограничения этого <code>option</code>, браузер
+            всё равно считает, что состояние всего
+            <code>select</code>&nbsp;&mdash; <code>:valid</code>.
+          </p>
+        </div>
+      </div>
+    </section>
 
     <section class="stage mt-9">
       <div class="container">
@@ -72,11 +942,17 @@
           <h4>h4. Bootstrap heading</h4>
           <h5>h5. Bootstrap heading</h5>
           <h6>h6. Bootstrap heading</h6>
-          <p class="text text-l">Big. You can use the mark tag to <mark>highlight</mark> text.</p>
+          <p class="text text-l">
+            Big. You can use the mark tag to <mark>highlight</mark> text.
+          </p>
+          <p></p>
+          <p class="text text-s">
+            Small. You can use the mark tag to <mark>highlight</mark> text.
+          </p>
+          <p></p>
           <p>
-          <p class="text text-s">Small. You can use the mark tag to <mark>highlight</mark> text.</p>
-          <p>
-          <p>Normal. You can use the mark tag to <mark>highlight</mark> text.</p>
+            Normal. You can use the mark tag to <mark>highlight</mark> text.
+          </p>
           <p>
             <del>This line of text is meant to be treated as deleted text.</del>
           </p>
@@ -100,6 +976,347 @@
           </p>
           <p><strong>This line rendered as bold text.</strong></p>
           <p><em>This line rendered as italicized text.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="stage mt-9">
+      <div class="container">
+        <h2>Icons Array</h2>
+        <div class="paragraph">
+          <div class="form-check form-switch mb-2">
+            <input
+              class="form-check-input"
+              id="uikit_icons[switch]"
+              type="checkbox"
+            />
+            <label class="form-check-label" for="uikit_icons[switch]"
+              >Enlarge</label
+            >
+          </div>
+
+          <div class="icons" id="uikit_icons[items]">
+            {% set icons = ['menu', 'close', 'chevron-up', 'chevron-down',
+            'check', 'star', 'multiple', 'whatsapp', 'facebook', 'fb-messenger']
+            %} {% for icon in icons %}
+            <div class="icon-{{ icon }}"></div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stage mt-9">
+      <div class="container">
+        <h2>Lists</h2>
+
+        <div class="row paragraph">
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-md-6 col-lg-12">
+                <h3>Unordered List</h3>
+                <ul class="list">
+                  <li>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Animi autem culpa dicta dolorem eaque enim, est et eum
+                    iusto, laudantium maxime nam nisi, officia quos reiciendis
+                    repellat rerum velit voluptate?
+                  </li>
+                  <li>
+                    Consequatur, consequuntur deserunt dicta dignissimos dolores
+                    eligendi, et eveniet ex excepturi facilis fugiat id incidunt
+                    iste laudantium, maxime nisi officiis possimus reiciendis
+                    sint temporibus unde veritatis vero voluptatum! Debitis,
+                    veritatis!
+                    <ul>
+                      <li>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Amet aspernatur consectetur consequuntur dolor
+                        eligendi tempore totam?
+                      </li>
+                      <li>
+                        At autem, blanditiis commodi dolores eos inventore iusto
+                        laborum nostrum quisquam repellendus reprehenderit sit
+                        soluta tenetur.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Dicta dolore dolorum, facere nobis provident quasi saepe!
+                    Aspernatur cumque ea eveniet facilis fuga impedit in ipsa
+                    ipsum labore modi non possimus quas quasi quidem ratione
+                    reiciendis, sed sint soluta.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-md-6 col-lg-12">
+                <h3>Ordered List</h3>
+                <ol class="list">
+                  <li>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Aperiam atque beatae consectetur deserunt dolor doloremque
+                    dolores dolorum eligendi, enim esse et eum fuga id inventore
+                    iusto libero officiis repellendus, reprehenderit.
+                  </li>
+                  <li>
+                    Ab accusantium commodi, doloribus ipsum itaque magnam nemo
+                    nostrum quas tempora tempore! Amet consequuntur eum,
+                    expedita fuga, ipsa iste molestias nulla pariatur porro quas
+                    quis voluptate! Accusamus eveniet excepturi itaque!
+                  </li>
+                  <li>
+                    Asperiores dolor doloremque laborum minima tempora, vel! Ab
+                    ad animi assumenda beatae blanditiis consequuntur ducimus
+                    error esse illo laborum molestias, nam officia, perspiciatis
+                    possimus veritatis. Adipisci amet illum inventore repellat!
+                  </li>
+                  <li>
+                    Aspernatur assumenda deserunt dicta dolore dolorum error
+                    esse ex fugiat inventore iure magnam magni neque, obcaecati
+                    praesentium provident quam quod recusandae reiciendis sit
+                    sunt tempore totam vero. Eligendi odio, quidem.
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="text-restyle">
+              <h3>Restyled List</h3>
+              <ul class="list">
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Accusamus ad animi dolore doloremque dolorum eaque enim harum
+                  impedit laborum odit officia qui quisquam quod, recusandae
+                  tempore ullam voluptatibus! Quos, sed.
+                </li>
+                <li>
+                  Aliquid asperiores consequatur inventore iusto odit rerum
+                  soluta suscipit ullam velit veniam. Assumenda eaque et quas
+                  vel. Ab commodi cumque esse facere, facilis id, nam odit
+                  officiis provident quaerat reiciendis.
+                  <ul>
+                    <li>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Commodi nisi recusandae voluptatum.
+                      <ol>
+                        <li>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Accusantium architecto assumenda atque aut dolor
+                          ducimus eius.
+                        </li>
+                        <li>
+                          Eum illo laboriosam libero magni mollitia quis
+                          quisquam tenetur unde, veniam vitae, voluptatem
+                          voluptates.
+                          <ol>
+                            <li>
+                              Lorem ipsum dolor sit amet, consectetur
+                              adipisicing elit. A aliquam deserunt ducimus earum
+                              eius et fuga ipsum labore.
+                            </li>
+                            <li>
+                              Laborum minus nulla pariatur perspiciatis placeat
+                              quae, quibusdam quo reiciendis reprehenderit
+                              vitae?
+                            </li>
+                          </ol>
+                        </li>
+                      </ol>
+                    </li>
+                    <li>
+                      Aperiam dolorum error in porro praesentium unde,
+                      voluptates. Accusamus aliquam atque deserunt id nihil
+                      obcaecati quidem repellat voluptas?
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Culpa, doloribus facere illo magnam molestias quo saepe sed!
+                  Aliquam exercitationem libero modi natus nisi quisquam
+                  recusandae? Consequatur, ea ipsum laudantium magni maiores
+                  nisi perspiciatis, placeat quas rem sed, vero?
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="stage mt-9">
+      <div class="container">
+        <h2>Pagination</h2>
+
+        <div class="row paragraph">
+          <div class="col-md-8 col-lg-6">
+            <nav aria-label="Pages navigation">
+              <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous"
+                    ><span aria-hidden="true">&larr;</span></a
+                  >
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active">
+                  <a class="page-link" href="#">2</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item d-xs-none">
+                  <a class="page-link" href="#">4</a>
+                </li>
+                <li class="page-item d-xs-none">
+                  <a class="page-link" href="#">5</a>
+                </li>
+                <li class="page-item disabled">
+                  <span class="page-link">&hellip;</span>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">69</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next"
+                    ><span aria-hidden="true">&rarr;</span></a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="col-md-4 col-lg-6">
+            <div class="d-lg-flex align-items-lg-center">
+              <h3 class="h5 me-lg-3 mb-4">Pagination Large</h3>
+              <ul class="pagination pagination-lg">
+                <li class="page-item"><a href="#" class="page-link">1</a></li>
+                <li class="page-item"><a href="#" class="page-link">2</a></li>
+                <li class="page-item"><a href="#" class="page-link">3</a></li>
+              </ul>
+            </div>
+
+            <div class="d-lg-flex align-items-lg-center">
+              <h3 class="h5 me-lg-3 mb-4">Pagination Small</h3>
+              <ul class="pagination pagination-sm">
+                <li class="page-item"><a href="#" class="page-link">1</a></li>
+                <li class="page-item"><a href="#" class="page-link">2</a></li>
+                <li class="page-item"><a href="#" class="page-link">3</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stage mt-9">
+      <div class="container">
+        <h2>Plain Text</h2>
+
+        <div class="row paragraph">
+          <div class="col-xl-4">
+            <h3>Regular</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Aspernatur dolorum, ducimus ea fugiat illum incidunt inventore
+              minus nam pariatur perferendis quibusdam quidem repudiandae
+              sapiente? Eaque iure pariatur quas sint voluptatum?
+            </p>
+
+            <h3>Blockquote</h3>
+            <div class="paragraph">
+              <blockquote class="blockquote">
+                Aperiam architecto, cupiditate debitis excepturi expedita fugit,
+                impedit labore, libero molestias nihil non pariatur placeat porro
+                provident quasi quis rem. Beatae consequuntur harum minima
+                perferendis sit, temporibus? Ducimus, numquam, omnis.
+              </blockquote>
+              <figcaption class="blockquote-footer">
+                Someone famous in <cite title="Source Title">Source Title</cite>
+              </figcaption>
+            </div>
+          </div>
+
+          <div class="col-xl-8">
+            <div class="row">
+              <div class="col-md-6">
+                <h3>Default <span class="large">Large</span></h3>
+                <p class="large">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Aliquam dolor ea esse explicabo illum impedit inventore iure
+                  similique totam vel?
+                </p>
+              </div>
+
+              <div class="col-md-6">
+                <h3>Default <span class="small">Small</span></h3>
+                <p class="small">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Accusantium commodi deserunt dicta eligendi, error impedit,
+                  incidunt inventore iste nobis placeat recusandae repellat
+                  reprehenderit rerum sapiente, ullam ut veritatis voluptas
+                  voluptate?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3>Content Tags</h3>
+          <dl class="row gx-3 paragraph">
+            <dt class="col-md-4">&lt;a&gt;</dt>
+            <dd class="col-md-8">
+              Lorem <a href="#">ipsum dolor</a> sit amet, consectetur
+              adipisicing elit.
+              <a href="#"
+                >Aliquam at deserunt ex maxime provident sequi sunt
+                voluptatibus</a
+              >.
+            </dd>
+
+            <dt class="col-md-4">[class="link-restyle"]</dt>
+            <dd class="col-md-8">
+              Lorem <span class="link-restyle">ipsum dolor</span> sit amet,
+              consectetur adipisicing elit.
+              <span class="link-restyle"
+                >Ad at commodi deleniti, dignissimos, doloribus et expedita
+                incidunt ipsum</span
+              >.
+            </dd>
+
+            <dt class="col-md-4">&lt;b&gt;</dt>
+            <dd class="col-md-8">
+              Lorem <b>ipsum dolor</b> sit amet, consectetur adipisicing elit.
+              <b
+                >Consequatur culpa eligendi eos eveniet facilis fugiat fugit
+                hic.</b
+              >
+            </dd>
+
+            <dt class="col-md-4">&lt;strong&gt;</dt>
+            <dd class="col-md-8">
+              Lorem <strong>ipsum dolor</strong> sit amet, consectetur
+              adipisicing elit.
+              <strong
+                >Animi beatae blanditiis consequatur, cum cupiditate eius illo
+                in ipsam iusto</strong
+              >.
+            </dd>
+
+            <dt class="col-md-4">&lt;i&gt;</dt>
+            <dd class="col-md-8">
+              Lorem <i>ipsum dolor</i> sit amet, consectetur adipisicing elit.
+              <i
+                >Accusantium aliquid assumenda autem consequatur eos ex
+                facilis</i
+              >.
+            </dd>
+
+            <dt class="col-md-4">&lt;em&gt;</dt>
+            <dd class="col-md-8">
+              Lorem <em>ipsum dolor</em> sit amet, consectetur adipisicing elit.
+              <em
+                >Accusamus aliquam animi dicta distinctio doloremque doloribus
+                exercitationem</em
+              >.
+            </dd>
+          </dl>
         </div>
       </div>
     </section>
@@ -296,9 +1513,7 @@
     <section class="stage mt-stage">
       <div class="container">
         <h3>Overlay</h3>
-        <div class="paragraph">
-            But you cant close it outside
-        </div>
+        <div class="paragraph">But you cant close it outside</div>
         <div class="paragraph">
           <button class="btn btn-primary btn-arrow" id="overlay-btn-example">
             trigger
@@ -315,6 +1530,11 @@
           const overlay = document.querySelector("#overayExample");
           overlayBtn.addEventListener("click", () => {
             toggleClassWithAnimationDelay(overlay, overlayBtn);
+          });
+          document.addEventListener("click", (e) => {
+            if(e.target === overlay && overlay.classList.contains('opened')) {
+              toggleClassWithAnimationDelay(overlay, overlayBtn);
+            }
           });
         </script>
       </div>
@@ -367,6 +1587,21 @@
         </div>
       </div>
     </section>
+
+
+      <!-- input customization workaround -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <link
+        href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+        rel="stylesheet"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+      <script>
+        $("select").select2({
+          minimumResultsForSearch: -1,
+        });
+      </script>
+      <!--  -->
 
     <footer class="footer mt-stage">
       <div class="container">
@@ -505,8 +1740,9 @@
           </div>
         </div>
       </div>
-      
-    </footer><div class="fixed bottom">
+    </footer>
+
+    <div class="fixed bottom">
       <div class="row g-2">
         <div class="col-xs-6 col-lg-auto">
           <div class="hover-block collapsed" data-target="socialOverlay">
@@ -582,6 +1818,7 @@
       defer
       async
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/init.js"></script>
     <script src="./js/scripts.js"></script>

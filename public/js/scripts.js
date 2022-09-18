@@ -65,6 +65,11 @@ socialOverlayBtn.addEventListener("click", () => {
     toggleClassWithAnimationDelay(socialOverlay, socialOverlayBtn);
   }
 });
+document.addEventListener("click", (e) => {
+  if(e.target === socialOverlay && socialOverlay.classList.contains('opened')) {
+    toggleClassWithAnimationDelay(socialOverlay, socialOverlayBtn);
+  }
+});
 //
 
 // scroll to anchor

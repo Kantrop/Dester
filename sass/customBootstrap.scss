@@ -72,30 +72,30 @@ $h3-font-size: 42px;
 $h4-font-size: 20px;
 $h5-font-size: 18px;
 $h6-font-size: 16px;
-h1,
-.h1 {
-    font-size: $h1-font-size !important;
-}
-h2:not(.scaling),
-.h2:not(.scaling) {
-    font-size: $h2-font-size !important;
-}
-h3,
-.h3 {
-    font-size: $h3-font-size !important;
-}
-h4,
-.h4 {
-    font-size: $h4-font-size !important;
-}
-h5,
-.h5 {
-    font-size: $h5-font-size !important;
-}
-h6,
-.h6 {
-    font-size: $h6-font-size !important;
-}
+// h1,
+// .h1 {
+//     font-size: $h1-font-size !important;
+// }
+// h2:not(.scaling),
+// .h2:not(.scaling) {
+//     font-size: $h2-font-size !important;
+// }
+// h3,
+// .h3 {
+//     font-size: $h3-font-size !important;
+// }
+// h4,
+// .h4 {
+//     font-size: $h4-font-size !important;
+// }
+// h5,
+// .h5 {
+//     font-size: $h5-font-size !important;
+// }
+// h6,
+// .h6 {
+//     font-size: $h6-font-size !important;
+// }
 
 $headings-margin-bottom: 0;
 $headings-font-weight: 700;
@@ -116,9 +116,27 @@ $input-border-width: 0;
 $input-padding-y: 16px;
 $input-padding-x: 16px;
 $input-placeholder-color: $primary;
+$input-disabled-bg: $electric_blue_transparent;
+$input-disabled-color: $middle_gray!important;
+$form-check-input-checked-bg-color: $deep_blu;
+$form-check-inline-margin-end: 0;
 
+$form-check-input-width: 30px;
+$form-check-min-height: 30px;
+$form-check-padding-start: 0;
+.form-check-input {
+    margin-top:-5px!important;
+    margin-right: 5px!important
+}
+$form-switch-width: 55px;
+$form-switch-padding-start: 0;
+
+$form-switch-color: $light-blu;
+
+$form-select-disabled-bg: $light_blu;
 $form-select-padding-y: 16px;
 $form-select-padding-x: 16px;
+
 
 $navbar-padding-y: 15px;
 $navbar-nav-link-padding-x: 13px;
@@ -140,4 +158,26 @@ $accordion-icon-transform: rotate(45deg);
 $accordion-button-active-icon: url("data:image/svg+xml, <svg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'> <rect y='8' width='17' height='1' rx='0.5' fill='#1B1B1B'/> <rect x='9' width='17' height='0.999999' rx='0.5' transform='rotate(90 9 0)' fill='#1B1B1B'/> </svg>");
 $accordion-button-icon: url("data:image/svg+xml, <svg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'> <rect y='8' width='17' height='1' rx='0.5' fill='#1B1B1B'/> <rect x='9' width='17' height='0.999999' rx='0.5' transform='rotate(90 9 0)' fill='#1B1B1B'/> </svg>");
 
+$popover-header-font-size: $h4-font-size !important;
+$popover-header-bg: $primary;
+$popover-header-color: $white;
+
+$modal-header-border-color: $air-grey;
+$modal-footer-border-color: $air-grey;
+
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+//   border: 1px solid green;
+  -webkit-text-fill-color: #{$white};
+  -webkit-box-shadow: 0 0 0px 1000px #{$deep_blu} inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
