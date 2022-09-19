@@ -385,8 +385,10 @@
           </div>
 
           <h3 class="mb-4">Form Controls</h3>
-          <div class="alert alert-warning">Please do not use small field conrols. Forms must be in primary colored block</div>
-
+          <div class="alert alert-warning">
+            Please do not use small field conrols. Forms must be in primary
+            colored block
+          </div>
           <div class="row">
             <div class="col-md-6">
               <div class="form-ui">
@@ -452,8 +454,7 @@
               <div class="form-ui">
                 <h4 class="heading">Form Control Sizes</h4>
 
-              <div class="col-6 col-sm-4 col-lg-3">
-              </div>
+                <div class="col-6 col-sm-4 col-lg-3"></div>
                 <div class="control">
                   <input
                     type="text"
@@ -473,7 +474,7 @@
                 <div class="control">
                   <input
                     type="text"
-                    class="form-control form-control-sm mb-2"
+                    class="form-control form-control-sm"
                     placeholder="Small Text Input"
                     aria-label="Small Text Input"
                   />
@@ -481,7 +482,7 @@
                 <div class="control">
                   <textarea
                     rows="3"
-                    class="form-control form-control-lg mb-2"
+                    class="form-control form-control-lg"
                     placeholder="Large Textarea"
                     aria-label="Large Textarea"
                   ></textarea>
@@ -498,7 +499,7 @@
                 <div class="control">
                   <textarea
                     rows="3"
-                    class="form-control form-control-sm mb-2"
+                    class="form-control form-control-sm"
                     placeholder="Small Textarea"
                     aria-label="Small Textarea"
                   ></textarea>
@@ -518,389 +519,415 @@
           </div>
 
           <h3 class="mt-6">Form Select</h3>
+          <div class="alert alert-warning">
+            You need to add initialize scripts on page, if you want you
+            customized selcects. See example before footer tag on this page
+          </div>
           <div class="form-ui paragraph">
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <div class="control">
-              <select class="form-select mb-2" aria-label="Select">
-                <option value="0" selected disabled>Select item...</option>
-                <option value="1">First item</option>
-                <option value="2">Second item</option>
-                <option value="3">Third item</option>
-              </select>
-            </div>
-              <div class="control">
-              <select
-                class="form-select mb-2"
-                disabled
-                aria-label="Disabled Select"
-              >
-                <option value="0">Disabled Select</option>
-              </select>
-            </div>
-            </div>
-            <div class="col-md-6 mb-3">
-              <div class="control">
-              <select
-                class="form-select form-select-lg mb-2"
-                aria-label="Large Select"
-              >
-                <option value="0">Large Select</option>
-              </select>
-            </div>
-              <div class="control">
-              <select class="form-select mb-2" aria-label="Default Select">
-                <option value="0">Default Select</option>
-              </select>
-            </div>
-              <div class="control">
-              <select
-                class="form-select form-select-sm mb-2"
-                aria-label="Small Select"
-              >
-                <option value="0">Small Select</option>
-              </select>
-            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <div class="control">
+                  <select class="form-select" aria-label="Select">
+                    <option value="0" selected disabled>Select item...</option>
+                    <option value="1">First item</option>
+                    <option value="2">Second item</option>
+                    <option value="3">Third item</option>
+                  </select>
+                </div>
+                <div class="control">
+                  <select
+                    class="form-select"
+                    disabled
+                    aria-label="Disabled Select"
+                  >
+                    <option value="0">Disabled Select</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <div class="control">
+                  <select
+                    class="form-select form-select-lg"
+                    aria-label="Large Select"
+                  >
+                    <option value="0">Custom Select</option>
+                  </select>
+                </div>
+                <div class="control">
+                  <select class="form-select" aria-label="Default Select">
+                    <option value="0">Native Select</option>
+                  </select>
+                </div>
+              </div>
             </div>
           </div>
-</div>
           <h3 class="mt-6">Checks and Radios</h3>
           <div class="form-ui paragraph">
-          <div class="row">
-            <div class="col-md-6 col-lg-4 mb-3">
-              <div class="control"><div>
-                <input
-                  class="form-check-input"
-                  id="uikit_checkbox[default]"
-                  type="checkbox"
-                />
-                <label class="form-check-label" for="uikit_checkbox[default]"
-                  >Checkbox</label
-                ></div>
+            <div class="row">
+              <div class="col-md-6 col-lg-4 mb-3">
+                <div class="control">
+                  <div>
+                    <input
+                      class="form-check-input"
+                      id="uikit_checkbox[default]"
+                      type="checkbox"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="uikit_checkbox[default]"
+                      >Checkbox</label
+                    >
+                  </div>
+                </div>
+                <div class="control">
+                  <div>
+                    <input
+                      class="form-check-input"
+                      id="uikit_checkbox[checked]"
+                      type="checkbox"
+                      checked
+                    />
+                    <label
+                      class="form-check-label"
+                      for="uikit_checkbox[checked]"
+                      >Checkbox <code>:checked</code></label
+                    >
+                  </div>
+                </div>
+                <div class="control">
+                  <div>
+                    <input
+                      class="form-check-input"
+                      id="uikit_checkbox[disabled]"
+                      type="checkbox"
+                      disabled
+                    />
+                    <label
+                      class="form-check-label"
+                      for="uikit_checkbox[disabled]"
+                      >Checkbox <code>:disabled</code></label
+                    >
+                  </div>
+                </div>
+                <div class="control">
+                  <div>
+                    <input
+                      class="form-check-input"
+                      id="uikit_checkbox[disabled][checked]"
+                      type="checkbox"
+                      checked
+                      disabled
+                    />
+                    <label
+                      class="form-check-label"
+                      for="uikit_checkbox[disabled][checked]"
+                      >Checkbox <code>:disabled</code>
+                      <code>:checked</code></label
+                    >
+                  </div>
+                </div>
               </div>
-              <div class="control"><div>
-                <input
-                  class="form-check-input"
-                  id="uikit_checkbox[checked]"
-                  type="checkbox"
-                  checked
-                />
-                <label class="form-check-label" for="uikit_checkbox[checked]"
-                  >Checkbox <code>:checked</code></label
-                ></div>
-              </div>
-              <div class="control"><div>
-                <input
-                  class="form-check-input"
-                  id="uikit_checkbox[disabled]"
-                  type="checkbox"
-                  disabled
-                />
-                <label class="form-check-label" for="uikit_checkbox[disabled]"
-                  >Checkbox <code>:disabled</code></label
-                ></div>
-              </div>
-              <div class="control"><div>
-                <input
-                  class="form-check-input"
-                  id="uikit_checkbox[disabled][checked]"
-                  type="checkbox"
-                  checked
-                  disabled
-                />
-                <label
-                  class="form-check-label"
-                  for="uikit_checkbox[disabled][checked]"
-                  >Checkbox <code>:disabled</code> <code>:checked</code></label
-                ></div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-3"><div>
-              <div class="control"><div>
-                <input
-                  class="form-check-input"
-                  id="uikit_radio[default]"
-                  type="radio"
-                  name="uikit_radio"
-                />
-                <label class="form-check-label" for="uikit_radio[default]"
-                  >Radio</label
-                ></div></div>
-              </div>
-              <div class="control"><div>
-                <input
-                  class="form-check-input"
-                  id="uikit_radio[checked]"
-                  type="radio"
-                  name="uikit_radio"
-                  checked
-                />
-                <label class="form-check-label" for="uikit_radio[checked]"
-                  >Radio <code>:checked</code></label
-                ></div>
-              </div>
-              <div class="control"><div>
-                <input
-                  class="form-check-input"
-                  id="uikit_radio[disabled]"
-                  type="radio"
-                  name="uikit_radio_disabled"
-                  disabled
-                />
-                <label class="form-check-label" for="uikit_radio[disabled]"
-                  >Radio <code>:disabled</code></label
-                ></div>
-              </div>
-              <div class="control">
+              <div class="col-md-6 col-lg-4 mb-3">
                 <div>
-                <input
-                  class="form-check-input"
-                  id="uikit_radio[disabled][checked]"
-                  type="radio"
-                  name="uikit_radio_disabled"
-                  disabled
-                  checked
-                />
-                <label
-                  class="form-check-label"
-                  for="uikit_radio[disabled][checked]"
-                  >Radio <code>:disabled</code> <code>:checked</code></label
-                >
-              </div>
-              </div>
-              <hr>
-              <h3 class="heading">Custom radio</h3>
-              <div class="control">
-                <div>
-                  <label>
-                    <input type="radio" name="uikit_radio" value="paypal" />
+                  <div class="control">
                     <div>
+                      <input
+                        class="form-check-input"
+                        id="uikit_radio[default]"
+                        type="radio"
+                        name="uikit_radio"
+                      />
+                      <label class="form-check-label" for="uikit_radio[default]"
+                        >Radio</label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="control">
+                  <div>
+                    <input
+                      class="form-check-input"
+                      id="uikit_radio[checked]"
+                      type="radio"
+                      name="uikit_radio"
+                      checked
+                    />
+                    <label class="form-check-label" for="uikit_radio[checked]"
+                      >Radio <code>:checked</code></label
+                    >
+                  </div>
+                </div>
+                <div class="control">
+                  <div>
+                    <input
+                      class="form-check-input"
+                      id="uikit_radio[disabled]"
+                      type="radio"
+                      name="uikit_radio_disabled"
+                      disabled
+                    />
+                    <label class="form-check-label" for="uikit_radio[disabled]"
+                      >Radio <code>:disabled</code></label
+                    >
+                  </div>
+                </div>
+                <div class="control">
+                  <div>
+                    <input
+                      class="form-check-input"
+                      id="uikit_radio[disabled][checked]"
+                      type="radio"
+                      name="uikit_radio_disabled"
+                      disabled
+                      checked
+                    />
+                    <label
+                      class="form-check-label"
+                      for="uikit_radio[disabled][checked]"
+                      >Radio <code>:disabled</code> <code>:checked</code></label
+                    >
+                  </div>
+                </div>
+                <hr />
+                <h3 class="heading">Custom radio</h3>
+                <div class="control">
+                  <div>
+                    <label>
+                      <input type="radio" name="uikit_radio" value="paypal" />
                       <span>
                         <span class="radiobtn"></span>
                         <span>Tron (TRC)</span>
                       </span>
-                    </div>
-                  </label>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 mb-3">
+                <div class="control form-switch">
+                  <div>
+                    <input
+                      class="form-check-input"
+                      id="uikit_switch[default]"
+                      type="checkbox"
+                    />
+                    <label class="form-check-label" for="uikit_switch[default]"
+                      >Switch</label
+                    >
+                  </div>
+                </div>
+                <div class="control form-switch">
+                  <div>
+                    <input
+                      class="form-check-input"
+                      id="uikit_switch[checked]"
+                      type="checkbox"
+                      checked
+                    />
+                    <label class="form-check-label" for="uikit_switch[checked]"
+                      >Switch <code>:checked</code></label
+                    >
+                  </div>
+                </div>
+                <div class="control form-switch">
+                  <div>
+                    <input
+                      class="form-check-input"
+                      id="uikit_switch[disabled]"
+                      type="checkbox"
+                      disabled
+                    />
+                    <label class="form-check-label" for="uikit_switch[disabled]"
+                      >Switch <code>:disabled</code></label
+                    >
+                  </div>
+                </div>
+                <div class="control form-switch">
+                  <div>
+                    <input
+                      class="form-check-input"
+                      id="uikit_switch[disabled][checked]"
+                      type="checkbox"
+                      checked
+                      disabled
+                    />
+                    <label
+                      class="form-check-label"
+                      for="uikit_switch[disabled][checked]"
+                      >Switch <code>:disabled</code>
+                      <code>:checked</code></label
+                    >
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-6 col-lg-4 mb-3">
-              <div class="control form-switch">
-                <div>
-                <input
-                  class="form-check-input"
-                  id="uikit_switch[default]"
-                  type="checkbox"
-                />
-                <label class="form-check-label" for="uikit_switch[default]"
-                  >Switch</label
-                >
-              </div>
-              </div>
-              <div class="control form-switch">
-                <div>
-                <input
-                  class="form-check-input"
-                  id="uikit_switch[checked]"
-                  type="checkbox"
-                  checked
-                />
-                <label class="form-check-label" for="uikit_switch[checked]"
-                  >Switch <code>:checked</code></label
-                >
-              </div>
-              </div>
-              <div class="control form-switch">
-                <div>
-                <input
-                  class="form-check-input"
-                  id="uikit_switch[disabled]"
-                  type="checkbox"
-                  disabled
-                />
-                <label class="form-check-label" for="uikit_switch[disabled]"
-                  >Switch <code>:disabled</code></label
-                ></div>
-              </div>
-              <div class="control form-switch ">
-                <div>
-                <input
-                  class="form-check-input"
-                  id="uikit_switch[disabled][checked]"
-                  type="checkbox"
-                  checked
-                  disabled
-                />
-                <label
-                  class="form-check-label"
-                  for="uikit_switch[disabled][checked]"
-                  >Switch <code>:disabled</code> <code>:checked</code></label
-                >
-              </div>
-              </div>
-            </div>
-          </div>
           </div>
 
           <h3>Form Validation</h3>
           <div class="form-ui paragraph">
-          <div class="mb-3">
-            <fieldset class="row gx-2">
-              <legend class="h4 heading">Visual demo</legend>
-              <div class="col-sm-6 col-md-3 mb-2">
-                <label for="uikit_validation[f_name]" class="form-label"
-                  >First name</label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="uikit_validation[f_name]"
-                  value=""
-                  autocomplete="off"
-                  required
-                />
-              </div>
-              <div class="col-sm-6 col-md-3 mb-2">
-                <label for="uikit_validation[l_name]" class="form-label"
-                  >Last name</label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="uikit_validation[l_name]"
-                  value=""
-                  autocomplete="off"
-                  required
-                  aria-describedby="uikit_validation[l_name][message]"
-                />
-                <div id="uikit_validation[l_name][message]" class="form-text">
-                  Additional message.
+            <div class="mb-3">
+              <fieldset class="row gx-2">
+                <legend class="h4 heading">Visual demo</legend>
+                <div class="col-sm-6 col-md-3">
+                  <label for="uikit_validation[f_name]" class="form-label"
+                    >First name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="uikit_validation[f_name]"
+                    value=""
+                    autocomplete="off"
+                    required
+                  />
                 </div>
-              </div>
-              <div class="col-sm-6 col-md-3 mb-2">
-                <label for="uikit_validation[city]" class="form-label"
-                  >City</label
-                >
-                <input
-                  type="text"
-                  class="form-control is-invalid"
-                  id="uikit_validation[city]"
-                  value=""
-                  autocomplete="off"
-                  required
-                  aria-describedby="uikit_validation[city][invalid]"
-                />
-                <div
-                  id="uikit_validation[city][invalid]"
-                  class="invalid-feedback"
-                >
-                  Error message.
+                <div class="col-sm-6 col-md-3">
+                  <label for="uikit_validation[l_name]" class="form-label"
+                    >Last name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="uikit_validation[l_name]"
+                    value=""
+                    autocomplete="off"
+                    required
+                    aria-describedby="uikit_validation[l_name][message]"
+                  />
+                  <div id="uikit_validation[l_name][message]" class="form-text">
+                    Additional message.
+                  </div>
                 </div>
-              </div>
-              <div class="col-sm-6 col-md-3 mb-2">
-                <label for="uikit_validation[state]" class="form-label"
-                  >State</label
-                >
-                <select
-                  class="form-select is-valid"
-                  id="uikit_validation[state]"
-                  required
-                  aria-describedby="uikit_validation[state][valid]"
-                >
-                  <option value="0" disabled>...</option>
-                  <option value="1" selected>...</option>
-                  <option value="2">...</option>
-                </select>
-                <div id="uikit_validation[state][valid]" class="valid-feedback">
-                  Success message.
+                <div class="col-sm-6 col-md-3">
+                  <label for="uikit_validation[city]" class="form-label"
+                    >City</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control is-invalid"
+                    id="uikit_validation[city]"
+                    value=""
+                    autocomplete="off"
+                    required
+                    aria-describedby="uikit_validation[city][invalid]"
+                  />
+                  <div
+                    id="uikit_validation[city][invalid]"
+                    class="invalid-feedback"
+                  >
+                    Error message.
+                  </div>
                 </div>
-              </div>
-            </fieldset>
-          </div>
+                <div class="col-sm-6 col-md-3">
+                  <label for="uikit_validation[state]" class="form-label"
+                    >State</label
+                  >
+                  <select
+                    class="form-select is-valid"
+                    id="uikit_validation[state]"
+                    required
+                    aria-describedby="uikit_validation[state][valid]"
+                  >
+                    <option value="0" disabled>...</option>
+                    <option value="1" selected>...</option>
+                    <option value="2">...</option>
+                  </select>
+                  <div
+                    id="uikit_validation[state][valid]"
+                    class="valid-feedback"
+                  >
+                    Success message.
+                  </div>
+                </div>
+              </fieldset>
+            </div>
           </div>
 
           <form action="#" id="uikit_validation_live[form]" class="mb-3">
             <div class="form-ui paragraph">
-            <fieldset class="row gx-2">
-              <div class="heading">Action demo</div>
-              <div class="col-sm-6 col-md-3 mb-2">
-                <div class="control">
-                <label for="uikit_validation_live[name]" class="form-label"
-                  >Name</label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="uikit_validation_live[name]"
-                  value=""
-                  autocomplete="off"
-                  required
-                />
-                <div class="valid-feedback">Correct value.</div>
-                <div class="invalid-feedback">Incorrect value.</div>
-              </div>
-              </div>
-              <div class="col-sm-6 col-md-3 mb-2">
-                <div class="control">
-                <label for="uikit_validation_live[email]" class="form-label"
-                  >Email</label
-                >
-                <input
-                  type="email"
-                  class="form-control"
-                  id="uikit_validation_live[email]"
-                  value=""
-                  autocomplete="off"
-                  required
-                />
-                <div class="valid-feedback">Correct value.</div>
-                <div class="invalid-feedback">Incorrect value.</div>
+              <fieldset class="row gx-2">
+                <div class="heading">Action demo</div>
+                <div class="col-sm-6 col-md-3">
+                  <div class="control">
+                    <label for="uikit_validation_live[name]" class="form-label"
+                      >Name</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="uikit_validation_live[name]"
+                      value=""
+                      autocomplete="off"
+                      required
+                    />
+                    <div class="valid-feedback">Correct value.</div>
+                    <div class="invalid-feedback">Incorrect value.</div>
+                  </div>
                 </div>
-              </div>
-              <div class="col-sm-6 col-md-3 mb-2">
-                <div class="control">
-                <label for="uikit_validation_live[phone]" class="form-label"
-                  >Phone</label
-                >
-                <input
-                  type="tel"
-                  class="form-control"
-                  id="uikit_validation_live[phone]"
-                  value=""
-                  autocomplete="off"
-                  pattern="[\d\s\-+()]{5,}"
-                  required
-                />
-                <div class="valid-feedback">Correct value.</div>
-                <div class="invalid-feedback">Incorrect value.</div>
+                <div class="col-sm-6 col-md-3">
+                  <div class="control">
+                    <label for="uikit_validation_live[email]" class="form-label"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="uikit_validation_live[email]"
+                      value=""
+                      autocomplete="off"
+                      required
+                    />
+                    <div class="valid-feedback">Correct value.</div>
+                    <div class="invalid-feedback">Incorrect value.</div>
+                  </div>
                 </div>
-              </div>
-              <div class="col-sm-6 col-md-3 mb-2">
-                <div class="control">
-                <label for="uikit_validation_live[gender]" class="form-label"
-                  >Gender</label
-                >
-                <select
-                  class="form-select"
-                  id="uikit_validation_live[gender]"
-                  required
-                >
-                  <option selected disabled>Choose your destiny</option>
-                  <option value="1">Male</option>
-                  <option value="2">Female</option>
-                  <option value="3">Combat Helicopter</option>
-                </select>
-                <div class="valid-feedback">Correct value.</div>
-                <div class="invalid-feedback">Incorrect value.</div>
+                <div class="col-sm-6 col-md-3">
+                  <div class="control">
+                    <label for="uikit_validation_live[phone]" class="form-label"
+                      >Phone</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="uikit_validation_live[phone]"
+                      value=""
+                      autocomplete="off"
+                      pattern="[\d\s\-+()]{5,}"
+                      required
+                    />
+                    <div class="valid-feedback">Correct value.</div>
+                    <div class="invalid-feedback">Incorrect value.</div>
+                  </div>
                 </div>
-              </div>
-              <div class="col-12">
-                <button type="submit" class="btn btn-lg btn-light btn-arrow">Submit</button>
-                <div class="button-disclaimer">
-                  * Disclaimer under the submit button
+                <div class="col-sm-6 col-md-3">
+                  <div class="control">
+                    <label
+                      for="uikit_validation_live[gender]"
+                      class="form-label"
+                      >Gender</label
+                    >
+                    <select
+                      class="form-select"
+                      id="uikit_validation_live[gender]"
+                      required
+                    >
+                      <option selected disabled>Choose your destiny</option>
+                      <option value="1">Male</option>
+                      <option value="2">Female</option>
+                      <option value="3">Combat Helicopter</option>
+                    </select>
+                    <div class="valid-feedback">Correct value.</div>
+                    <div class="invalid-feedback">Incorrect value.</div>
+                  </div>
                 </div>
-              </div>
-            </fieldset>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-lg btn-light btn-arrow">
+                    Submit
+                  </button>
+                  <div class="button-disclaimer">
+                    * Disclaimer under the submit button
+                  </div>
+                </div>
+              </fieldset>
             </div>
           </form>
         </div>
@@ -991,7 +1018,7 @@
       <div class="container">
         <h2>Icons Array</h2>
         <div class="paragraph">
-          <div class="form-check form-switch mb-2">
+          <div class="form-check form-switch">
             <input
               class="form-check-input"
               id="uikit_icons[switch]"
@@ -1229,8 +1256,8 @@
             <div class="paragraph">
               <blockquote class="blockquote">
                 Aperiam architecto, cupiditate debitis excepturi expedita fugit,
-                impedit labore, libero molestias nihil non pariatur placeat porro
-                provident quasi quis rem. Beatae consequuntur harum minima
+                impedit labore, libero molestias nihil non pariatur placeat
+                porro provident quasi quis rem. Beatae consequuntur harum minima
                 perferendis sit, temporibus? Ducimus, numquam, omnis.
               </blockquote>
               <figcaption class="blockquote-footer">
@@ -1539,7 +1566,7 @@
             toggleClassWithAnimationDelay(overlay, overlayBtn);
           });
           document.addEventListener("click", (e) => {
-            if(e.target === overlay && overlay.classList.contains('opened')) {
+            if (e.target === overlay && overlay.classList.contains("opened")) {
               toggleClassWithAnimationDelay(overlay, overlayBtn);
             }
           });
@@ -1595,20 +1622,19 @@
       </div>
     </section>
 
-
-      <!-- input customization workaround -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <link
-        href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
-        rel="stylesheet"
-      />
-      <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-      <script>
-        $("select").select2({
-          minimumResultsForSearch: -1,
-        });
-      </script>
-      <!--  -->
+    <!-- input customization workaround -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+      $("select").select2({
+        minimumResultsForSearch: -1,
+      });
+    </script>
+    <!--  -->
 
     <footer class="footer mt-stage">
       <div class="container">
