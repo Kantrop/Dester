@@ -15752,6 +15752,7 @@ p,
   position: relative;
   transition: all 0.4s;
   min-height: 150px;
+  width: 300px;
   min-width: 300px;
   margin-bottom: 20px;
 }
@@ -15790,6 +15791,17 @@ p,
 .payment-options-item input {
   display: initial;
 }
+.payment-options-item-logo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+}
+.payment-options-item-content {
+  display: flex;
+  align-items: center;
+}
 .payment-options-item-name {
   display: flex;
   justify-content: space-between;
@@ -15804,13 +15816,15 @@ p,
   overflow: hidden;
 }
 .payment-options input:checked + .payment-options-item-name {
-  height: 30px;
+  min-height: 30px;
+  height: auto;
   opacity: 1;
 }
 .payment-options input:checked + .payment-options-item-name .radiobtn {
   opacity: 0;
-  width: 0;
-  margin-right: 0;
+}
+.payment-options input:checked + .payment-options-item-name .radiobtn-label {
+  transform: translateX(-40px);
 }
 .payment-options .payment-options-change {
   transition: all 0.3s;
@@ -15826,8 +15840,9 @@ p,
 }
 .payment-options.opened input:checked + .payment-options-item-name .radiobtn, .payment-options.opening input:checked + .payment-options-item-name .radiobtn, .payment-options.closing input:checked + .payment-options-item-name .radiobtn {
   opacity: 1;
-  width: 30px;
-  margin-right: 0.3em;
+}
+.payment-options.opened input:checked + .payment-options-item-name .radiobtn-label, .payment-options.opening input:checked + .payment-options-item-name .radiobtn-label, .payment-options.closing input:checked + .payment-options-item-name .radiobtn-label {
+  transform: translateX(0);
 }
 .payment-options.opened .payment-options-item + .payment-options-item {
   margin-top: 24px;
@@ -15846,11 +15861,13 @@ p,
 
 .radiobtn {
   width: 30px;
+  min-width: 30px;
   height: 30px;
+  min-height: 30px;
   position: relative;
   vertical-align: middle;
   transition: all 0.3s;
-  margin-right: 0.3em;
+  margin-right: 10px;
   display: inline-block;
 }
 .radiobtn:after {
@@ -15864,6 +15881,9 @@ p,
   position: absolute;
   transition: all 0.3s;
   left: 0;
+}
+.radiobtn-label {
+  transition: all 0.4s;
 }
 
 input[type=radio]:checked + * .radiobtn:after {
@@ -16256,6 +16276,9 @@ input[type=radio] + * {
 .hide-fixed .fixed:not(.force-shown).bottom {
     bottom: 0;
     transform: translateY(100%);
+  }
+  .payment-options {
+    width: auto;
   }
 }
 @media (max-width: 575px) {

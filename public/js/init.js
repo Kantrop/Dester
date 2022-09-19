@@ -53,13 +53,26 @@ window.addEventListener("resize", () => {
   setAdaptiveSwiper(575);
 });
 
-var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-  return new bootstrap.Popover(popoverTriggerEl)
-})
-var popover = new bootstrap.Popover(
-  document.querySelector(".popover-dismiss"),
-  {
-    trigger: "focus",
-  }
+// Bootstrap popoper
+const popoverTriggerList = [].slice.call(
+  document.querySelectorAll('[data-bs-toggle="popover"]')
 );
+const popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new bootstrap.Popover(popoverTriggerEl);
+});
+const popoverElements = document.querySelectorAll(".popover-dismiss");
+const popoverDismissNodeList = [].slice.call(
+  document.querySelectorAll('[data-bs-toggle="popover"]')
+);
+const popoverDismissList = popoverDismissNodeList.map(function (
+  popoverTriggerEl
+) {
+  return new bootstrap.Popover(popoverTriggerEl, {
+    trigger: "focus",
+  });
+});
+
+// custom selects
+$("select").select2({
+  minimumResultsForSearch: -1,
+});

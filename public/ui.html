@@ -519,8 +519,8 @@
           </div>
 
           <h3 class="mt-6">Form Select</h3>
-          <div class="alert alert-warning">
-            You need to add initialize scripts on page, if you want you
+          <div class="alert alert-warning mt-4">
+            You need to add initialize scripts on page, if you want
             customized selcects. See example before footer tag on this page
           </div>
           <div class="form-ui paragraph">
@@ -967,7 +967,7 @@
       <div class="container">
         <div class="alert alert-primary" role="alert">
           Headings dont have margins. <b>It IS feature.</b> You should wrap
-          content in class="paragraph" instead
+          content in <b>class="paragraph"</b> or <b>mt-4</b> class or higher instead
         </div>
         <div class="paragraph">
           <h1>h1. Bootstrap heading</h1>
@@ -1254,6 +1254,7 @@
 
             <h3>Blockquote</h3>
             <div class="paragraph">
+              <div class="alert alert-danger">Use block Review instead</div>
               <blockquote class="blockquote">
                 Aperiam architecto, cupiditate debitis excepturi expedita fugit,
                 impedit labore, libero molestias nihil non pariatur placeat
@@ -1547,7 +1548,7 @@
     <section class="stage mt-stage">
       <div class="container">
         <h3>Overlay</h3>
-        <div class="paragraph">But you cant close it outside</div>
+        <div class="paragraph">See initialization code in this block</div>
         <div class="paragraph">
           <button class="btn btn-primary btn-arrow" id="overlay-btn-example">
             trigger
@@ -1563,11 +1564,11 @@
           const overlayBtn = document.querySelector("#overlay-btn-example");
           const overlay = document.querySelector("#overayExample");
           overlayBtn.addEventListener("click", () => {
-            toggleClassWithAnimationDelay(overlay, overlayBtn);
+            toggleClassWithAnimationDelay({ el: overlay, btn: overlayBtn});
           });
           document.addEventListener("click", (e) => {
-            if (e.target === overlay && overlay.classList.contains("opened")) {
-              toggleClassWithAnimationDelay(overlay, overlayBtn);
+            if (e.target === overlay && overlay?.classList.contains("opened")) {
+              toggleClassWithAnimationDelay({ el:overlay, btn:overlayBtn });
             }
           });
         </script>
@@ -1601,6 +1602,98 @@
         </div>
       </div>
     </section>
+    <section class="stage mt-stage">
+      <div class="container">
+        <h3>Collapses</h3>
+        <div class="paragraph row">
+          <div class="col-xs">
+            <h4 class="mb-4">With sizes saving (fly)</h4>
+            <div class="payment-options" id="saveSizesCollapseOverlay">
+              <div class="payment-options-list">
+                <div class="payment-options-caption">Payment Method</div>
+                <div class="payment-options-item">
+                  <label data-target="saveSizesCollapse">
+                    <input type="radio" name="payment-source" value="visa" checked="checked" />
+                    <div class="payment-options-item-name">
+                      <span class="payment-options-item-content">
+                        <span class="radiobtn"></span>
+                        <span class="radiobtn-label">Credit/debit card via Decta</span>
+                      </span>
+                      <span class="payment-options-item-logo">
+                        <img src="https://dester.io/css/dester/assets/payment/MasterCard.svg">
+                        <img src="https://dester.io/css/dester/assets/payment/Visa.svg">
+                      </span>
+                  </div>
+                </label>
+                </div>
+                <div class="payment-options-item">
+                  <label data-target="saveSizesCollapse">
+                    <input type="radio" name="payment-source" value="paypal" />
+                    <div class="payment-options-item-name">
+                      <span class="payment-options-item-content">
+                        <span class="radiobtn"></span>
+                        <span class="radiobtn-label">Apple Pay</span>
+                      </span>
+                      <span class="payment-options-item-logo">
+                        <img src="https://dester.io/css/dester/assets/payment/Paypal.svg">
+                      </span>
+                    </div>
+                  </label>
+                </div>
+                <div class="payment-options-item">
+                  <label data-target="saveSizesCollapse">
+                    <input type="radio" name="payment-source" value="paypal" />
+                    <div class="payment-options-item-name">
+                      <span class="payment-options-item-content">
+                        <span class="radiobtn"></span>
+                        <span class="radiobtn-label">Tron (TRC)</span>
+                      </span>
+                      <span class="payment-options-item-logo">
+                        <img src="https://dester.io/css/dester/assets/payment/Paypal.svg">
+                      </span>
+                    </div>
+                  </label>
+                </div>
+                <div class="payment-options-item">
+                  <label data-target="saveSizesCollapse">
+                    <input type="radio" name="payment-source" value="paypal" />
+                    <div class="payment-options-item-name">
+                      <span class="payment-options-item-content">
+                        <span class="radiobtn"></span>
+                        <span class="radiobtn-label">Paypal</span>
+                      </span>
+                      <span class="payment-options-item-logo">
+                        <img src="https://dester.io/css/dester/assets/payment/Paypal.svg">
+                      </span>
+                    </div>
+                  </label>
+                </div>
+                <a href="javascript: void 0" class="payment-options-change" data-target="saveSizesCollapse">Change</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs">
+            <div class="h4 mb-4">Custom collapse (classes only)</div>
+            <div class="mb-2" data-target="basicCollapse">Collapse trigger</div>
+            <div id="basicCollapseOverlay">
+              <p>
+                Add only classes that you custumize by yourself.
+                <br>
+                Rich with statuses on Opening, Open, Closing, Closed. Have callbacks on OpenStart, OpenEnd, CloseStart, CloseEnd.
+                <br>
+                With classes on trigger button and extra element
+              </p>
+              <p>See implementation in srcipts.js</p>
+            </div>
+          </div>
+          <div class="col-xs">
+            <div class="h4 mb-4">Bootstrap Overlay</div>
+            <div class="btn btn-lg btn-primary mb-2" data-bs-toggle="collapse" data-bs-target="#collapseExample">Collapse trigger</div>
+            <div class="collapse" id="collapseExample">Collapse Content</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="stage stage-banner mt-stage">
       <div class="container">
@@ -1621,20 +1714,6 @@
         </div>
       </div>
     </section>
-
-    <!-- input customization workaround -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <script>
-      $("select").select2({
-        minimumResultsForSearch: -1,
-      });
-    </script>
-    <!--  -->
 
     <footer class="footer mt-stage">
       <div class="container">
@@ -1837,21 +1916,26 @@
         </div>
       </div>
     </div>
+    
+    <!-- input customization workaround -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!--  Bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
       integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
       crossorigin="anonymous"
-      defer
-      async
     ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
       integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
       crossorigin="anonymous"
-      defer
-      async
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <!-- etc -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/init.js"></script>
     <script src="./js/scripts.js"></script>

@@ -1131,6 +1131,7 @@ p,
   position: relative
   transition: all 0.4s
   min-height: 150px
+  width: 300px
   min-width: 300px
   margin-bottom: #{$indent-sm}
   [data-target]
@@ -1160,6 +1161,15 @@ p,
     transition: all 0.3s
     input
       display: initial
+    &-logo
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      justify-content: flex-end
+      gap: 5px
+    &-content
+      display: flex
+      align-items: center
     &-name
       display: flex
       justify-content: space-between
@@ -1173,12 +1183,13 @@ p,
       opacity: 0
       overflow: hidden
   input:checked + .payment-options-item-name
-      height: 30px
+      min-height: 30px
+      height: auto
       opacity: 1
       .radiobtn
         opacity: 0
-        width: 0
-        margin-right: 0
+      .radiobtn-label
+        transform: translateX(-40px)
   .payment-options-change
     transition: all 0.3s
     height: 1.2em
@@ -1195,8 +1206,8 @@ p,
     input:checked + .payment-options-item-name
       .radiobtn
         opacity: 1
-        width: 30px
-        margin-right: 0.3em
+      .radiobtn-label
+        transform: translateX(0)
   &.opened
     .payment-options-item + .payment-options-item
       margin-top: 24px
@@ -1213,11 +1224,13 @@ p,
 
 .radiobtn
   width:30px
+  min-width:30px
   height:30px
+  min-height:30px
   position: relative
   vertical-align: middle
   transition: all 0.3s
-  margin-right: 0.3em
+  margin-right: 10px
   display: inline-block
   &:after
     content: ''
@@ -1230,6 +1243,8 @@ p,
     position: absolute
     transition: all 0.3s
     left: 0
+  &-label
+    transition: all 0.4s
   
 input[type=radio]:checked + * .radiobtn:after
   border-width: 10px
@@ -1565,6 +1580,9 @@ input[type=radio] + *
     &.bottom
       bottom: 0
       transform: translateY(100%)
+
+  .payment-options
+    width: auto
       
 @media (max-width: 575px)
   .stage .app-btn
