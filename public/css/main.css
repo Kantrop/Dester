@@ -15755,6 +15755,7 @@ p,
   width: 300px;
   min-width: 300px;
   margin-bottom: 20px;
+  word-break: break-word;
 }
 .payment-options [data-target] {
   cursor: pointer;
@@ -16331,6 +16332,9 @@ input[type=radio] + * {
 @media (max-width: 375px) {
   .fixed-whatsapp-btn-subtext {
     display: none;
+  }
+  .payment-options {
+    min-width: auto;
   }
 }
 
