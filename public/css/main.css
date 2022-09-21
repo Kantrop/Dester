@@ -14618,8 +14618,8 @@ input:active:focus,
 textarea:focus,
 textarea:active,
 textarea:active:focus {
-  box-shadow: none;
-  outline: none;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 .btn {
