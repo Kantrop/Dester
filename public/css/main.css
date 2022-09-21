@@ -14611,6 +14611,17 @@ select {
   line-height: 135%;
 }
 
+button:focus, button:active, button:active:focus,
+input:focus,
+input:active,
+input:active:focus,
+textarea:focus,
+textarea:active,
+textarea:active:focus {
+  box-shadow: none;
+  outline: none;
+}
+
 .btn {
   line-height: 135%;
   letter-spacing: -0.035em;

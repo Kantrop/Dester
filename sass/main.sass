@@ -194,7 +194,14 @@ select
     font-size: 20px
     letter-spacing: -0.015em
     line-height: #{$line-height-lg}
-
+button,
+input,
+textarea
+  &:focus,
+  &:active,
+  &:active:focus
+    box-shadow: none
+    outline: none
 .btn
   line-height: 135%
   letter-spacing: -0.035em
