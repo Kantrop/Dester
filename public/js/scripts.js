@@ -69,7 +69,7 @@ document.addEventListener("scroll", () => {
 // handle overlay
 const socialOverlayBtn = document.querySelector("[data-target=socialOverlay]");
 const socialOverlay = document.querySelector("#socialOverlay");
-socialOverlayBtn.addEventListener("click", () => {
+socialOverlayBtn?.addEventListener("click", () => {
   if (window.innerWidth < 992) {
     toggleClassWithAnimationDelay({ el: socialOverlay, btn: socialOverlayBtn });
   }
@@ -92,7 +92,7 @@ Array.from(hashItems).forEach((item) =>
     const hash = this.getAttribute("href");
     window.location.hash = hash;
     const targetItem = document.querySelector(hash);
-    window.scroll(0, targetItem.offsetTop - 100);
+    window.scroll(0, targetItem?.offsetTop - 100);
   })
 );
 
@@ -108,7 +108,7 @@ const handleHash = () => {
   Array.from(items).forEach((item) => item.classList.add("active"));
 
   const targetItem = document.querySelector(pagehash);
-  window.scroll(0, targetItem.offsetTop - 100);
+  window.scroll(0, targetItem?.offsetTop - 100);
 };
 handleHash(); // move to onLoad listener?
 window.addEventListener("popstate", handleHash);
@@ -118,10 +118,10 @@ const inputNumbers = document.querySelectorAll(`.spinner input`);
 Array.from(inputNumbers).forEach((item) => {
   const step = item.getAttribute("step") || "0.0";
   const stepNumber = +step;
-  item.parentNode.querySelector(".up").addEventListener("click", () => {
+  item.parentNode.querySelector(".up")?.addEventListener("click", () => {
     item.value = (+item.value + stepNumber).toFixed(step.length - 2);
   });
-  item.parentNode.querySelector(".down").addEventListener("click", () => {
+  item.parentNode.querySelector(".down")?.addEventListener("click", () => {
     item.value = (+item.value - stepNumber).toFixed(step.length - 2);
   });
 });
