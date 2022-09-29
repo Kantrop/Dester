@@ -44,7 +44,7 @@ const toggleClassWithAnimationDelay = ({ el, btn, extra, onOpenStart, onCloseSta
   }
 };
 
-headerButton.addEventListener("click", (e) => {
+headerButton?.addEventListener("click", (e) => {
   const headerMenu = document.querySelector("#headerMenu");
   const header = document.querySelector(".header");
   toggleClassWithAnimationDelay({
