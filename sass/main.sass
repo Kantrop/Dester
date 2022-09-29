@@ -33,7 +33,7 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button 
   -webkit-appearance: none
   margin: 0
-  
+
 .underline
   display: inline
   text-decoration: none
@@ -225,6 +225,7 @@ textarea
   &-circle
     border-radius: 50%
     padding: 16px
+    display: inline-block
   &-primary
     &,
     &:hover,
@@ -424,12 +425,25 @@ p,
   .socials-item + .socials-item
     margin-left: 10px
 
+.fc-widget-open
+  .fixed.with-freshdesk
+    opacity: 0
+    pointer-events: none
+
 .fixed
   position: fixed
   z-index: 20
   right: 23px
   &.bottom
     bottom: 23px
+  &.with-freshdesk
+    transition: all 0.3s
+    bottom: 21px
+    right: 95px
+    left: auto
+    display: none
+    .btn
+      box-shadow: 0 5px 4px 0 rgb(0 0 0 / 26%)
 .sticky
   position: sticky
   z-index: 20
@@ -1081,6 +1095,16 @@ p,
     display: inline
 .text-opened
   display: none
+
+.pac-target-input
+  caret-color: initial
+.pac-target-input::placeholder
+  color: #{$dark_grey} !important
+  transition: all 0.1s
+.pac-target-input:focus::placeholder
+  color: #{$middle_gray} !important
+
+
 @keyframes fade-in
   from
     opacity: 0
@@ -1443,6 +1467,8 @@ input[type=radio] + *
   .fixed
     left: 16px
     right: 16px
+    &.with-freshdesk
+      display: block
   .overlay
     height: 258px
   body

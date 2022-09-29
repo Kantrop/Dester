@@ -14648,6 +14648,7 @@ textarea:active:focus {
 .btn-circle {
   border-radius: 50%;
   padding: 16px;
+  display: inline-block;
 }
 .btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   color: #ffffff;
@@ -14887,6 +14888,11 @@ p,
   margin-left: 10px;
 }
 
+.fc-widget-open .fixed.with-freshdesk {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .fixed {
   position: fixed;
   z-index: 20;
@@ -14894,6 +14900,16 @@ p,
 }
 .fixed.bottom {
   bottom: 23px;
+}
+.fixed.with-freshdesk {
+  transition: all 0.3s;
+  bottom: 21px;
+  right: 95px;
+  left: auto;
+  display: none;
+}
+.fixed.with-freshdesk .btn {
+  box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.26);
 }
 
 .sticky {
@@ -15696,6 +15712,19 @@ p,
   display: none;
 }
 
+.pac-target-input {
+  caret-color: initial;
+}
+
+.pac-target-input::placeholder {
+  color: #555658 !important;
+  transition: all 0.1s;
+}
+
+.pac-target-input:focus::placeholder {
+  color: #d2d2d2 !important;
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -16107,6 +16136,9 @@ input[type=radio] + * {
   .fixed {
     left: 16px;
     right: 16px;
+  }
+  .fixed.with-freshdesk {
+    display: block;
   }
   .overlay {
     height: 258px;
