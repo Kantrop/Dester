@@ -15,11 +15,17 @@
 
 html
   overflow-x: hidden
-
 body
   position: relative
   scroll-behavior: smooth
   line-height: 135%
+html,
+body
+  min-height: 100%
+  display: flex
+  flex-direction: column
+  flex: 1
+
 table
   td
     padding: 12px
@@ -130,6 +136,10 @@ input::-webkit-inner-spin-button
 
 .stage
   overflow: hidden
+  &-status
+    flex: 1
+    display: flex
+    flex-direction: column
   &-common
     overflow: visible
   &-rounded
@@ -222,6 +232,9 @@ textarea
     font-size: 20px
     line-height: 135%
     letter-spacing: -0.035em
+  &-wide
+    padding-left: 86px
+    padding-right: 86px
   &-circle
     border-radius: 50%
     padding: 16px
@@ -1288,6 +1301,32 @@ input[type=radio]:checked + * .radiobtn:after
 input[type=radio] + *
   font-size: 18px
   font-weight: 700
+
+.status-block
+  flex: 1
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  &-icon
+    width: 60px
+    height: 60px
+    background-size: contain
+    background-repeat: no-repeat
+    &.payment
+      background-image: url(../assets/circle-ok.svg)
+    &.adress
+      background-image: url(../assets/circle-pin.svg)
+  &-caption
+    font-weight: 600
+    font-size: 24px
+    line-height: 112%
+    letter-spacing: -0.035em
+    margin-top: #{$indent-l}
+  &-description
+    margin-top: 16px
+  &-action
+    margin-top: #{$indent-xl}
 
 @media (max-width: 992px)
   .navbar

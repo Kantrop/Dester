@@ -14401,6 +14401,14 @@ body {
   line-height: 135%;
 }
 
+html,
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 table td {
   padding: 12px;
   vertical-align: top;
@@ -14525,6 +14533,11 @@ input::-webkit-inner-spin-button {
 .stage {
   overflow: hidden;
 }
+.stage-status {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
 .stage-common {
   overflow: visible;
 }
@@ -14644,6 +14657,10 @@ textarea:active:focus {
   font-size: 20px;
   line-height: 135%;
   letter-spacing: -0.035em;
+}
+.btn-wide {
+  padding-left: 86px;
+  padding-right: 86px;
 }
 .btn-circle {
   border-radius: 50%;
@@ -15941,6 +15958,39 @@ input[type=radio]:checked + * .radiobtn:after {
 input[type=radio] + * {
   font-size: 18px;
   font-weight: 700;
+}
+
+.status-block {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.status-block-icon {
+  width: 60px;
+  height: 60px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.status-block-icon.payment {
+  background-image: url(../assets/circle-ok.svg);
+}
+.status-block-icon.adress {
+  background-image: url(../assets/circle-pin.svg);
+}
+.status-block-caption {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 112%;
+  letter-spacing: -0.035em;
+  margin-top: 30px;
+}
+.status-block-description {
+  margin-top: 16px;
+}
+.status-block-action {
+  margin-top: 32px;
 }
 
 @media (max-width: 992px) {
