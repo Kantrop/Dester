@@ -8,7 +8,7 @@ function join(arr /*, separator */) {
     .join(separator);
 }
 function showPostalCode(address) {
-  $("#postal_code").val(address.postal_code);
+  $("#zip_code").val(address.postal_code);
 }
 function showRegion(address) {
   $("#region").val(

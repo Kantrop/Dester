@@ -2619,8 +2619,8 @@ progress {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.135;
-  color: #ffffff;
-  background-color: #1300B1;
+  color: #1b1b1b;
+  background-color: #f6f6f6;
   background-clip: padding-box;
   border: 0 solid #ced4da;
   appearance: none;
@@ -2639,8 +2639,8 @@ progress {
   cursor: pointer;
 }
 .form-control:focus {
-  color: #ffffff;
-  background-color: #1300B1;
+  color: #1b1b1b;
+  background-color: #f6f6f6;
   border-color: #a499fa;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(72, 51, 245, 0.25);
@@ -2649,19 +2649,19 @@ progress {
   height: 1.135em;
 }
 .form-control::placeholder {
-  color: #4833f5;
+  color: #9D9D9D;
   opacity: 1;
 }
 .form-control:disabled {
-  color: #d2d2d2 !important;
-  background-color: rgba(18, 0, 177, 0.5);
+  color: #9D9D9D !important;
+  background-color: #ededed;
   opacity: 1;
 }
 .form-control::file-selector-button {
   padding: 16px 16px;
   margin: -16px -16px;
   margin-inline-end: 16px;
-  color: #ffffff;
+  color: #1b1b1b;
   background-color: #e9ecef;
   pointer-events: none;
   border-color: inherit;
@@ -2763,8 +2763,8 @@ textarea.form-control-lg {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.135;
-  color: #ffffff;
-  background-color: #1300B1;
+  color: #1b1b1b;
+  background-color: #f6f6f6;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right 16px center;
@@ -2789,11 +2789,11 @@ textarea.form-control-lg {
   background-image: none;
 }
 .form-select:disabled {
-  background-color: #d4d0f7;
+  background-color: #ededed;
 }
 .form-select:-moz-focusring {
   color: transparent;
-  text-shadow: 0 0 0 #ffffff;
+  text-shadow: 0 0 0 #1b1b1b;
 }
 
 .form-select-sm {
@@ -2839,7 +2839,7 @@ textarea.form-control-lg {
   height: 30px;
   margin-top: -14.4325px;
   vertical-align: top;
-  background-color: #1300B1;
+  background-color: #f6f6f6;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -3118,7 +3118,7 @@ textarea.form-control-lg {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.135;
-  color: #ffffff;
+  color: #1b1b1b;
   text-align: center;
   white-space: nowrap;
   background-color: #e9ecef;

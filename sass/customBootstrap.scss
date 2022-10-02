@@ -110,14 +110,14 @@ $input-btn-padding-x-lg: 32px;
 $input-btn-font-size-lg: 20px;
 $btn-font-weight: 600;
 
-$input-bg: $deep_blu;
-$input-color: $white;
+$input-bg: $air_grey;
+$input-color: $black;
 $input-border-width: 0;
 $input-padding-y: 16px;
 $input-padding-x: 16px;
-$input-placeholder-color: $primary;
-$input-disabled-bg: $electric_blue_transparent;
-$input-disabled-color: $middle_gray!important;
+$input-placeholder-color: $text_grey;
+$input-disabled-bg: $light_gray;
+$input-disabled-color: $text_grey!important;
 $form-check-input-checked-bg-color: $deep_blu;
 $form-check-inline-margin-end: 0;
 
@@ -133,7 +133,7 @@ $form-switch-padding-start: 0;
 
 $form-switch-color: $light-blu;
 
-$form-select-disabled-bg: $light_blu;
+$form-select-disabled-bg: $light_gray;
 $form-select-padding-y: 16px;
 $form-select-padding-x: 16px;
 

@@ -26,6 +26,18 @@ body
   flex-direction: column
   flex: 1
 
+[data-bs-target]
+  .open-text
+    display: none
+  .close-text
+    display: block
+  &.collapsed
+    .open-text
+      display: block
+    .close-text
+      display: none
+  
+
 table
   td
     padding: 12px
@@ -233,12 +245,19 @@ textarea
     line-height: 135%
     letter-spacing: -0.035em
   &-wide
-    padding-left: 86px
-    padding-right: 86px
+    padding: 16px 86px
   &-circle
     border-radius: 50%
     padding: 16px
     display: inline-block
+  &-deep
+    &,
+    &:hover,
+    &:focus,
+    &:active
+      background: #{$deep_blu}
+      color: #{$white}
+      border: none
   &-primary
     &,
     &:hover,
@@ -246,6 +265,7 @@ textarea
     &:active
       color: #{$white}
       background-color: #{$primary}
+      border: none
   &-light
     &,
     &:hover,
@@ -841,15 +861,28 @@ p,
     line-height: 112%
   .btn
     width: 100%
+  // input,
+  // select
+  //   background: #{$deep_blu}
+  //   color: #{$white} !important
+  //   &::placeholder
+  //     color: #{$primary}
+  //   &:focus
+  //     background: #{$deep_blu}
+  label
+    font-weight: 500
+    font-size: 16px
+  .control
+    margin-bottom: 24px
 .control
-  margin-bottom: 24px
+  margin-bottom: 20px
   // min-height: 100%
   display: flex
   flex-direction: column
   justify-content: space-between
   label
     font-weight: 500
-    font-size: 16px
+    font-size: 14px
   .collapse-block
     .form-control
       color: #{$black}
