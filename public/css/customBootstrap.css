@@ -106,8 +106,8 @@
   src: url("../assets/fonts/Inter/Inter-ThinItalic.otf") format("opentype");
 }
 .form-check-input {
-  margin-top: -5px !important;
-  margin-right: 5px !important;
+  margin-top: 0 !important;
+  margin-right: 8px !important;
 }
 
 /*!

@@ -36,7 +36,6 @@ body
       display: block
     .close-text
       display: none
-  
 
 table
   td
@@ -44,14 +43,44 @@ table
     vertical-align: top
   tr:nth-child(even) 
     background: #{$air-grey}
+
 input,
 select
   -webkit-appearance: none
+  font-size: 14px !important
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button 
   -webkit-appearance: none
   margin: 0
+.form-check-input
+  width:18px
+  height: 18px
 
+.was-validated .form-control:invalid, .form-control.is-invalid
+  background-image: none
+  border: 1px solid #F63D48
+.was-validated .form-control:valid, .form-control.is-valid
+  background-image: none
+.invalid-feedback
+  font-weight: 500
+  font-size: 10px
+  line-height: 112%
+  color: #F63D48
+
+.with-inner-button
+  position: relative
+  .inner-btn
+    position: absolute
+    top: #{$input-padding-y}
+    right: #{$input-padding-y}
+.white
+  &,
+  &:focus,
+  &:active,
+  &:active:focus
+    background: #{$white}
+
+  
 .underline
   display: inline
   text-decoration: none
@@ -148,6 +177,8 @@ input::-webkit-inner-spin-button
 
 .stage
   overflow: hidden
+  &-no-footer-gap
+    margin-bottom: -124px
   &-status
     flex: 1
     display: flex
@@ -250,6 +281,13 @@ textarea
     border-radius: 50%
     padding: 16px
     display: inline-block
+  &-text
+    border: none
+    background: none
+    padding: 0
+    color: #{$primary}
+    font-weight: 500
+    font-size: 14px
   &-deep
     &,
     &:hover,
@@ -861,8 +899,9 @@ p,
     line-height: 112%
   .btn
     width: 100%
-  // input,
-  // select
+  input,
+  select
+    font-size: 16px !important
   //   background: #{$deep_blu}
   //   color: #{$white} !important
   //   &::placeholder
@@ -905,20 +944,6 @@ p,
     font-weight: 600
     margin-bottom: 24px
     line-height: 112%
-  .group
-    width: 100%
-    border-bottom: 1px solid #{$light_gray}
-    margin-bottom: 16px
-  dl
-    display: flex
-    justify-content: space-between
-    width: 100%
-    margin: 0 0 16px 0
-  dt
-    font-weight: 400
-  dd
-    font-weight: 400
-    margin: 0
   .total-aed
     font-size: 16px
     color: #A6A6A6
@@ -929,6 +954,40 @@ p,
       flex-direction: column
       display: flex
       align-items: flex-end
+    .heading
+      font-size: 24px
+      font-weight: 600
+      margin-bottom: 24px
+      line-height: 112%
+.group
+  width: 100%
+  & + &
+    border-top: 1px solid #{$light_gray}
+    margin-top: 16px
+    padding-top: 16px
+  dl
+    display: flex
+    justify-content: space-between
+    width: 100%
+    margin: 0 0 16px 0
+  dt
+    font-weight: 400
+  dd
+    font-weight: 400
+    margin: 0
+  &.total
+    .heading
+      margin-bottom: 10px
+    dd
+      flex-direction: column
+      display: flex
+      align-items: flex-end
+    .heading
+      font-size: 20px
+      font-weight: 600
+      margin-bottom: 8px
+      line-height: 112%
+
 .button-disclaimer
     margin-top: 16px
     margin-bottom: -35px
@@ -1150,7 +1209,6 @@ p,
 .pac-target-input:focus::placeholder
   color: #{$middle_gray} !important
 
-
 @keyframes fade-in
   from
     opacity: 0
@@ -1181,6 +1239,7 @@ p,
       max-width: 100%
   &-quantity
     font-size: 14px
+    line-height: 135%
     color: #A6A6A6
   &-price
     margin-bottom: 4px
@@ -1189,7 +1248,7 @@ p,
       font-weight: bold
       color: #{$dark_grey}
     &-old + &-actual
-      color: #{$whatsapp-green}
+      // color: #{$whatsapp-green}
       margin-left: 0.5em
     &-actual
       font-weight: bold
@@ -1199,14 +1258,63 @@ p,
     color: #{$dark_grey}
     display: flex
     flex-wrap: wrap
-    margin-top: #{$indent-xs}
+    margin-top: 8px
   &-option
     margin-right: #{$indent-sm}
     dl
       display: flex
-      margin: 0
+      margin: 0 0 8px 0
+      color: #{$text_grey}
+      line-height: 135%
     dt
+      font-weight: 500
       margin-right: #{$indent-xs}
+    dd
+      margin: 0
+
+
+.right-gray-block
+  position: relative
+  height: 100%
+  padding: 40px 0 40px 40px
+  max-width: 480px
+  // flex: 1
+  &::before
+    background: #{$air_grey}
+    content:''
+    left: 0
+    top: 0
+    bottom: 0
+    width: 100vw
+    position: absolute
+    z-index: -1
+  .results
+    margin-top: #{$indent-xxxl}
+
+.order-preview-list
+  max-height: 232px
+  overflow-y: auto
+  padding-right: 30px
+  .cart-item + .cart-item
+    margin-top: #{$indent-xs}
+    padding: 0
+    border: none
+  .cart-item
+    &-caption
+      font-size: 14px
+      line-height: 112%
+    &-price-info,
+    &-price
+      display: flex
+      &-old,
+      &-actual
+        font-size: 14px
+        font-weight: 500
+        color: #{$black}
+    &-quantity
+        font-size: 14px
+        font-weight: 500
+        margin-left: 14px
 
 .payment-options
   position: relative
@@ -1305,6 +1413,32 @@ p,
       height: auto
       overflow: visible
 
+.payment-methods
+  &-item
+    background: #{$air-grey}
+    border-radius: 8px
+    padding: 16px
+  &-item + &-item
+    margin-top: 24px
+  &-head
+    align-items: center
+  &-logos
+    display: flex
+  &-logo
+      padding: 8px
+      border: 1px solid #{$light_gray}
+      border-radius: 8px
+  &-logo + &-logo
+      margin-left: 10px
+  &-form
+    display: none
+    border-top: 1px solid #{$light_gray}
+    margin-top: 16px
+    padding: 16px 0
+  input[type="radio"]:checked ~ .payment-methods-form
+    display: block
+
+
 .radiobtn
   width:30px
   min-width:30px
@@ -1360,6 +1494,33 @@ input[type=radio] + *
     margin-top: 16px
   &-action
     margin-top: #{$indent-xl}
+
+.stepper
+  background: #{$air_grey}
+  border-radius: 8px
+  .nav-item + .nav-item
+    border-left: 1px solid #{$light_gray}
+.step
+  padding: 16px
+  display: flex
+  align-items: center
+  &-count
+    width: 24px
+    min-width: 24px
+    height: 24px
+    color: #{$white}
+    margin-right: 10px
+    font-size: 14px
+    line-height:24px
+    background: #{$text_grey}
+    border-radius: 50%
+  &.active
+    .step-count
+      background: #{$electric_blue}
+  &-content
+    text-align: left
+  &-description
+    color: #{$text_grey}
 
 @media (max-width: 992px)
   .navbar
@@ -1694,6 +1855,15 @@ input[type=radio] + *
 
   .payment-options
     width: auto
+  .right-gray-block
+    max-width: none
+    padding: 40px
+    padding-bottom: 40px!important
+    margin-bottom: 124px
+    height: auto
+    &::before
+      width: auto
+      right: 0
       
 @media (max-width: 575px)
   .stage .app-btn
