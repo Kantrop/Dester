@@ -15450,6 +15450,10 @@ p,
   margin-top: 8px;
 }
 
+.form-floating {
+  color: #1b1b1b;
+}
+
 .form-ui {
   background: #4833f5;
   border-radius: 40px;
