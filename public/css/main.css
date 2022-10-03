@@ -16167,10 +16167,10 @@ input[type=radio] + * {
   background-size: contain;
   background-repeat: no-repeat;
 }
-.status-block-icon.payment {
+.status-block-icon.status-icon-ok {
   background-image: url(../assets/circle-ok.svg);
 }
-.status-block-icon.adress {
+.status-block-icon.status-icon-pin {
   background-image: url(../assets/circle-pin.svg);
 }
 .status-block-caption {
