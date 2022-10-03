@@ -15455,7 +15455,6 @@ p,
   border-radius: 40px;
   padding: 40px 40px 60px;
   color: #ffffff;
-  caret-color: #ffffff;
 }
 .form-ui .heading {
   font-size: 24px;
@@ -15469,6 +15468,10 @@ p,
 .form-ui input,
 .form-ui select {
   font-size: 16px !important;
+}
+.form-ui .up,
+.form-ui .down {
+  color: #1b1b1b;
 }
 .form-ui label {
   font-weight: 500;
