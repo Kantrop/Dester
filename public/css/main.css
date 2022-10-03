@@ -15470,7 +15470,8 @@ p,
   font-size: 16px !important;
 }
 .form-ui .up,
-.form-ui .down {
+.form-ui .down,
+.form-ui .select2 {
   color: #1b1b1b;
 }
 .form-ui label {
