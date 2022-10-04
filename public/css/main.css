@@ -14395,10 +14395,6 @@ select:-webkit-autofill:focus {
   opacity: 0.5;
 }
 
-html {
-  overflow-x: hidden;
-}
-
 body {
   position: relative;
   scroll-behavior: smooth;
@@ -14432,6 +14428,10 @@ table td {
 }
 table tr:nth-child(even) {
   background: #f6f6f6;
+}
+
+.h-100 {
+  max-height: none !important;
 }
 
 input,
@@ -14747,6 +14747,12 @@ textarea:active:focus {
   background-color: #4833f5;
   border: none;
 }
+.btn-secondary, .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
+  color: #1b1b1b;
+  background-color: #f6f6f6;
+  border: none;
+  font-weight: 500;
+}
 .btn-light, .btn-light:hover, .btn-light:focus, .btn-light:active {
   border: none;
   color: #4833f5;
@@ -14916,6 +14922,11 @@ p,
 }
 .icon-white-tiktok {
   background-image: url(../assets/socials/white-tiktok.svg);
+}
+.icon-arrow-left {
+  width: 17px;
+  height: 16px;
+  background-image: url(../assets/arrow-left.svg);
 }
 
 .fixed {
@@ -15892,6 +15903,9 @@ p,
 .cart-item-image {
   text-align: center;
 }
+.cart-item-image.w100 {
+  width: 100px;
+}
 .cart-item-image img {
   max-height: 200px;
   max-width: 100%;
@@ -15937,6 +15951,11 @@ p,
 }
 .cart-item-option dd {
   margin: 0;
+}
+.cart-item-content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .right-gray-block {
@@ -16240,6 +16259,22 @@ input[type=radio] + * {
 }
 .order-form-actions {
   margin-bottom: 40px;
+}
+
+.offcanvas {
+  z-index: 2000;
+  padding: 40px;
+}
+.offcanvas.offcanvas-end {
+  max-width: 563px;
+  width: 100%;
+}
+.offcanvas-header {
+  padding: 0;
+  margin-bottom: 40px;
+}
+.offcanvas-body {
+  padding: 0;
 }
 
 @media (max-width: 992px) {
