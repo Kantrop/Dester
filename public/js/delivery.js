@@ -251,9 +251,9 @@ function geocodeLatLng(geocoder, map, infowindow) {
                   countryName = "United States of America";
                 }
                 if (arr[i].innerText == countryName) {
-                  document.getElementById("delivery_country_id").value =
-                    arr[i].value;
-                  if (arr[i].value == 3263) {
+                  document.getElementById("delivery_country_id").value = arr[i].value;
+                  $("#delivery_country_id").trigger('change');
+                  if (arr[i].value == 3263 || arr[i].value == 3182) {
                     document.getElementById("zip_code").value = "no";
                   }
                 }

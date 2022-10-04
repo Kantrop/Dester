@@ -14728,6 +14728,14 @@ textarea:active:focus {
   color: #4833f5;
   font-weight: 500;
   font-size: 14px;
+  display: inline-block;
+  width: auto !important;
+}
+.btn-text-white {
+  color: #ffffff;
+}
+.btn-text-underline {
+  text-decoration: underline;
 }
 .btn-deep, .btn-deep:hover, .btn-deep:focus, .btn-deep:active {
   background: #1300B1;
@@ -15450,8 +15458,14 @@ p,
   margin-top: 8px;
 }
 
+.form-floating > .form-control:not(:placeholder-shown) {
+  padding-top: 20px;
+}
+.form-floating > .form-control:not(:placeholder-shown) ~ label, .form-floating > .form-control:focus ~ label {
+  transform: scale(0.67) translateY(-5px) translateX(5px);
+}
 .form-floating label {
-  color: #1b1b1b;
+  color: #9D9D9D;
 }
 
 .form-ui {
@@ -16219,6 +16233,13 @@ input[type=radio] + * {
 }
 .step-description {
   color: #9D9D9D;
+}
+
+.order-form-list-item + .order-form-list-item {
+  margin-top: 40px;
+}
+.order-form-actions {
+  margin-bottom: 40px;
 }
 
 @media (max-width: 992px) {
