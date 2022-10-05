@@ -117,12 +117,24 @@ window.addEventListener("popstate", handleHash);
 const inputNumbers = document.querySelectorAll(`.spinner input`);
 Array.from(inputNumbers).forEach((item) => {
   const step = item.getAttribute("step") || "0.0";
+  const max = item.getAttribute("max");
+  const min = item.getAttribute("min");
+  const comma = step.split(".")[1] || '';
   const stepNumber = +step;
+  const maxLimit = max ? Number(max) : Infinity;
+  const minLimit = min ? Number(min) : -Infinity;
+
   item.parentNode.querySelector(".up")?.addEventListener("click", () => {
-    item.value = (+item.value + stepNumber).toFixed(step.length - 2);
+    const newValue = +item.value + stepNumber; 
+    if (newValue <= maxLimit && newValue >= minLimit) {
+      item.value = newValue.toFixed(comma.length);
+    }
   });
   item.parentNode.querySelector(".down")?.addEventListener("click", () => {
-    item.value = (+item.value - stepNumber).toFixed(step.length - 2);
+    const newValue = +item.value - stepNumber; 
+    if (newValue <= maxLimit && newValue >= minLimit) {
+      item.value = newValue.toFixed(comma.length);
+    }
   });
 });
 
