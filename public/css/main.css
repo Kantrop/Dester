@@ -14379,7 +14379,7 @@ select:-webkit-autofill:focus {
 }
 
 .select2-container--disabled {
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 .test-bg {
@@ -14449,6 +14449,20 @@ input::-webkit-inner-spin-button {
 .form-check-input {
   width: 18px;
   height: 18px;
+}
+
+.form-control:disabled,
+.form-control:read-only {
+  background-color: #ededed !important;
+  color: #555658 !important;
+  cursor: not-allowed;
+}
+.form-control:disabled:focus, .form-control:disabled:active, .form-control:disabled:active:focused,
+.form-control:read-only:focus,
+.form-control:read-only:active,
+.form-control:read-only:active:focused {
+  background-color: red !important;
+  color: #555658 !important;
 }
 
 .was-validated .form-control:invalid, .form-control.is-invalid {
@@ -15491,12 +15505,19 @@ p,
   margin-bottom: 24px;
   line-height: 112%;
 }
+.form-ui .button-disclaimer {
+  margin-bottom: -35px;
+}
 .form-ui .btn {
   width: 100%;
 }
 .form-ui input,
 .form-ui select {
   font-size: 16px !important;
+}
+.form-ui .form-control:disabled,
+.form-ui .form-control:read-only {
+  opacity: 0.7;
 }
 .form-ui .up,
 .form-ui .down,
@@ -15611,7 +15632,6 @@ p,
 
 .button-disclaimer {
   margin-top: 16px;
-  margin-bottom: -35px;
   font-weight: 400;
   font-size: 14px;
   color: #A6A6A6;

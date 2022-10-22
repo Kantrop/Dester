@@ -59,6 +59,17 @@ input::-webkit-inner-spin-button
   width:18px
   height: 18px
 
+.form-control:disabled,
+.form-control:read-only
+  background-color: #{$light_gray}!important
+  color: #{$dark_grey}!important
+  cursor: not-allowed
+  &:focus,
+  &:active,
+  &:active:focused
+    background-color: red!important
+    color: #{$dark_grey}!important
+
 .was-validated .form-control:invalid, .form-control.is-invalid
   background-image: none
   border: 1px solid #F63D48
@@ -929,11 +940,17 @@ p,
     font-weight: 600
     margin-bottom: 24px
     line-height: 112%
+
+  .button-disclaimer
+    margin-bottom: -35px
   .btn
     width: 100%
   input,
   select
     font-size: 16px !important
+  .form-control:disabled,
+  .form-control:read-only
+    opacity: 0.7
   .up,
   .down,
   .select2
@@ -1026,7 +1043,7 @@ p,
 
 .button-disclaimer
     margin-top: 16px
-    margin-bottom: -35px
+    // margin-bottom: -35px
     font-weight: 400
     font-size: 14px
     color: #A6A6A6

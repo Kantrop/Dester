@@ -855,9 +855,10 @@
                       type="text"
                       class="form-control"
                       id="uikit_validation_live[name]"
-                      value=""
+                      value="disabled"
                       autocomplete="off"
                       required
+                      disabled
                     />
                     <div class="valid-feedback">Correct value.</div>
                     <div class="invalid-feedback">Incorrect value.</div>
@@ -872,9 +873,10 @@
                       type="email"
                       class="form-control"
                       id="uikit_validation_live[email]"
-                      value=""
+                      value="readonly"
                       autocomplete="off"
                       required
+                      readonly
                     />
                     <div class="valid-feedback">Correct value.</div>
                     <div class="invalid-feedback">Incorrect value.</div>
@@ -899,6 +901,98 @@
                   </div>
                 </div>
                 <div class="col-sm-6 col-md-3">
+                  <div class="control">
+                    <label
+                      for="uikit_validation_live[gender]"
+                      class="form-label"
+                      >Gender</label
+                    >
+                    <select
+                      class="form-select"
+                      id="uikit_validation_live[gender]"
+                      required
+                    >
+                      <option selected disabled>Choose your destiny</option>
+                      <option value="1">Male</option>
+                      <option value="2">Female</option>
+                      <option value="3">Combat Helicopter</option>
+                    </select>
+                    <div class="valid-feedback">Correct value.</div>
+                    <div class="invalid-feedback">Incorrect value.</div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-lg btn-light btn-arrow">
+                    Submit
+                  </button>
+                  <div class="button-disclaimer">
+                    * Disclaimer under the submit button
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </form>
+
+
+          <form action="#" id="uikit_validation_live[form]" class="mb-3">
+            <div class="paragraph">
+              <div class="h4 mb-3">Form without background</div>
+              <fieldset class="row gx-2">
+                <div class="col-sm-12 col-md-12">
+                  <div class="control">
+                    <label for="uikit_validation_live[name]" class="small form-label"
+                      >Name</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="uikit_validation_live[name]"
+                      value="disabled"
+                      autocomplete="off"
+                      required
+                      disabled
+                    />
+                    <div class="valid-feedback">Correct value.</div>
+                    <div class="invalid-feedback">Incorrect value.</div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-6">
+                  <div class="control">
+                    <label for="uikit_validation_live[email]" class="form-label"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="uikit_validation_live[email]"
+                      value="readonly"
+                      autocomplete="off"
+                      required
+                      readonly
+                    />
+                    <div class="valid-feedback">Correct value.</div>
+                    <div class="invalid-feedback">Incorrect value.</div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-6">
+                  <div class="control">
+                    <label for="uikit_validation_live[phone]" class="form-label"
+                      >Phone</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="uikit_validation_live[phone]"
+                      value=""
+                      autocomplete="off"
+                      pattern="[\d\s\-+()]{5,}"
+                      required
+                    />
+                    <div class="valid-feedback">Correct value.</div>
+                    <div class="invalid-feedback">Incorrect value.</div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-12">
                   <div class="control">
                     <label
                       for="uikit_validation_live[gender]"
