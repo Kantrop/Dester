@@ -15007,8 +15007,8 @@ p,
 }
 .fixed.with-freshdesk {
   transition: all 0.3s;
-  bottom: 100px;
-  right: 20px;
+  bottom: 105px;
+  right: 28px;
   left: auto;
   display: none;
 }
@@ -16205,6 +16205,12 @@ input[type=radio] + * {
 }
 .status-block-icon.status-icon-pin {
   background-image: url(../assets/circle-pin.svg);
+}
+.status-block-icon.status-icon-fail {
+  background-image: url(../assets/circle-fail.svg);
+}
+.status-block-icon.status-icon-critical {
+  background-image: url(../assets/circle-critical.svg);
 }
 .status-block-caption {
   font-weight: 600;
