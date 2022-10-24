@@ -14452,15 +14452,15 @@ input::-webkit-inner-spin-button {
 }
 
 .form-control:disabled,
-.form-control:read-only {
+.form-control[readonly] {
   background-color: #ededed !important;
   color: #555658 !important;
   cursor: not-allowed;
 }
 .form-control:disabled:focus, .form-control:disabled:active, .form-control:disabled:active:focused,
-.form-control:read-only:focus,
-.form-control:read-only:active,
-.form-control:read-only:active:focused {
+.form-control[readonly]:focus,
+.form-control[readonly]:active,
+.form-control[readonly]:active:focused {
   background-color: red !important;
   color: #555658 !important;
 }
@@ -15516,7 +15516,7 @@ p,
   font-size: 16px !important;
 }
 .form-ui .form-control:disabled,
-.form-ui .form-control:read-only {
+.form-ui .form-control[readonly] {
   opacity: 0.7;
 }
 .form-ui .up,
