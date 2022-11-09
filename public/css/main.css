@@ -15211,6 +15211,13 @@ p,
   gap: 15px;
   align-items: flex-start;
 }
+.footer .payment-types-icon {
+  height: 20px;
+  vertical-align: middle;
+}
+.footer .payment-types-icon > img {
+  max-height: 20px;
+}
 .footer .btn-dark {
   padding-top: 15px;
   padding-bottom: 15px;
