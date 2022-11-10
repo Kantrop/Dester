@@ -12,6 +12,10 @@
   border-radius: 8px !important;
 }
 
+.white-select .select2-container--default .select2-selection--single {
+  background: #fff !important;
+}
+
 .select2-container--default .select2-selection--single .select2-selection__rendered {
   font-seize: 16px !important;
   font-weight: 400 !important;

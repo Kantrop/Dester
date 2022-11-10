@@ -514,49 +514,115 @@
                   </div>
                 </div>
               </div>
-              <div class="results">
-                <div class="group details">
-                  <dl>
-                    <dt>Items Store Price</dt>
-                    <dd data-selector="gray-form-item">$50.00</dd>
-                  </dl>
-                  <dl>
-                    <dt>International Shipping</dt>
-                    <dd data-selector="gray-form-shipping">$22.62</dd>
-                  </dl>
-                  <dl>
-                    <dt>Service Fee</dt>
-                    <dd data-selector="gray-form-service">$7.25</dd>
-                  </dl>
+              <div class="mt-7">
+                <div class="white-select control">
+                  <label for="currency-field" class="small form-label">
+                    currency
+                  </label>
+                    <select id="currency-field">
+                      <option value="USD" >USD</option>
+                      <option value="GBR" selected>GBR</option>
+                    </select>
+                  <script>
+                    document.querySelector('#currency-field').onchange = function () {
+                      Array.from(document.querySelectorAll('.results')).map(resultBlock => {
+                        resultBlock.classList.remove('active');
+                      });
+                      document.querySelector(`.results#${this.value}`).classList.add('active')
+                    };
+                  </script>
                 </div>
-                <div class="group customs">
-                  <dl>
-                    <dt>Customs duty</dt>
-                    <dd data-selector="calculation-results-customs">$0.00</dd>
-                  </dl>
-                  <dl>
-                    <dt>VAT</dt>
-                    <dd data-selector="calculation-results-vat">$2.50</dd>
-                  </dl>
+              </div>
+              <div class="tab-content">
+                <div class="results tab-pane fade show" id="USD">
+                  <div class="group details">
+                    <dl>
+                      <dt>Items Store Price</dt>
+                      <dd data-selector="gray-form-item">$22.62</dd>
+                    </dl>
+                    <dl>
+                      <dt>International Shipping</dt>
+                      <dd data-selector="gray-form-shipping">$22.62</dd>
+                    </dl>
+                    <dl>
+                      <dt>Service Fee</dt>
+                      <dd data-selector="gray-form-service">$7.25</dd>
+                    </dl>
+                  </div>
+                  <div class="group customs">
+                    <dl>
+                      <dt>Customs duty</dt>
+                      <dd data-selector="calculation-results-customs">$0.00</dd>
+                    </dl>
+                    <dl>
+                      <dt>VAT</dt>
+                      <dd data-selector="calculation-results-vat">$2.50</dd>
+                    </dl>
+                  </div>
+                  <div class="group total">
+                    <dl>
+                      <dt class="heading">Total Price</dt>
+                      <dd>
+                        <div
+                          class="heading"
+                          data-selector="calculation-results-total"
+                        >
+                          $82.37
+                        </div>
+                        <div
+                          data-selector="calculation-results-total-aed"
+                          class="total-aed"
+                        >
+                          AED 302.30
+                        </div>
+                      </dd>
+                    </dl>
+                  </div>
                 </div>
-                <div class="group total">
-                  <dl>
-                    <dt class="heading">Total Price</dt>
-                    <dd>
-                      <div
-                        class="heading"
-                        data-selector="calculation-results-total"
-                      >
-                        $82.37
-                      </div>
-                      <div
-                        data-selector="calculation-results-total-aed"
-                        class="total-aed"
-                      >
-                        AED 302.30
-                      </div>
-                    </dd>
-                  </dl>
+                <div class="results tab-pane fade show active" id="GBR">
+                  <div class="group details">
+                    <dl>
+                      <dt>Items Store Price</dt>
+                      <dd data-selector="gray-form-item">£20.00</dd>
+                    </dl>
+                    <dl>
+                      <dt>International Shipping</dt>
+                      <dd data-selector="gray-form-shipping">£12.62</dd>
+                    </dl>
+                    <dl>
+                      <dt>Service Fee</dt>
+                      <dd data-selector="gray-form-service">£5.25</dd>
+                    </dl>
+                  </div>
+                  <div class="group customs">
+                    <dl>
+                      <dt>Customs duty</dt>
+                      <dd data-selector="calculation-results-customs">$0.00</dd>
+                    </dl>
+                    <dl>
+                      <dt>VAT</dt>
+                      <dd data-selector="calculation-results-vat">£1.50</dd>
+                    </dl>
+                  </div>
+                  <div class="group total">
+                    <dl>
+                      <dt class="heading">Total Price</dt>
+                      <dd>
+                        <div
+                          class="heading"
+                          data-selector="calculation-results-total"
+                        >
+                        £52.37
+                        </div>
+                        <div
+                          data-selector="calculation-results-total-aed"
+                          class="total-aed"
+                        >
+                          AED 302.30
+                        </div>
+                      </dd>
+                    </dl>
+                  </div>
                 </div>
               </div>
               <div class="mt-3">
