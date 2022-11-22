@@ -15209,11 +15209,28 @@ p,
   margin-bottom: -10px;
 }
 .footer .payment-types {
-  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
   align-items: flex-start;
+}
+.footer .payment-types.aside {
+  margin-top: 15px;
+}
+.footer .payment-types.aside .payment-types-icon {
+  vertical-align: middle;
+}
+.footer .payment-types.aside .payment-types-icon.mastercard > img {
+  width: 37px;
+  max-height: 40px;
+}
+.footer .payment-types.aside .payment-types-icon.visa > img {
+  width: 51px;
+  max-height: 40px;
+}
+.footer .payment-types.aside .payment-types-icon.tamara > img {
+  width: 60px;
+  max-height: 40px;
 }
 .footer .payment-types-icon {
   height: 20px;

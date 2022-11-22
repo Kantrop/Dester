@@ -693,11 +693,23 @@ p,
     &:last-child
       margin-bottom: -10px
   .payment-types
-    margin-top: 20px
     display: flex
     flex-wrap: wrap
     gap: 15px
     align-items: flex-start
+    &.aside
+      margin-top: 15px
+      .payment-types-icon
+        vertical-align: middle
+        &.mastercard > img
+          width: 37px
+          max-height: 40px
+        &.visa > img
+          width: 51px
+          max-height: 40px
+        &.tamara > img
+          width: 60px
+          max-height: 40px
     &-icon
       height: 20px
       vertical-align: middle
