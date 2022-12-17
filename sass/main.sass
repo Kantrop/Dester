@@ -220,7 +220,7 @@ input::-webkit-inner-spin-button
       margin-top: #{$indent-m}
       @media (max-width: 992px)
         margin-top: 0
-        padding-top: 56.25%
+        padding-top: 72.7%
         height: 0
         width: 100%
   .subcaption
@@ -591,6 +591,28 @@ p,
     background-position: right -90px top -155px
     background-size: 622px
     background-repeat: no-repeat
+  &-dester-image
+    background: url(../assets/promo-baner-full.png)
+    background-position: right top
+    background-size: cover
+    padding: 25% 0 0 !important
+    min-height: auto!important
+  &-dester
+    background: url(../assets/promo-baner.png)
+    background-position: right top
+    background-size: cover
+    padding-right: 30% !important
+    padding-top: 7%
+    .banner-caption
+      font-family: Inter
+      letter-spacing: 0.035em
+      font-size: 28px
+    .banner-content ul
+      padding-left: 20px
+    .banner-content li
+      font-size: 18px
+      margin-bottom: 18px
+      padding-right: 24px
   &-caption
     font-family: "PP Gatwick"
     font-weight: 700
@@ -615,9 +637,16 @@ p,
 .video
   // width: 570px
   border-radius: #{$border-radius-xl}
-  height: 414px
+  // height: 396px
   position: relative
   background: #{$air-grey}
+  overflow: hidden
+  padding-top: 72.7%
+  & video
+    position: absolute
+    width:100%
+    top:0
+    left: 0
   &.stopped
     .play-btn
       cursor: pointer
@@ -1708,7 +1737,8 @@ input[type=radio] + *
 
   .banner-summersale
     background-position: left 258px top -153px
-
+  .banner-dester
+    background-position: right 13% top
   .stage
     &-rounded
       border-radius: 0

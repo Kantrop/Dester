@@ -14641,7 +14641,7 @@ input::-webkit-inner-spin-button {
 @media (max-width: 992px) {
   .stage-video .video {
     margin-top: 0;
-    padding-top: 56.25%;
+    padding-top: 72.7%;
     height: 0;
     width: 100%;
   }
@@ -15082,6 +15082,33 @@ p,
   background-size: 622px;
   background-repeat: no-repeat;
 }
+.banner-dester-image {
+  background: url(../assets/promo-baner-full.png);
+  background-position: right top;
+  background-size: cover;
+  padding: 25% 0 0 !important;
+  min-height: auto !important;
+}
+.banner-dester {
+  background: url(../assets/promo-baner.png);
+  background-position: right top;
+  background-size: cover;
+  padding-right: 30% !important;
+  padding-top: 7%;
+}
+.banner-dester .banner-caption {
+  font-family: Inter;
+  letter-spacing: 0.035em;
+  font-size: 28px;
+}
+.banner-dester .banner-content ul {
+  padding-left: 20px;
+}
+.banner-dester .banner-content li {
+  font-size: 18px;
+  margin-bottom: 18px;
+  padding-right: 24px;
+}
 .banner-caption {
   font-family: "PP Gatwick";
   font-weight: 700;
@@ -15112,9 +15139,16 @@ p,
 
 .video {
   border-radius: 40px;
-  height: 414px;
   position: relative;
   background: #f6f6f6;
+  overflow: hidden;
+  padding-top: 72.7%;
+}
+.video video {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 .video.stopped .play-btn {
   cursor: pointer;
@@ -16423,6 +16457,9 @@ input[type=radio] + * {
   }
   .banner-summersale {
     background-position: left 258px top -153px;
+  }
+  .banner-dester {
+    background-position: right 13% top;
   }
   .stage-rounded {
     border-radius: 0;
