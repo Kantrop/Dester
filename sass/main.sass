@@ -1534,6 +1534,7 @@ p,
     align-items: center
   &-logos
     display: flex
+    flex-wrap: wrap
   &-logo
       padding: 8px
       border: 1px solid #{$light_gray}
@@ -1559,6 +1560,9 @@ p,
   transition: all 0.3s
   margin-right: 10px
   display: inline-block
+  &-wrapper
+    display: flex
+    align-items: center
   &:after
     content: ''
     width:30px

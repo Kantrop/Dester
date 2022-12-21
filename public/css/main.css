@@ -16225,6 +16225,7 @@ p,
 }
 .payment-methods-logos {
   display: flex;
+  flex-wrap: wrap;
 }
 .payment-methods-logo {
   padding: 8px;
@@ -16254,6 +16255,10 @@ p,
   transition: all 0.3s;
   margin-right: 10px;
   display: inline-block;
+}
+.radiobtn-wrapper {
+  display: flex;
+  align-items: center;
 }
 .radiobtn:after {
   content: "";
