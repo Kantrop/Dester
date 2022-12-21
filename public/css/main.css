@@ -16275,6 +16275,11 @@ input[type=radio]:checked + * .radiobtn:after {
   border-width: 10px;
 }
 
+input[type=radio]:disabled + * .radiobtn:after {
+  background: #d2d2d2;
+  border-color: #555658;
+}
+
 input[type=radio] + * {
   font-size: 18px;
   font-weight: 700;
