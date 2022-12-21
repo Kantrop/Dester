@@ -721,24 +721,29 @@ p,
       margin-top: -10px
     &:last-child
       margin-bottom: -10px
+  &-wrapper
+    margin-top: 100px
+    margin-bottom: 100px
+
+    @media (max-width: 992px)
+      margin-bottom: 40px
   .payment-types
     display: flex
     flex-wrap: wrap
     gap: 15px
     align-items: flex-start
+    @media (max-width: 992px)
+      margin-top: 20px
+    &-wrapper
+      display: flex
+      justify-content: flex-end
+      @media (max-width: 992px)
+        justify-content: flex-start
     &.aside
-      margin-top: 15px
       .payment-types-icon
         vertical-align: middle
-        &.mastercard > img
-          width: 37px
-          max-height: 40px
-        &.visa > img
-          width: 51px
-          max-height: 40px
-        &.tamara > img
-          width: 60px
-          max-height: 40px
+        &.amazon > img
+          margin-top: 7px
     &-icon
       height: 20px
       vertical-align: middle
