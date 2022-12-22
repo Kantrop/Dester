@@ -890,31 +890,25 @@
     <script>
       $(document).ready(function () {
           const sticky = $("#buttons-container");
-
-        if(window.innerWidth < 420) {
-          sticky.parent().height(sticky.height());
-          let offset = sticky.height() + sticky.offset().top + 20; // 20 from css
-          const screenBottom = window.scrollY + window.innerHeight
-          if(screenBottom <= offset) {
-            sticky.addClass("sticky");
-          }
-
-          $(document).on('resize', () => {
-            sticky.parent().height(sticky.height());
-            let offset = sticky.height() + sticky.offset().top + 20; // 20 from css
-          })
-
-          $(document).on('scroll', (e) => {
+          const handleSticky = () => {
+            let offset = sticky.parent().height() + sticky.parent().offset().top + 20; // 20 from css
             const screenBottom = window.scrollY + window.innerHeight
-            if(screenBottom <= offset) {
+
+            if(screenBottom <= offset && window.innerWidth < 420) {
               sticky.addClass("sticky");
             } else {
               sticky.removeClass("sticky");
             }
+          }
+          sticky.parent().height(sticky.height());
+          handleSticky()
+
+          $(document).on('scroll', handleSticky)
+          $(window).on("resize", () => {
+            sticky.parent().height(sticky.height());
+            handleSticky()
           })
-        } else {
-          sticky.removeClass("sticky");
-        }
+
       });
     </script>
   </body>
