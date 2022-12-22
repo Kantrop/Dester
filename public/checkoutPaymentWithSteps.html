@@ -894,6 +894,10 @@
         if(window.innerWidth < 420) {
           sticky.parent().height(sticky.height());
           let offset = sticky.height() + sticky.offset().top + 20; // 20 from css
+          const screenBottom = window.scrollY + window.innerHeight
+          if(screenBottom <= offset) {
+            sticky.addClass("sticky");
+          }
 
           $(document).on('resize', () => {
             sticky.parent().height(sticky.height());
