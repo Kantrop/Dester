@@ -892,7 +892,7 @@
           const sticky = $("#buttons-container");
           const handleSticky = () => {
             let offset = sticky.parent().height() + sticky.parent().offset().top + 20; // 20 from css
-            const screenBottom = window.scrollY + window.innerHeight
+            const screenBottom = window.scrollY + window.screen.availHeight
 
             if(screenBottom <= offset && window.innerWidth < 420) {
               sticky.addClass("sticky");
