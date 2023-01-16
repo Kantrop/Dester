@@ -16290,6 +16290,17 @@ input[type=radio] + * {
   font-weight: 700;
 }
 
+input[type=checkbox].big {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+}
+input[type=checkbox].big + * {
+  font-size: 18px;
+  font-weight: 700;
+  vertical-align: middle;
+}
+
 .status-block {
   flex: 1;
   display: flex;
