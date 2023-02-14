@@ -14469,6 +14469,12 @@ input::-webkit-inner-spin-button {
   color: #555658 !important;
 }
 
+.form-control-l {
+  font-size: 20px !important;
+  line-height: 135%;
+  padding: 18px 20px;
+}
+
 .was-validated .form-control:invalid, .form-control.is-invalid {
   background-image: none;
   border: 1px solid #F63D48;
@@ -15145,6 +15151,8 @@ p,
   padding-top: 72.7%;
 }
 .video video {
+  border-radius: 40px;
+  overflow: hidden;
   position: absolute;
   width: 100%;
   top: 0;
@@ -16404,6 +16412,19 @@ input[type=checkbox].big + * {
   left: 55px;
 }
 
+.subscribe-arrow {
+  width: 161px;
+  height: 85px;
+  background: url(../assets/subscribeArrow.svg) no-repeat center center;
+  background-size: contain;
+  bottom: 20px;
+  right: -100px;
+}
+.subscribe-arrow-wrapper {
+  display: flex;
+  align-items: end;
+}
+
 @media (max-width: 992px) {
   .navbar > * {
     position: relative;
@@ -16594,6 +16615,12 @@ input[type=checkbox].big + * {
   }
   .overlay {
     height: 258px;
+  }
+  .subscribe-arrow {
+    transform: rotate(20deg);
+    bottom: 0;
+    right: 33px;
+    position: relative;
   }
 }
 @media (max-width: 768px) {
@@ -16806,6 +16833,13 @@ input[type=checkbox].big + * {
     width: auto;
     right: 0;
   }
+  .subscribe-arrow {
+    transform: rotate(20deg);
+    bottom: -50px;
+    right: -40px;
+    width: 90px;
+    height: 40px;
+  }
 }
 @media (max-width: 575px) {
   .stage .app-btn {
@@ -16852,6 +16886,12 @@ input[type=checkbox].big + * {
   .illustration-app {
     padding-top: 70%;
     height: auto;
+  }
+}
+@media (max-width: 427px) {
+  .subscribe-arrow {
+    bottom: -25px;
+    right: -89px;
   }
 }
 @media (max-width: 375px) {
