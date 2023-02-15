@@ -206,3 +206,27 @@ Array.from(basicCollapseBtns).forEach((collapseBtn) => {
   });
 });
 //
+
+
+// email subscribe
+document.querySelector('#emailSubscribtionForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const data = new FormData(e.target);
+  const sendFormat = {
+    email_address: data.get('email'),
+    status: "subscribed",
+    merge_fields: {
+      "FIRSTNAME": data.get('name'),
+      "LASTNAME": ""
+    }
+  }
+
+  fetch('https://us21.api.mailchimp.com/3.0/lists/02ffb86bbc/members', {
+    method: "POST",
+    headers: {
+      'Authorization': 'Bearer 8cfa163f394224ac1a693cf07ca879d9-us21', 
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(sendFormat)
+  })
+})

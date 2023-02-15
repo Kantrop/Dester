@@ -14230,18 +14230,24 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
+.form-ui input:-webkit-autofill,
+.form-ui input:-webkit-autofill:hover,
+.form-ui input:-webkit-autofill:focus,
+.form-ui textarea:-webkit-autofill,
+.form-ui textarea:-webkit-autofill:hover,
+.form-ui textarea:-webkit-autofill:focus,
+.form-ui select:-webkit-autofill,
+.form-ui select:-webkit-autofill:hover,
+.form-ui select:-webkit-autofill:focus {
   -webkit-text-fill-color: #ffffff;
   -webkit-box-shadow: 0 0 0px 1000px #1300B1 inset;
   transition: background-color 5000s ease-in-out 0s;
+}
+.form-ui select:-webkit-autofill::first-line,
+.form-ui textarea:-webkit-autofill::first-line,
+.form-ui input:-webkit-autofill::first-line {
+  font-family: inherit;
+  font-size: 1rem;
 }
 
 .select2-dropdown {
@@ -14442,6 +14448,14 @@ input,
 select {
   -webkit-appearance: none;
   font-size: 14px !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  color: inherit;
+  background: inherit;
 }
 
 input::-webkit-outer-spin-button,
@@ -16422,7 +16436,7 @@ input[type=checkbox].big + * {
 }
 .subscribe-arrow-wrapper {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
 }
 
 @media (max-width: 992px) {

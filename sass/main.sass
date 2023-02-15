@@ -51,6 +51,13 @@ input,
 select
   -webkit-appearance: none
   font-size: 14px !important
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active
+    color: inherit
+    background: inherit
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button 
   -webkit-appearance: none
@@ -69,6 +76,11 @@ input::-webkit-inner-spin-button
   &:active:focused
     background-color: red!important
     color: #{$dark_grey}!important
+
+.form-control-l
+  font-size: 20px !important
+  line-height: 135%
+  padding: 18px 20px
 
 .was-validated .form-control:invalid, .form-control.is-invalid
   background-image: none
@@ -643,6 +655,8 @@ p,
   overflow: hidden
   padding-top: 72.7%
   & video
+    border-radius: #{$border-radius-xl}
+    overflow: hidden
     position: absolute
     width:100%
     top:0
@@ -1676,6 +1690,18 @@ input[type=checkbox].big
     right: 55px
     left: 55px
 
+.subscribe-arrow
+  &-wrapper
+    display: flex
+    align-items: flex-end
+  width: 161px
+  height: 85px
+  background: url(../assets/subscribeArrow.svg) no-repeat center center
+  background-size: contain
+  // position: absolute
+  bottom: 20px
+  right: -100px
+
 @media (max-width: 992px)
   .navbar
     > *
@@ -1850,6 +1876,12 @@ input[type=checkbox].big
           opacity: 1
   .overlay
     height: 258px
+  .subscribe-arrow
+    transform: rotate(20deg)
+    bottom: 0
+    right: 33px
+    position: relative
+    
 
 @media (max-width: 768px)
   .fixed
@@ -2019,7 +2051,14 @@ input[type=checkbox].big
     &::before
       width: auto
       right: 0
-      
+   
+  .subscribe-arrow
+    transform: rotate(20deg)
+    bottom: -50px
+    right: -40px
+    width: 90px
+    height:40px
+
 @media (max-width: 575px)
   .stage .app-btn
     width: 100%
@@ -2058,6 +2097,11 @@ input[type=checkbox].big
     &-app
       padding-top: 70%
       height: auto
+
+@media (max-width: 427px)
+  .subscribe-arrow
+    bottom: -25px
+    right: -89px
 
 @media (max-width: 375px)
   .fixed-whatsapp-btn
