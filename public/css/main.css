@@ -16439,6 +16439,29 @@ input[type=checkbox].big + * {
   align-items: flex-end;
 }
 
+.modal {
+  background: rgba(27, 27, 27, 0.3);
+  backdrop-filter: blur(5px);
+}
+.modal-emailSubscription .btn-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-image: url(../assets/close-blue.svg);
+}
+.modal-emailSubscription .modal-body {
+  position: relative;
+  width: 656px;
+  background: #E8E6F8 url(../assets/subsModalBg.png) bottom right no-repeat;
+  border-radius: 20px;
+}
+.modal-emailSubscription .caption {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 112%;
+  letter-spacing: -0.035em;
+}
+
 @media (max-width: 992px) {
   .navbar > * {
     position: relative;
