@@ -107,7 +107,7 @@
 }
 .form-check-input {
   margin-top: 0 !important;
-  margin-right: 8px !important;
+  margin-inline-end: 8px !important;
 }
 
 /*!

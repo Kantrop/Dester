@@ -107,7 +107,7 @@
 }
 .form-check-input {
   margin-top: 0 !important;
-  margin-right: 8px !important;
+  margin-inline-end: 8px !important;
 }
 
 /*!
@@ -14348,6 +14348,12 @@ textarea.form-control-lg {
   color: #999;
 }
 
+[dir=rtl] .spinner .up,
+[dir=rtl] .spinner .down {
+  right: auto;
+  left: 16px;
+}
+
 .spinner {
   position: relative;
 }
@@ -14390,6 +14396,11 @@ textarea.form-control-lg {
 
 .select2-container--disabled {
   opacity: 0.7;
+}
+
+[dir=rtl] .select2-container--default .select2-selection--single .select2-selection__arrow {
+  left: 45px !important;
+  right: auto !important;
 }
 
 .test-bg {
@@ -14505,6 +14516,11 @@ input::-webkit-inner-spin-button {
   color: #F63D48;
 }
 
+[dir=rtl] .with-inner-button .inner-btn {
+  right: auto;
+  left: 16px;
+}
+
 .with-inner-button {
   position: relative;
 }
@@ -14526,7 +14542,7 @@ input::-webkit-inner-spin-button {
 }
 
 .container {
-  margin-left: auto;
+  margin-inline-start: auto;
   margin-right: auto;
 }
 
@@ -14568,6 +14584,7 @@ input::-webkit-inner-spin-button {
 .header .btn {
   line-height: 1.12;
   font-weight: 500;
+  margin-inline-start: 48px;
 }
 
 .lang {
@@ -14667,7 +14684,7 @@ input::-webkit-inner-spin-button {
   }
 }
 .stage .subcaption {
-  padding-right: 23%;
+  padding-inline-end: 23%;
 }
 .stage .heading-sup {
   margin-bottom: 20px;
@@ -14678,7 +14695,7 @@ input::-webkit-inner-spin-button {
   font-weight: 500;
 }
 .stage .heading-sup .icon {
-  margin-left: 6px;
+  margin-inline-start: 6px;
 }
 
 .capitalize {
@@ -14820,7 +14837,7 @@ textarea:active:focus {
   width: 18px;
   height: 18px;
   vertical-align: -3px;
-  margin-left: 9px;
+  margin-inline-start: 9px;
 }
 .btn-arrow {
   border: none;
@@ -14842,6 +14859,16 @@ textarea:active:focus {
 }
 .btn-arrow:hover::after, .btn-arrow:active::after {
   transform: translateX(6px) rotate(45deg);
+}
+
+[dir=rtl] .btn-arrow {
+  border: none;
+}
+[dir=rtl] .btn-arrow::after {
+  transform: rotate(225deg);
+}
+[dir=rtl] .btn-arrow:hover::after, [dir=rtl] .btn-arrow:active::after {
+  transform: translateX(-6px) rotate(225deg);
 }
 
 .navbar-nav {
@@ -14870,6 +14897,7 @@ p,
   background-position: left top;
   background-repeat: no-repeat;
   height: 50px;
+  width: 55px;
 }
 .card-index {
   font-weight: 600;
@@ -14901,9 +14929,11 @@ p,
 }
 .icon-device {
   background-image: url(../assets/device.svg);
+  width: 70px;
 }
 .icon-box {
   background-image: url(../assets/box.svg);
+  width: 60px;
 }
 .icon-calc {
   background-image: url(../assets/calc.svg);
@@ -14976,7 +15006,7 @@ p,
 
 .socials {
   display: flex;
-  padding-left: 0;
+  padding-inline-start: 0;
   margin-bottom: 0;
   list-style: none;
 }
@@ -14984,7 +15014,7 @@ p,
   transition: all 0.3s;
 }
 .socials-item + .socials-item {
-  margin-left: 15px;
+  margin-inline-start: 15px;
 }
 .socials-item:hover {
   opacity: 0.6;
@@ -15027,12 +15057,17 @@ p,
   margin: 0;
 }
 .hover-block .socials-item + .socials-item {
-  margin-left: 10px;
+  margin-inline-start: 10px;
 }
 
 .fc-widget-open .fixed.with-freshdesk {
   opacity: 0;
   pointer-events: none;
+}
+
+[dir=rtl] .fixed {
+  right: auto;
+  left: 24px;
 }
 
 .fixed {
@@ -15063,6 +15098,12 @@ p,
   bottom: 23px;
 }
 
+.by-hash {
+  margin-inline-end: 100px;
+  padding-inline-end: 40px;
+  padding-right: 0;
+}
+
 .partner {
   border-radius: 20px;
   background: #f6f6f6;
@@ -15089,6 +15130,12 @@ p,
   grid-template-columns: repeat(5, 1fr);
 }
 
+[dir=rtl] .banner {
+  padding-right: 33% !important;
+}
+[dir=rtl] .banner-summersale {
+  background-position: left -90px top -155px;
+}
 .banner {
   border-radius: 40px;
   padding: 60px;
@@ -15122,12 +15169,12 @@ p,
   font-size: 28px;
 }
 .banner-dester .banner-content ul {
-  padding-left: 20px;
+  padding-inline-start: 20px;
 }
 .banner-dester .banner-content li {
   font-size: 18px;
   margin-bottom: 18px;
-  padding-right: 24px;
+  padding-inline-end: 24px;
 }
 .banner-caption {
   font-family: "PP Gatwick";
@@ -15148,7 +15195,7 @@ p,
 
 .list {
   margin: 32px 0;
-  padding-left: 30px;
+  padding-inline-start: 30px;
 }
 .list > li {
   margin-bottom: 20px;
@@ -15393,7 +15440,7 @@ p,
   height: 20px;
   position: relative;
   padding: 2px;
-  margin-left: 15px;
+  margin-inline-start: 15px;
 }
 .navbar-toggler, .navbar-toggler:hover, .navbar-toggler:active, .navbar-toggler:focus {
   outline: none;
@@ -15548,6 +15595,11 @@ p,
 }
 .navbar-aside .nav-link.active {
   background: rgba(72, 51, 245, 0.2);
+}
+
+.accordion-button::after {
+  margin-inline-start: auto;
+  margin-left: 0;
 }
 
 .accordion-header button {
@@ -15909,7 +15961,7 @@ p,
   top: 150%;
 }
 .order-item-stage-popup .timeline {
-  padding-right: 14px;
+  padding-inline-end: 14px;
   text-align: left;
   box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
   background: #fff;
@@ -15921,7 +15973,7 @@ p,
 
 .timeline {
   padding: 0;
-  padding-left: 36px;
+  padding-inline-start: 36px;
   margin: 0;
   list-style: none;
 }
@@ -15964,6 +16016,15 @@ p,
 .timeline-item-description {
   font-size: 0.8em;
   color: #555658;
+}
+
+[dir=rtl] .timeline-item::after {
+  left: auto;
+  right: -16px;
+}
+[dir=rtl] .timeline-item::before {
+  left: auto;
+  right: -19px;
 }
 
 .collapsed .text-collapsed {
@@ -16039,7 +16100,7 @@ p,
   color: #555658;
 }
 .cart-item-price-old + .cart-item-price-actual {
-  margin-left: 0.5em;
+  margin-inline-start: 0.5em;
 }
 .cart-item-price-actual {
   font-weight: bold;
@@ -16073,6 +16134,14 @@ p,
   flex-direction: column;
 }
 
+[dir=rtl] .right-gray-block {
+  padding: 40px 40px 40px 0;
+}
+[dir=rtl] .right-gray-block::before {
+  left: auto;
+  right: 0;
+}
+
 .right-gray-block {
   position: relative;
   height: 100%;
@@ -16096,7 +16165,7 @@ p,
 .order-preview-list {
   max-height: 232px;
   overflow-y: auto;
-  padding-right: 30px;
+  padding-inline-end: 30px;
 }
 .order-preview-list .cart-item + .cart-item {
   margin-top: 12px;
@@ -16118,7 +16187,11 @@ p,
 .order-preview-list .cart-item-quantity {
   font-size: 14px;
   font-weight: 500;
-  margin-left: 14px;
+  margin-inline-start: 14px;
+}
+
+[dir=rtl] .payment-options input:checked + .payment-options-item-name .radiobtn-label {
+  transform: translateX(40px);
 }
 
 .payment-options {
@@ -16255,7 +16328,7 @@ p,
   border-radius: 8px;
 }
 .payment-methods-logo + .payment-methods-logo {
-  margin-left: 10px;
+  margin-inline-start: 10px;
 }
 .payment-methods-form {
   display: none;
@@ -16275,7 +16348,7 @@ p,
   position: relative;
   vertical-align: middle;
   transition: all 0.3s;
-  margin-right: 10px;
+  margin-inline-end: 10px;
   display: inline-block;
 }
 .radiobtn-wrapper {
@@ -16380,17 +16453,15 @@ input[type=checkbox].big + * {
   min-width: 24px;
   height: 24px;
   color: #ffffff;
-  margin-right: 10px;
+  margin-inline-end: 10px;
   font-size: 14px;
   line-height: 24px;
   background: #9D9D9D;
   border-radius: 50%;
+  text-align: center;
 }
 .step.active .step-count {
   background: #4833f5;
-}
-.step-content {
-  text-align: left;
 }
 .step-description {
   color: #9D9D9D;
@@ -16424,6 +16495,10 @@ input[type=checkbox].big + * {
   bottom: 20px;
   right: 55px;
   left: 55px;
+}
+
+[dir=rtl] .subscribe-arrow {
+  transform: scale(-1, 1);
 }
 
 .subscribe-arrow {
@@ -16605,7 +16680,7 @@ input[type=checkbox].big + * {
   .fixed-whatsapp-btn .icon-m {
     width: 18px;
     height: 18px;
-    margin-left: 8px;
+    margin-inline-start: 8px;
   }
   .hover-block {
     font-size: 14px;
@@ -16704,7 +16779,7 @@ input[type=checkbox].big + * {
     margin-bottom: 48px !important;
   }
   .stage .subcaption {
-    padding-right: 0;
+    padding-inline-end: 0;
     margin: 16px 0 20px;
   }
   .stage .heading-sup {
