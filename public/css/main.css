@@ -16520,9 +16520,31 @@ input[type=checkbox].big + * {
   right: 55px;
   left: 55px;
 }
+#buttons-container .subscribe-letter:after {
+  left: -20px;
+}
 
 [dir=rtl] .subscribe-arrow {
   transform: scale(-1, 1);
+}
+
+.stage-subscription-success {
+  display: none;
+}
+
+.subscribe-letter {
+  display: inline-block;
+  position: relative;
+}
+.subscribe-letter:after {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  content: "";
+  width: 100px;
+  height: 100px;
+  background: url(../assets/subscription-letter.svg) no-repeat center center;
+  background-size: contain;
 }
 
 .subscribe-arrow {
@@ -16550,7 +16572,7 @@ input[type=checkbox].big + * {
 }
 .modal-emailSubscription .modal-body {
   position: relative;
-  width: 656px;
+  max-width: 656px;
   background: #E8E6F8 url(../assets/subsModalBg.png) bottom right no-repeat;
   border-radius: 20px;
 }

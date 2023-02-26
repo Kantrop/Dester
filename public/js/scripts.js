@@ -212,11 +212,17 @@ Array.from(basicCollapseBtns).forEach((collapseBtn) => {
 document.querySelectorAll('.emailSubscribtionForm').forEach((form) => {
   form.addEventListener('submit', function(e) {
     e.preventDefault();
-    const success = this.querySelector('.valid-feedback');
-    const failure = this.querySelector('.invalid-feedback');
 
+    const success = document.querySelector('.stage-subscription-success');
+    const failure = this.querySelector('.invalid-feedback');
     success.style.display = 'none'
     failure.style.display = 'none'
+
+    const handleSuccess = () => {
+      form.closest(".stage").remove()
+      success.style.display = 'block'
+
+    }
 
     const data = new FormData(e.target);
     const sendFormat = {
@@ -235,18 +241,21 @@ document.querySelectorAll('.emailSubscribtionForm').forEach((form) => {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(sendFormat)
-    }).then(() => {
-      success.style.display = 'block'
-    }).catch(() => {
-      failure.style.display = 'block'
-    })
+    }).then(async (response) => {
+      let data = await response.json()
+      if(data.status === 'subscribed' || data.title === 'Member Exists') {
+        handleSuccess()
+      } else {
+        failure.style.display = 'block'
+      }
+    }).catch(handleSuccess)
   })
 })
 
 // show modal window on start
 const modalNode = document.querySelector('.modal-emailSubscription');
-const modal = new bootstrap.Modal(modalNode);
-modalNode.addEventListener('hide.bs.modal', () => {
+const modal = modalNode && new bootstrap.Modal(modalNode);
+modalNode?.addEventListener('hide.bs.modal', () => {
   localStorage.setItem('subscribeShown', 'true')
 });
 
@@ -254,6 +263,6 @@ setTimeout(() => {
   const isWasShown = localStorage.getItem('subscribeShown')=== 'true';
 
   if(!isWasShown) {
-    modal.show();
+    modal?.show();
   }
 }, 30 * 1000)
