@@ -213,15 +213,23 @@ document.querySelectorAll('.emailSubscribtionForm').forEach((form) => {
   form.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    const success = document.querySelector('.stage-subscription-success');
+    const success = `
+        <div class="row">
+          <div class="col-xs-9 position-relative">
+            <div class="h2">
+              Thank you!
+              <br>
+              Your submission has been received!
+              <div class="subscribe-letter"></div>
+            </div>
+          </div>
+        </div>
+    `
     const failure = this.querySelector('.invalid-feedback');
-    success.style.display = 'none'
     failure.style.display = 'none'
 
     const handleSuccess = () => {
-      form.closest(".stage").remove()
-      success.style.display = 'block'
-
+      this.innerHTML = success;
     }
 
     const data = new FormData(e.target);
@@ -248,7 +256,7 @@ document.querySelectorAll('.emailSubscribtionForm').forEach((form) => {
       } else {
         failure.style.display = 'block'
       }
-    }).catch(handleSuccess)
+    }).catch(() => failure.style.display = 'block')
   })
 })
 

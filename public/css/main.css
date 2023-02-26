@@ -16576,11 +16576,15 @@ input[type=checkbox].big + * {
   background: #E8E6F8 url(../assets/subsModalBg.png) bottom right no-repeat;
   border-radius: 20px;
 }
-.modal-emailSubscription .caption {
+.modal-emailSubscription .caption,
+.modal-emailSubscription .h2 {
   font-weight: 600;
   font-size: 36px;
   line-height: 112%;
   letter-spacing: -0.035em;
+}
+.modal-emailSubscription .subscribe-letter {
+  display: none;
 }
 
 .factoidBlock {
