@@ -24,20 +24,33 @@ var swiperReview = new Swiper(".swiper-reviews", {
     prevEl: ".swiper-button-prev",
   },
 });
+var swiperPhotos = new Swiper(".swiper-photos", {
+  slidesPerView: 'auto',
+  spaceBetween: 20,
+  initialSlide: 1,
+  centeredSlides: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+
 
 let swiperList;
-setAdaptiveSwiper = (width) => {
+setAdaptiveSwiper = (selector, width = 575, options = {}) => {
   if (window.innerWidth <= width) {
     if (swiperList) {
       return;
     }
-    swiperList = new Swiper(".swiper-list", {
+    swiperList = new Swiper(selector, {
       slidesPerView: 1,
       spaceBetween: 8,
       pagination: {
-        el: ".swiper-list .swiper-pagination",
+        el: `${selector} .swiper-pagination`,
         clickable: true,
       },
+      ...options
     });
   } else {
     if (swiperList) {
@@ -48,9 +61,11 @@ setAdaptiveSwiper = (width) => {
   }
 };
 
-setAdaptiveSwiper(575);
+setAdaptiveSwiper(".swiper-list");
+setAdaptiveSwiper(".swiper-tabs", 768, { slidesPerView: "auto", noSwiping:false });
 window.addEventListener("resize", () => {
-  setAdaptiveSwiper(575);
+  setAdaptiveSwiper(".swiper-list");
+  setAdaptiveSwiper(".swiper-tabs", 768, { slidesPerView: "auto", noSwiping:false });
 });
 
 // Bootstrap popoper
@@ -73,6 +88,6 @@ const popoverDismissList = popoverDismissNodeList.map(function (
 });
 
 // custom selects
-$("select").select2({
+$("select")?.select2?.({
   minimumResultsForSearch: -1,
 });
