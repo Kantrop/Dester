@@ -12,7 +12,8 @@
   z-index: 100
   pointer-events: none
   opacity: 0.5
-
+.no-break
+  white-space: nowrap
 // html
 //   overflow-x: hidden
 body
@@ -218,6 +219,9 @@ input::-webkit-inner-spin-button
     overflow: visible
   &-rounded
     border-radius: var(--bs-border-radius-pill)
+  &-grey
+    background: #{$air-grey}
+    padding: 60px 0 60px
   &-inverse
     background: #{$electric-blue}
     color: #{$white}
@@ -644,6 +648,11 @@ p,
     background-size: cover
     padding: 25% 0 0 !important
     min-height: auto!important
+  &-delivery
+    background: #4833f5
+    color: #ffffff
+    padding: 60px
+    overflow: hidden
   &-dester
     background: url(../assets/promo-baner.png)
     background-position: right top
@@ -1620,7 +1629,6 @@ p,
   input[type="radio"]:checked ~ .payment-methods-form
     display: block
 
-
 .radiobtn
   width:30px
   min-width:30px
@@ -1695,6 +1703,9 @@ input[type=checkbox].big
   &-action
     margin-top: #{$indent-xl}
 
+.standAlone-stepper
+  .step
+    margin-bottom: 15px
 .stepper
   background: #{$air_grey}
   border-radius: 8px
@@ -1704,6 +1715,8 @@ input[type=checkbox].big
   padding: 16px
   display: flex
   align-items: center
+  background: #{$air_grey}
+  border-radius: 8px
   &-count
     width: 24px
     min-width: 24px
@@ -1781,6 +1794,60 @@ input[type=checkbox].big
       line-height: 112%
       letter-spacing: -0.035em
 
+.factoidBlock
+  height: 480px
+  display: flex
+  border-radius: 40px
+  padding: 40px 60px
+  box-sizing: border-box
+  &.mission
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../assets/bg/mission.jpeg) top -40px left no-repeat
+    background-size: cover
+    justify-content: flex-end
+    align-items: flex-end
+    color: white
+
+.circle
+  border-radius: 50%
+  width:100%
+  width: 380px
+  height: 380px
+  background: #{$air_grey}
+  box-sizing: border-box
+  position: relative
+  &-content
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    align-items: center
+    justify-content: center
+    text-align: center
+    display: flex
+
+.inline-icon
+  display: inline-block
+  margin-right: 16px
+  vertical-align: baseline
+  width: 1.35em
+  height: 1.35em
+  &.external-link
+    background: url(../assets/bx-link-external.svg) center no-repeat
+    background-size: contain
+.bordered-list
+  list-style: none
+  padding: 0
+  margin: 0
+  li
+    border-bottom: 1px solid #{$light_gray}
+    padding: 25px 0
+    margin: 0
+  a
+    display: flex
+    align-items: end
+    position: relative
+    top: -3px
 @media (max-width: 992px)
   .navbar
     > *

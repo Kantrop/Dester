@@ -14416,6 +14416,10 @@ textarea.form-control-lg {
   opacity: 0.5;
 }
 
+.no-break {
+  white-space: nowrap;
+}
+
 body {
   position: relative;
   scroll-behavior: smooth;
@@ -14653,6 +14657,10 @@ input::-webkit-inner-spin-button {
 }
 .stage-rounded {
   border-radius: var(--bs-border-radius-pill);
+}
+.stage-grey {
+  background: #f6f6f6;
+  padding: 60px 0 60px;
 }
 .stage-inverse {
   background: #4833f5;
@@ -15155,6 +15163,12 @@ p,
   background-size: cover;
   padding: 25% 0 0 !important;
   min-height: auto !important;
+}
+.banner-delivery {
+  background: #4833f5;
+  color: #ffffff;
+  padding: 60px;
+  overflow: hidden;
 }
 .banner-dester {
   background: url(../assets/promo-baner.png);
@@ -16435,6 +16449,10 @@ input[type=checkbox].big + * {
   margin-top: 32px;
 }
 
+.standAlone-stepper .step {
+  margin-bottom: 15px;
+}
+
 .stepper {
   background: #f6f6f6;
   border-radius: 8px;
@@ -16447,6 +16465,8 @@ input[type=checkbox].big + * {
   padding: 16px;
   display: flex;
   align-items: center;
+  background: #f6f6f6;
+  border-radius: 8px;
 }
 .step-count {
   width: 24px;
@@ -16535,6 +16555,71 @@ input[type=checkbox].big + * {
   font-size: 36px;
   line-height: 112%;
   letter-spacing: -0.035em;
+}
+
+.factoidBlock {
+  height: 480px;
+  display: flex;
+  border-radius: 40px;
+  padding: 40px 60px;
+  box-sizing: border-box;
+}
+.factoidBlock.mission {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../assets/bg/mission.jpeg) top -40px left no-repeat;
+  background-size: cover;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: white;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 100%;
+  width: 380px;
+  height: 380px;
+  background: #f6f6f6;
+  box-sizing: border-box;
+  position: relative;
+}
+.circle-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+}
+
+.inline-icon {
+  display: inline-block;
+  margin-right: 16px;
+  vertical-align: baseline;
+  width: 1.35em;
+  height: 1.35em;
+}
+.inline-icon.external-link {
+  background: url(../assets/bx-link-external.svg) center no-repeat;
+  background-size: contain;
+}
+
+.bordered-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.bordered-list li {
+  border-bottom: 1px solid #ededed;
+  padding: 25px 0;
+  margin: 0;
+}
+.bordered-list a {
+  display: flex;
+  align-items: end;
+  position: relative;
+  top: -3px;
 }
 
 @media (max-width: 992px) {
