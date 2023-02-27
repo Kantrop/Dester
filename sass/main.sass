@@ -1881,13 +1881,48 @@ input[type=checkbox].big
   align-content: space-between
   height: 100%
   min-height: 200px
+  overflow: hidden
+  position: relative
+  transition: color 0.5s ease
+  transform: translate3d(0, 0, 0)
+  z-index: 1
+  & > * 
+    z-index: 1
+    transform: translate3d(0, 0, 0)
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 100%
+    width: 100px
+    height: 100px
+    transform-origin: top left
+    transform: scale(1) translateX(0) translateY(-100%)
+    background: #{$primary}
+    border-radius: 50%
+    transition: all 0.4s ease
+  &:hover
+    color: white
+    &:before
+      top: 50%
+      left: 50%
+      transform: scale(6.5) translateX(-50%) translateY(-50%)
   &.bg-package
-    background: #{$air_grey} url(../assets/bg/package.png) bottom 45px right 15px no-repeat
-    background-size: 50%
-    @media (max-width: 992px)
-      background-size: 140px
-      background-position: bottom 24px right 24px
-     
+    &:after
+      content:''
+      position: absolute
+      bottom: 45px
+      right: 15px 
+      background: url(../assets/bg/package.png) no-repeat
+      background-size: contain
+      width: 52.5%
+      padding-top: 39%
+      z-index: 1
+      @media (max-width: 992px)
+        width: 140px
+        padding-top: 104px
+        bottom: 24px
+        right: 24px
     &-description
       margin-top: 117px
 
@@ -1916,6 +1951,7 @@ input[type=checkbox].big
 .tab-content
   background: #{$air_grey}
   border-radius: 40px
+  transform: translate3d(0,0,0)
   position: relative
   overflow: hidden
   @media (max-width: 768px)

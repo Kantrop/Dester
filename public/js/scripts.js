@@ -237,8 +237,8 @@ document.querySelectorAll('.emailSubscribtionForm').forEach((form) => {
       email_address: data.get('email'),
       status: "subscribed",
       merge_fields: {
-        "FIRSTNAME": data.get('name'),
-        "LASTNAME": ""
+        "FNAME": data.get('name'),
+        "LNAME": ""
       }
     }
   
