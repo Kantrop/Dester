@@ -971,7 +971,9 @@ p,
 .swiper-list
   .swiper-pagination
     display: none
-
+.swiper-photos
+  img
+    max-height: 388px
 .partners-group
   margin-bottom: 60px
   &:last-child
@@ -1970,6 +1972,31 @@ input[type=checkbox].big
     position: absolute
     top: -64px
     right: -158px
+    background-repeat: no-repeat
+    &.tab-personalized
+      background-size: 867px
+      background-position: left -282px top -22px
+      @media (max-width: 992px)
+        background-position: left -282px top -62px
+      @media (max-width: 768px)
+        background-size: 627px
+        background-position: left -222px top -46px
+    &.tab-shopping
+      background-size: 762px
+      background-position: left -231px top -3px
+      @media (max-width: 992px)
+        background-position: left -282px top -62px
+      @media (max-width: 768px)
+        background-size: 557px
+        background-position: left -151px top -25px
+    &.tab-fillment
+      background-size: 795px
+      background-position: left -40px top 38px
+      @media (max-width: 992px)
+        background-position: left -106px top -17px
+      @media (max-width: 768px)
+        background-size: 557px
+        background-position: left -4px top -4px
     @media (max-width: 992px)
       width: 425px
       height: 425px
@@ -2001,6 +2028,7 @@ input[type=checkbox].big
     background-image: url(../assets/handwrite/coin.svg)
   &.heart
     background-image: url(../assets/handwrite/heart.svg)
+
 @media (max-width: 992px)
   .navbar
     > *
