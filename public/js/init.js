@@ -25,20 +25,47 @@ var swiperReview = new Swiper(".swiper-reviews", {
   },
 });
 var swiperPhotos = new Swiper(".swiper-photos", {
-  slidesPerView: 'auto',
+  slidesPerView: "auto",
   spaceBetween: 20,
-  initialSlide: 1,
-  centeredSlides: true,
+  watchSlidesProgress: true,
+  speed: 600,
+  lazy: {
+    loadOnTransitionStart: !0,
+    loadPrevNext: !0,
+    loadPrevNextAmount: 4,
+  },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: !1,
+  },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
 });
 
+Fancybox?.bind('[data-fancybox="swiper-photos"]', {
+  Hash: !1,
+  Toolbar: {
+    right: ["counter", "zoom", "fullscreen", "close", "left"],
+  },
+  Thumbs: !1,
+  on: {
+    reveal: function () {
+      swiperPhotos.autoplay &&
+        swiperPhotos.autoplay.running &&
+        swiperPhotos.autoplay.pause();
+    },
+    closing: function () {
+      swiperPhotos.autoplay &&
+        swiperPhotos.autoplay.running &&
+        swiperPhotos.autoplay.run();
+    },
+  },
+});
 
-
-let swiperList;
 setAdaptiveSwiper = (selector, width = 575, options = {}) => {
+  let swiperList;
   if (window.innerWidth <= width) {
     if (swiperList) {
       return;
@@ -50,7 +77,7 @@ setAdaptiveSwiper = (selector, width = 575, options = {}) => {
         el: `${selector} .swiper-pagination`,
         clickable: true,
       },
-      ...options
+      ...options,
     });
   } else {
     if (swiperList) {
@@ -62,10 +89,16 @@ setAdaptiveSwiper = (selector, width = 575, options = {}) => {
 };
 
 setAdaptiveSwiper(".swiper-list");
-setAdaptiveSwiper(".swiper-tabs", 768, { slidesPerView: "auto", noSwiping:false });
+setAdaptiveSwiper(".swiper-tabs", 768, {
+  slidesPerView: "auto",
+  noSwiping: false,
+});
 window.addEventListener("resize", () => {
   setAdaptiveSwiper(".swiper-list");
-  setAdaptiveSwiper(".swiper-tabs", 768, { slidesPerView: "auto", noSwiping:false });
+  setAdaptiveSwiper(".swiper-tabs", 768, {
+    slidesPerView: "auto",
+    noSwiping: false,
+  });
 });
 
 // Bootstrap popoper

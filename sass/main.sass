@@ -973,7 +973,21 @@ p,
     display: none
 .swiper-photos
   img
-    max-height: 388px
+    height: 100%
+  .swiper-slide
+    height: 388px
+    @media (max-width: 768px)
+      height: 248px
+  .swiper-pagination
+    position: static
+    margin-top: 60px
+  .swiper-pagination-bullet-active
+      background: #4833F5
+.fancybox__backdrop
+  --fancybox-bg: rgba(27, 27, 27, 0.7)
+  backdrop-filter: blur(5px)
+  -webkit-backdrop-filter: blur(5px)
+  transition: backdrop-filter 0.3s
 .partners-group
   margin-bottom: 60px
   &:last-child
@@ -1797,6 +1811,7 @@ input[type=checkbox].big
 .modal
   background: rgba(27, 27, 27, 0.3)
   backdrop-filter: blur(5px)
+  -webkit-backdrop-filter: blur(5px)
   &-emailSubscription
     .btn-close
       position: absolute
@@ -2011,6 +2026,8 @@ input[type=checkbox].big
   min-height: 168px
   height:100%
   padding: 16px
+  font-size: 18px
+  line-height: 112%
   align-self: stretch
   padding-bottom: 60px
   box-sizing: border-box
@@ -2226,6 +2243,10 @@ input[type=checkbox].big
       font-size: 14px
     &-s
       font-size: 12px
+    &-semibold
+      font-weight: 600
+  .h1:not(.scaling), h1:not(.scaling)
+    font-size: 24px !important
   .h2:not(.scaling), h2:not(.scaling)
     font-size: 24px !important
   .h3, h3
