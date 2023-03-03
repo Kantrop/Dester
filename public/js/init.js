@@ -44,26 +44,6 @@ var swiperPhotos = new Swiper(".swiper-photos", {
   },
 });
 
-Fancybox?.bind('[data-fancybox="swiper-photos"]', {
-  Hash: !1,
-  Toolbar: {
-    right: ["counter", "zoom", "fullscreen", "close", "left"],
-  },
-  Thumbs: !1,
-  on: {
-    reveal: function () {
-      swiperPhotos.autoplay &&
-        swiperPhotos.autoplay.running &&
-        swiperPhotos.autoplay.pause();
-    },
-    closing: function () {
-      swiperPhotos.autoplay &&
-        swiperPhotos.autoplay.running &&
-        swiperPhotos.autoplay.run();
-    },
-  },
-});
-
 setAdaptiveSwiper = (selector, width = 575, options = {}) => {
   let swiperList;
   if (window.innerWidth <= width) {
@@ -123,4 +103,24 @@ const popoverDismissList = popoverDismissNodeList.map(function (
 // custom selects
 $("select")?.select2?.({
   minimumResultsForSearch: -1,
+});
+
+Fancybox?.bind('[data-fancybox="swiper-photos"]', {
+  Hash: !1,
+  Toolbar: {
+    right: ["counter", "zoom", "fullscreen", "close", "left"],
+  },
+  Thumbs: !1,
+  on: {
+    reveal: function () {
+      swiperPhotos.autoplay &&
+        swiperPhotos.autoplay.running &&
+        swiperPhotos.autoplay.pause();
+    },
+    closing: function () {
+      swiperPhotos.autoplay &&
+        swiperPhotos.autoplay.running &&
+        swiperPhotos.autoplay.run();
+    },
+  },
 });

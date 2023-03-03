@@ -16778,7 +16778,7 @@ input[type=checkbox].big + * {
   margin: 0 auto;
 }
 
-.tab-content {
+.tab-rounded {
   background: #f6f6f6;
   border-radius: 40px;
   transform: translate3d(0, 0, 0);
@@ -16786,25 +16786,25 @@ input[type=checkbox].big + * {
   overflow: hidden;
 }
 @media (max-width: 768px) {
-  .tab-content {
+  .tab-rounded {
     width: calc(100% + 16px);
   }
 }
-.tab-content .tab-pane {
+.tab-rounded .tab-pane {
   padding: 60px 50% 60px 60px;
   min-height: 400px;
 }
 @media (max-width: 992px) {
-  .tab-content .tab-pane {
+  .tab-rounded .tab-pane {
     padding: 60px 340px 60px 60px;
   }
 }
 @media (max-width: 768px) {
-  .tab-content .tab-pane {
+  .tab-rounded .tab-pane {
     padding: 24px 24px 340px 24px;
   }
 }
-.tab-content .tab-image {
+.tab-rounded .tab-image {
   width: 582px;
   height: 582px;
   border-radius: 50%;
@@ -16813,60 +16813,60 @@ input[type=checkbox].big + * {
   right: -158px;
   background-repeat: no-repeat;
 }
-.tab-content .tab-image.tab-personalized {
+.tab-rounded .tab-image.tab-personalized {
   background-size: 867px;
   background-position: left -282px top -22px;
 }
 @media (max-width: 992px) {
-  .tab-content .tab-image.tab-personalized {
+  .tab-rounded .tab-image.tab-personalized {
     background-position: left -282px top -62px;
   }
 }
 @media (max-width: 768px) {
-  .tab-content .tab-image.tab-personalized {
+  .tab-rounded .tab-image.tab-personalized {
     background-size: 627px;
     background-position: left -222px top -46px;
   }
 }
-.tab-content .tab-image.tab-shopping {
+.tab-rounded .tab-image.tab-shopping {
   background-size: 762px;
   background-position: left -231px top -3px;
 }
 @media (max-width: 992px) {
-  .tab-content .tab-image.tab-shopping {
+  .tab-rounded .tab-image.tab-shopping {
     background-position: left -282px top -62px;
   }
 }
 @media (max-width: 768px) {
-  .tab-content .tab-image.tab-shopping {
+  .tab-rounded .tab-image.tab-shopping {
     background-size: 557px;
     background-position: left -151px top -25px;
   }
 }
-.tab-content .tab-image.tab-fillment {
+.tab-rounded .tab-image.tab-fillment {
   background-size: 795px;
   background-position: left -40px top 38px;
 }
 @media (max-width: 992px) {
-  .tab-content .tab-image.tab-fillment {
+  .tab-rounded .tab-image.tab-fillment {
     background-position: left -106px top -17px;
   }
 }
 @media (max-width: 768px) {
-  .tab-content .tab-image.tab-fillment {
+  .tab-rounded .tab-image.tab-fillment {
     background-size: 557px;
     background-position: left -4px top -4px;
   }
 }
 @media (max-width: 992px) {
-  .tab-content .tab-image {
+  .tab-rounded .tab-image {
     width: 425px;
     height: 425px;
     top: -10px;
   }
 }
 @media (max-width: 768px) {
-  .tab-content .tab-image {
+  .tab-rounded .tab-image {
     top: auto;
     bottom: -132px;
     right: -114px;
