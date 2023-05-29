@@ -17,7 +17,7 @@ $indent-xl: 32px;
 $indent-xxl: 36px;
 $indent-xxxl: 40px;
 $indent-xxxxl: 48px;
-$indent-xxxxxl: 60px;
+$indent-xxxxxl: 64px;
 
 $grid-breakpoints: (
     xxs: 0,
@@ -51,11 +51,11 @@ $paragraph-margin-top: $indent-xl;
 $grid-gutter-width: $indent-xs;
 
 $border-color: $dark-grey;
-$border-radius: 8px;
-$border-radius-lg: 20px;
+$border-radius: 14px;
+$border-radius-lg: 30px;
 $border-radius-xl: 40px;
 $border-radius-pill: 60px;
-$btn-border-radius-lg: 12px;
+$btn-border-radius-lg: 30px;
 
 $box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
 $font-family-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans",
@@ -66,8 +66,8 @@ $line-height-base: 1.135;
 $line-height-sm: 112%;
 $line-height-lg: 135%;
 
-$h1-font-size: 82px;
-$h2-font-size: 62px;
+$h1-font-size: 56px;
+$h2-font-size: 52px;
 $h3-font-size: 42px;
 $h4-font-size: 20px;
 $h5-font-size: 18px;
@@ -103,12 +103,13 @@ $headings-line-height: $line-height-sm;
 
 //TODO - перезадать $input-btn-padding-y  и прочее, а это убрать?
 $input-btn-padding-y: 10px;
-$input-btn-padding-x: 20px;
+$input-btn-padding-x: 24px;
 
-$input-btn-padding-y-lg: 18px;
-$input-btn-padding-x-lg: 32px;
-$input-btn-font-size-lg: 20px;
-$btn-font-weight: 600;
+$input-btn-padding-y-lg: 20px;
+$input-btn-padding-x-lg: 60px;
+$input-btn-font-size: 1rem;
+$input-btn-font-size-lg: 1.125rem;
+$btn-font-weight: 500;
 
 $input-bg: $air_grey;
 $input-color: $black;
@@ -139,7 +140,8 @@ $form-select-padding-x: 16px;
 
 
 $navbar-padding-y: 15px;
-$navbar-nav-link-padding-x: 13px;
+$navbar-nav-link-padding-x: 18px;
+$navbar-brand-margin-end: 72px;
 $nav-link-padding-y: 10px; //?
 $nav-link-color: #000;
 $nav-link-hover-color: #000;
